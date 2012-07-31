@@ -1,7 +1,9 @@
-My Presentation slides in HTML (Google Slide Template)
+My Presentation slides
 ===================
 
-View them on webkit-based browsers
+- created on Google I/O slides template
+- View them on webkit-based browsers
+- Use arrow keys / spacebar to navigate
 
-## Innovators of the Web Conf
-http://girliemac.github.com/presentation-slides/cascade/
+### Innovators of the Web Conference
+HTML5: The Mobile Approach - http://girliemac.github.com/presentation-slides/cascade/
