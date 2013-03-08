@@ -7,7 +7,7 @@ My Presentation slides
 
 http://girliemac.github.com/presentation-slides/html5-mobile-usecases
 
-- W3Conf
+- W3Conf (Video: http://youtu.be/3Afi-v-m_Gc)
 
 
 ### HTML5 Mobile Approach
