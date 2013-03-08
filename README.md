@@ -1,9 +1,14 @@
 My Presentation slides
 ===================
 
-- created on Google I/O slides template
-- View them on webkit-based browsers (Well, use the stable version of Chrome!)
 - Use arrow keys / spacebar to navigate
 
-### HTML5 Dev Conf (Oct.15, 2012)
-http://girliemac.github.com/presentation-slides/SFHTML5DevConf/
+### HTML5 Mobile Real-life Use cases
+- W3Conf
+http://girliemac.github.com/presentation-slides/html5-mobile-usecases
+
+### HTML5 Mobile Apprach
+- HTML5 Dev Conf 2012
+- Innovators of the Web Conference
+etc.
+http://girliemac.github.com/presentation-slides/html5-mobile-approach/
