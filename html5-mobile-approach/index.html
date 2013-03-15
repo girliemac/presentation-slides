@@ -1,274 +1,272 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Presentation</title>
-		<meta charset='utf-8'>
-		<base target="_blank">
-		<script src='../google/slides.js'></script>
-		<link href="../google/styles.css" rel="stylesheet" />
-		<link href="extra-styles.css" rel="stylesheet" />
-		<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
-	</head>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>HTML5 Mobile Approaches</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="screen-custom.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#Picture h2 {
+			color:#FFF;
+			}
+	</style>
+</head>
+<body class="list">
 	
-	<body style='display: none'>
-
-	<section class='slides layout-regular template-me'>
-		
-		
-	<!-- Slide -->
-	<article>
-		<header id="slideTitle"><h1>HTML<span>5</span></h1><p>Mobile Strategies</p></header>
-	 	<p>Tomomi Imura<br>October 15, 2012</p>
-	 	
-	 	<p style="position: relative; top: -186px; left: 286px;"><img src='images/html5-lumia.png'></p>
-	 	<!--
-	 	<div style="position: absolute; bottom: 80px; right:1.5em; line-height: 1.5em">Press <span class="arrowkey">→</span> key to navigate</div>
-	 	-->
-	</article>
+	<header class="caption">
+		<h1>HTML5 Mobile Approaches</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
 	
-	<!-- Slide -->
-	<article>
+	
+	<section class="slide cover"><div>
+		<h2>HTML5<br>Mobile Approaches</h2>
+		<h4>Tomomi Imura</h4>
+		<img src="images/html5-lumia.png" style="position:relative;left:290px;margin-top:-90px;" alt="Lumia phone">
+	</div></section>
+	
+	
+	<section class="slide"><div>
 		<!-- Hello, my name is CSS sticker -->
-		<div class="vcard" style="margin: 150px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
+		<div class="vcard" style="margin: 120px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
 		    <div> 
 		        <p>Hello</p> 
 		        <p>my name is</p> 
 		    </div> 
 		    <div class="fn"> 
-		        <p class="given-name" style="color:#333;margin-top:4px">Tomomi</p> 
-		        <address class="nickname" style="color:#333">@girlie_mac</address> 
+		        <p class="given-name">Tomomi</p> 
+		        <address class="nickname">@girlie_mac</address> 
 		    </div>
 		</div>
 		<!-- sticker end -->
-		<ul class="animList">
-			<li>Mobile UI/UX Developer</li>
-			<li>Developer Evangelist at Nokia</li>
-			<li>Former UI Dev &amp; Dev Relations at Palm webOS</li>
-			<li>Former mobile web dev at Yahoo! Mobile</li>
-			<li>HTTP Status Cat Lady</li>
+		<ul class="animList" style="position:relative; left: 180px;">
+			<li>Mobile Front-end, UI/UX Developer</li>
+			<li>Open Web Advocate at Nokia</li>
+			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
 		</ul>
-	</article>
+
+	</div></section>
+
 	
-	<!-- Slide -->
-	<article>
-		<div style="text-align:center"><img src="images/403.jpg" style=""></div>
-	</article>
+	<section class="slide cover"><div>
+		<img src="images/html5.png" alt="HTML5" style="width:1024px;height:640px;">
+		<p class="credit">http://lemarquis.deviantart.com/art/HTML5-Wallpaper-243682854</p>
+	</div></section>	
 	
-	<!-- Slide -->
-	<article>
-		<h3>Web Apps: No SDK Required</h3>
-		<img src="images/webapps.png" style="position:relative;left:-30px; top: -90px">
-	</article>
 	
-    
-    <!-- Slide -->
-	<article>
-		<h3>Desktop to Mobile</h3>
+	<section class="slide"><div>
+		<h2>Web Apps</h2>
+		<img src="images/webapps.png" style="width:760px;position:relative;left:40px;top:-50px">
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<p align="center" class="center-large">
+			No <span style="color:#f18">SDK</span> Required!
+		</p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Desktop to Mobile</h2>
 		<ol class="large-list" style="margin-top: 3em">
 			<li>Do Nothing</li>
 			<li>Adaptive Design</li>
 			<li>Separated Mobile Experience</li>
-		</ol>
-	</article>
+		</ol>		
+	</div></section>
 	
-	<!-- Slide -->
-	<article>
-		<h3>Adaptive Design</h3>
+	
+	<section class="slide"><div>
+		<h2>Adaptive Design</h2>
 		<ol class="build">
-			<li>Progressive Enhancement</li>
+			<li>Progressive Enhancement
 				<ul>
-					<li>Enhancing Experiences based on browser/device capabilities</li> 
+					<li>Enhancing Experiences based on browser capabilities</li> 
 					<li>Graceful Degradation - Fallbacks</li>
 				</ul>
-			<li style="margin-top: 1.5em">Responsive Design</li>
+			</li>
+			<li style="margin-top:.75em">Responsive Design
 				<ul>
-					<li>Fluid Grid Layout</li>
+					<li>Fluid Layout</li>
 					<li>Flexible Images</li>
 					<li>Media Queries</li>
 				</ul>
+			</li>
 		</ol>
-	</article>
+	</div></section>
 	
-	<!-- Slide -->
-	<article>
-		<div style="margin-top: 1.5em">
-			<img class="centered" src="images/rwd.png">
+	
+	<section class="slide"><div>
+		<div style="text-align:center">
+			<img src="images/rwd.png">
 		</div>
-		<p style="font-size:.75em; margin-top:2.5em;">A super silly example I wrote: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web</a><p>
-	</article>
-	
-	<!-- Slide -->
-	<article>
-		<h3>Why Should You Consider RWD?</h3>
+		<p style="font-size:.75em; margin-top:2em;text-align:right">A super silly example I wrote: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web</a><p>		
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Why Should You Consider RWD?</h2>
 		<ul>
 			<li>One URL works across the browsers</li>
 			<ul>
 			<li>No redirect</li>
 			<li>No User-Agent sniffing</li>
 			</ul>
-			<li>Scale the UI to fit on any browser types also window size/orientations</li>
-			<li>Maintainable - a single markup/content to manage</li>
+			<li>Maintainable</li>
+			<ul>
+			<li>A single content</li>
+			<li>No separate markup</li>
+			</ul>
 		</ul>
-	</article>
-	
-	<!-- Slide -->
-	<article class="fill">
-        <h3>
-          @media
-        </h3>
-		<p>
-			<img src="images/starbucks.jpg">
-		</p>
-		<div class="source">http://cutie-kitty-pie.deviantart.com/art/Starbucks-Coffee-Sizes-129806135</div>
-	</article>
-	
-	<!-- Slide -->
-	<article>
-		<h3>CSS2: Media-Types</h3>
 		
-		<pre>
+		<footer>
+		- using a single content and scale the UI to fit on any browser types also window size/orientations
+		- Maintainable - a single markup/content to manage
+		</footer>		
+	</div></section>
+	
+	
+	<section class="slide cover"><div>
+		<h2 style="text-align:right">@media</h2>
+		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;">
+		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+	</div></section>	
+	
+	<section class="slide"><div>
+		<h2>CSS2 Media-Types</h2>
+		<pre style="margin-top: -20px"><code class="language-css">		
 @media handheld {
   /* Some mobile-specific CSS here */
-}</pre>
-		<div class="build">
-			<p>Only supported by: </p>
-			<ul>
-				<li>Opera Mini
-				<li>OpenWave
-				<li>Obigo
-				<li>PIE (partial)
-			</ul>
+}
+		</code></pre>
+		
+		<p>Only supported by: </p>
+		<ul class="small">
+			<li>Opera Mini
+			<li>OpenWave
+			<li>Obigo
+			<li>PIE (partial)
+		</ul>
+
+		<li class="next">
 			<img src="images/fu-android.png" style="position:relative; top:-240px; left:500px;">
-		</div>
-		
-	</article>
+		</li>
+	</div></section>
 	
-	<!-- Slide -->
-	<article>
-		<div style="position:relative">
-			<img style="position: absolute; top: 0; right: 0" src="images/html5-badge-h-css3.png">
-		</div>
+	
+	<section class="slide"><div>
+		<h2>CSS3: Media-Queries</h2>
 		
+		<p>Controlling the presentation without modifying the content itself.</p>
+	
+		<div style="text-align:center"><img style="margin-top:0" src="images/screens.png"></div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
 		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">Separate styles by the width of the target viewport</p>
 		
-		<p>Controlling the presentation of content without modifying the content itself.</p>
-	
-		<img class="centered" style="margin-top: 40px" src="images/screens.png">
-		</pre>
-		
-	</article>
-	
-	<!-- Slide -->
-	<article>
-		<h3>Media-Queries</h3>
-		<p>Separate styles by the width of the target viewport (browser display area)</p>
-		<!-- use the MQ "feature" -->
-		<!-- exclusive expression "only" (vs. "not") -->
-		<!-- <link rel="stylesheet" media="print and (min-width: 25cm)" href="..." /> -->
-		<pre>
+		<pre style="margin-top: -20px"><code class="language-css">
 @media only screen
    and (min-width : 768px)
    and (max-width : 1024px) {
+  
   /* Styles */
-}</pre>
-	</article>
+}
+</code></pre>
+		
+		<footer>- the width of the target viewport, which is a browser display area</footer>
+	</div></section>
 	
-	<article>
-		<h3>Media-Queries</h3>
-		<p>by device-width, the width of the device's screen size</p>
-		<pre>
+	
+	<section class="slide"><div>
+		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">by device-width, the width of the device's screen size</p>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
 @media only screen 
    and (min-device-width : 320px) 
    and (max-device-width : 480px) {
+  
   /* Styles */
-}</pre>
+}
+		</code></pre>
+	</div></section>
 	
-	</article>
 	
-	<!-- Slide -->
-	<article>
-		<h3>Media-Queries</h3>
-		<p>combined with screen orientations</p>
+	<section class="slide"><div>
+		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">combined with screen orientations</p>
 		
-		<pre>
+		<pre style="margin-top: -20px"><code class="language-css">
 @media only screen
    and (min-device-width : 768px)
    and (max-device-width : 1024px)
    and (orientation : landscape) {
+  
   /* Styles */
 }...
-		</pre>
+		</code></pre>
+	</div></section>
 	
-	</article>
-
 	
-	<!-- Slide -->
-	<article>
-		<h3>Media-Queries</h3>
-		<p>separate styles by device pixel ratio</p>
+	<section class="slide"><div>
+		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">separate styles by device pixel ratio</p>
 		
-		<img class="centered" style="margin-top: 50px" src="images/screens-ipad.png">
-		
-	</article>
+		<img class="centered" style="margin-top:20px" src="images/screens-ipad.png">
+	</div></section>
 	
-	<!-- Slide -->
-	<article class="fill">
-        <h3>
-          High Pixel Density Displays
-        </h3>
-		<p>
-			<img src="images/jobs-retina.jpg">
-		</p>
-	</article>
 	
-	<!-- Slide -->
-	<article>
-        <h3>
-          The High DPI problem
-        </h3>
-        <p>When a browser maps one pixel to one high resolution screen pixel, text and images of the web sites made for smaller resolution displays become <strong>too small</strong>.</p>
+	<section class="slide cover dark"><div>
+		<h2>High Pixel Density Displays</h2>
+		<img src="images/jobs-retina.jpg" alt="Steve Jobs" style="width:1024px;height:640px;">
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>The High DPI problem</h2>
 		
-		<div class="build" style="margin-top:-20px">
+		<div style="margin-top:-10px">
 			<img src="images/resolutions-display.png">
 		</div>
-	</article>	
-
-	<!-- Slide -->
-	<article>
-        <h3>
-          The High DPI problem: Solution
-        </h3>
-		<p>Automatically scale up the UI and content (fit to HVGA, for instance).
-		<div style="text-align:center;margin-top:-10px"><img src="images/retina-display.png" width="600"></div>
-		</p>
-
-	</article>
-	
-	
-	<!-- Slide -->
-	<article>
 		
-		<ul class="large-list" style="margin-top: 3em">
-			
-			<li>Pixel in CSS is relative</li>
-			<li>1 CSS pixel <strong>!=</strong> 1 device pixel</li>
+				<footer>When a browser maps one pixel to one high resolution screen pixel, text and images of the web sites made for smaller resolution displays become too small.</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h3>The High DPI problem: Solution</h3>
+		
+		<div style="text-align:center;margin-top:20px"><img src="images/retina-display.png" style="width:540px"></div>
+		
+		<footer>Automatically scale up the UI and content (fit to HVGA, for instance).</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>CSS Pixel vs. Device Pixel</h2>
+		<ul style="margin-top:50px">
+			<li style="font-size:48px;line-height:100px;">Pixel in CSS is relative</li>
+			<li style="font-size:48px;line-height:100px;">1 CSS pixel <strong>!=</strong> 1 device pixel</li>
 		</ul>
-	</article>
+	</div></section>
 	
-	
-	<!-- Slide -->
-	<article>
-        <h3>
-          Pixel Density in DOM
-        </h3>
-		<p><!-- DOM property:<br/> -->
-		<pre>	
-window.devicePixelRatio
-
-</pre>
-		</p>
+	<section class="slide"><div>
+		<h2>Pixel Density in DOM</h2>
 		
-		<p style="margin-top:2em">e.g.</p>
+		<code>
+window.devicePixelRatio
+		</code>
+		
 		<table>
 		<tr>
 		<th>Device</th><th>Browser</th><th>Pixel Density</th>
@@ -283,112 +281,102 @@ window.devicePixelRatio
 		<td>Galaxy Nexus</td><td>Opera Mobile</td><td>2.25</td>
 		</tr>
 		</table>
-	</article>	
-		  
-    
-	<!-- Slide -->
-	<article>
-        <h3>
-          Media Queries: "Retina"
-        </h3>
-        
-        <pre style="margin-top: 10px">
-@media only screen and (-webkit-min-device-pixel-ratio: 2), 
-       only screen and (min-device-pixel-ratio: 2) {
-	   //some hi-res css
-}
-</pre>
-	<p>e.g.</p>
-		<ul>
-			<li>iPhone</li>
-			<li>Galaxy Nexus</li>
-		</ul>
-	</article>
-
-		
-	<!-- Slide -->
-	<article>
-        <h3>
-          WTF Vendor Prefix!
-        </h3>
-		
-		<p>with a zoom factor of 150% (e.g. 320px to 480px)</p>
-		
-		<div class="build">
-			
-		<div style="margin-top: 1em;">
-			<div class="browser-container">
-				<div class="browser chrome"></div><div class="browser android"></div><div class="browser safari"></div><div class="browser dolphin"></div>
-			</div>
-<pre>
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {...}
-</pre>
-		</div>
-		
-		<div>
-			<div class="browser-container">
-				<div class="browser moz"></div>
-			</div>
-<pre>
-@media only screen and (min--moz-device-pixel-ratio: 1.5) {...}
-</pre>
-		</div>
-		
-		<div>
-			<div class="browser-container">
-				<div class="browser o"></div>
-			</div>
-<pre>
-@media only screen and (-o-min-device-pixel-ratio: 3/2) {...}
-</pre>
-		</div>
-
-		</div>
-		
-	</article>
+	</div></section>
 	
 	
-	<!-- Slide -->
-	<article>
-        <h3>
-          Unprefix it with resolution media query?
-        </h3>
-
+	<section class="slide"><div>
+		<h2>Media-Queries for "Retina"</h2>
 		
-		<div class="browser-container">
-			<div class="browser moz"><span>3.5</span></div>
-			<div class="browser o"> <span>9</span> </div>
-			<div class="browser ie" style="opacity:.5"><span>9*</span></div>
-		</div>
-<pre style="margin-bottom: .5em">
-@media (-webkit-min-device-pixel-ratio: 2),  /* Webkit */ 
-       (min-resolution: 192dpi)              /* Moz &amp; Opera */ {
-...
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen and (min-device-pixel-ratio: 2) {
+	   /* some hi-res css */
 }
-</pre>
-		<p style="font-size:.75em">
-		Typical Screen: 96dpi (96px = 1in in CSS units)	</p>
-<pre>
+		</code></pre>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>WTF Vendor Prefix!</h2>
+		
+		<div class="browser-container half">
+			<div class="browser chrome"><span></span></div>
+			<div class="browser android"><span></span></div>
+			<div class="browser safari"><span></span></div>
+			<div class="browser bb"><span></span></div>
+		</div>
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {...}			
+		</code></pre>
+		
+		
+		<div class="browser-container half">
+			<div class="browser moz"><span></span></div>
+		</div>
+		<pre style="margin-top: -30px"><code class="language-css">
+@media only screen and (min--moz-device-pixel-ratio: 1.5) {...}			
+		</code></pre>
+
+
+		<div class="browser-container half">
+			<div class="browser o"><span></span></div>
+		</div>		
+		<pre style="margin-top: -30px"><code class="language-css">
+@media only screen and (-o-min-device-pixel-ratio: 3/2) {...}			
+		</code></pre>
+		
+		<footer>with a zoom factor of 150% (e.g. 320px to 480px)</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Unprefix: resolution media query</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
 @media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 2dppx)              /* Future */ {
-...
-}
-</pre>
-	</article>
-	
+       (min-resolution: 192dpi) {
+       ...
+}		</code></pre>
+
+		<p style="margin-top:2em">Typical Screen: 96dpi (96px = 1in in CSS units)</p>
 		
-	<!-- Slide -->
-	<article>
-		<img src="images/responsive-image.png" style="position:relative;top:-15px;">
-    </article>
-    
+		<div class="browser-container" style="margin-top:3em">
+			<div class="browser moz"><span></span></div>
+			<div class="browser o"><span></span></div>
+			<div class="browser ie dim"><span></span></div>
+		</div>
+		
+		<footer>
+			use resolution css data type
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>...even easier</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media (-webkit-min-device-pixel-ratio: 2),  
+       (min-resolution: 2dppx) {
+...
+}		</code></pre>		
 
-	<!-- Slide -->
-	<article>
-		<h3>Up-Res Images</h3>
-		<img src="images/responsive-image.png" style="z-index:1;width:40%;position:relative;left:510px;top:-70px">
-
-		<pre style="position:relative;top:-230px">
+		<div class="browser-container" style="margin-top:3em">
+			<div class="browser chrome"><span>21</span></div>
+			<div class="browser moz"><span>16</span></div>
+		</div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div align="center"><img src="images/responsive-image.png" style="margin-top:-15px;"></div>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<h2>Up-Res Images</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
 .banner {
     background-image: url(banner.png);
     width: 320px; height: 160px;
@@ -399,43 +387,24 @@ window.devicePixelRatio
       background-image: url(banner-2x.png);
       background-size: 100%;
   }
-}</pre>	
-
-    </article>
-    
-	<!-- Slide -->
-	<article>
-		<div style="position:relative">
-			<img src="images/svg-logo-v.png" style="position:absolute;top:0; right: 0;"/>
-		</div>
+}
+		</code></pre>
 		
-		<h3>SVG</h3>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>SVG</h2>
 		
 		<div class="live-code">
-			<code>
-			&lt;img src="logo.svg" width="<input type="number" value="432" step="10" oninput="resizeSVG(this)">"&gt;
-			</code> 
+			<pre><code>
+&lt;img src="logo.svg" width="<input type="number" value="432" step="10" oninput="resizeSVG(this)">"&gt;
+			</code></pre>
 		</div>
 		
-		<div style="text-align:center;margin-top: 2em; height:260px">
+		<div style="text-align:center;height:260px">
 			<img id="svgImg" src="images/HTML5_sticker.svg" width="432">
 		</div>
-
-<!--
-		<div style="margin-top:1em;">
-			<div class="browser-all small"></div>
-		</div>
-		
--->
-		<div class="browser-container med full" style="margin:1em 0 0 -4em;">
-			<div class="browser chrome"><span></span></div>
-			<div class="browser android"><span>3.0</span></div>
-			<div class="browser safari"><span></span></div>
-			<div class="browser dolphin"><span>β</span></div>
-			<div class="browser moz"><span></span></div>
-			<div class="browser o"><span></span></div>
-			<div class="browser ie"><span>9.0</span></div>
-    	</div>
 		
 		<script defer>
 		function resizeSVG(el) {
@@ -443,64 +412,36 @@ window.devicePixelRatio
 			obj.width = el.value;
 		}
 		</script>
-	</article>
-    
-	<!-- Slide -->
-	<article>
-    	<h3>Proposal: Responsive Images</h3>
-    	<p><a href="http://dvcs.w3.org/hg/html-proposals/raw-file/tip/responsive-images/responsive-images.html">"The picture element" Draft</a></p>
-    	
+	</div></section>			
 
-	    <pre>
+		
+	<section class="slide"><div>
+		<h2>Proposal: Responsive Images</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-markup">
 &lt;picture width="500" height="500"&gt;
-  &lt;source media="(min-width: 45em)"
-  			 srcset="large-1.jpg 1x, large-2.jpg 2x"&gt;
-  &lt;source media="(min-width: 18em)" 
-  			 srcset="med-1.jpg 1x, med-2.jpg 2x"&gt;
-  &lt;source srcset="small-1.jpg 1x, small-2.jpg 2x"&gt;
-  &lt;img src="fallback.jpg" &gt;
-&lt;/picture&gt;	    	
-	    </pre>
-    	
-    	<p class="source"><a href="http://dvcs.w3.org/hg/html-proposals/raw-file/tip/responsive-images/responsive-images.html">The Picture Element</a> draft by <a href="http://www.w3.org/community/respimg/" target="_blank">W3C Responsive Images Community Group</a></p>
-   </article>
-    
-    <!-- Slide -->
-	<article>
-    	<h3>CSSOM View Module</h3>
-    	
-    	<div class="browser-container med" style="margin-left:-3em;">
-			<div class="browser chrome"><span>18</span></div>
-			<div class="browser android"><span>3.0</span></div>
-			<div class="browser safari"><span>5.1</span></div>
-			<div class="browser dolphin"><span>β</span></div>
-			<div class="browser moz"><span>14</span></div>
-			<div class="browser ie"><span>10</span></div>
-    	</div>
-    	<pre><i>mediaQueryList </i> = window.matchMedia(<i>mediaQueryString</i>);</pre>
-    	
-    	<p>Example:</p>
-    	<pre>
-var mql = window.matchMedia('(orientation:landscape)');
-if (mql.matches) {  
-  /* the current orientation is in landscape */  
-} else {
-  /* portrait */ 
-}
-</pre>
-	<p class="source"><a href="http://www.w3.org/TR/cssom-view/">CSSOM View Module</a></p>
-	</article>
-	
-	
-    <!-- Slide -->
-	<article class="">
-    	<h3>Responsive Design: Meh</h3>
-    	
-    	<img src="images/alain-delorme-chicquero8.jpg" style="width:280px;position:absolute;right:0;top:120px">
-    	
-    	<ul style="text-shadow: 1px 1px 3px #fff">
-	    	<li>MQ not supported by all browsers *</li>
-	    	<li>Heavy resource loading</li>
+   &lt;source media="(min-width: 45em)" src="large.jpg"&gt;
+   &lt;source media="(min-width: 18em)" src="med.jpg"&gt;
+   &lt;source src="small.jpg"&gt;
+   &lt;img src="fallback.jpg"&gt;
+   &lt;p&gt;Accessible text&lt;/p&gt;
+&lt;/picture&gt;
+		</code></pre>
+		
+		<footer>
+		The `picture` element markup pattern was proposed by the Responsive Images Community Group.
+		By providing a means of declaring multiple sources, authors can use media queries to control which version of an image is displayed and under what conditions.
+		</footer>
+	</div></section>			
+			
+
+		
+	<section class="slide" style="background:#fff url(images/alain-delorme-chicquero8.jpg) 640px 0px no-repeat"><div>
+		<h2>Responsive, wut?</h2>
+
+		
+		<ul style="text-shadow: 1px 2px 2px #fff">
+	    	<li>Heavy resource loading
 	    		<ul>
 	    			<li>Extra http requests</li>
 	    			<li>Large images</li>
@@ -508,363 +449,335 @@ if (mql.matches) {
 	    			<li>Data transfer can be costly</li>
 	    			<li>Battery consumption</li>
 	    		</ul>
+	    	</li>
+	    	<li>Impressing developer, not users
     	</ul>
-    	<p style="font-size:.75em">* Use Shim or pollyfill like Modernizr for the rescue.</p>
-    	<div class="source">http://chicquero.com/2011/11/14/wanna-a-ride/</div>
-    </article>
-	
-	<!-- Slide -->
-	<article class="fill">
-    	<h3>Designing for different form factors</h3>
-    	<img src="images/formfactors.png">
-    </article>
-    
-	<!-- Slide -->
-	<article>
-    	<h3>Mobile-Specific Approach: Advantages</h3>
-    	<ul>
+	</div></section>			
+
+		
+	<section class="slide cover"><div>
+		<h2 style="margin-top:-30px;text-shadow: 2px 2px 1px #fff;">Designing for<br>different form factors</h2>
+    	<img src="images/formfactors2.png" style="width:1024px;" alt="different formfactors">
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Mobile-Specific Approach: Yay!</h2>
+		
+		<ul>
 	    	<li>No heavy resource loading (vs. RWD)</li>
-	    	<li>Better User-Experience</li>
+	    	<li>More focused User-Experience</li>
 	    	<ul>
     			<li>Different UI &amp; contents</li>
     			<li>User-interaction (touch/mouse/stylus)</li>
     		</ul>
     		<li>Device-specific features, Hardware access</li>
     	</ul>
-    </article>
-    
-    <!-- Slide -->
-	<article>
-    	<h3>Mobile-Specific Approach: Meh!</h3>
-    	<ul>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Mobile-Specific Approach: Meh!</h2>
+		
+		<ul>
     		<li>Different URL (m.yourdomain.com)</li>
     		<li>Redirect</li>
     		<li>User-Agent Sniffing</li>
     	</ul>
-    	<div style="margin-top:1.5em;text-align:center">
+    	<div style="margin-top:-80px;text-align:right">
     		<img src="images/sniffer-dog.jpg">
     	</div>
-    </article>
-        
-     <!-- Slide 
-	<article>
-    	<h3>Optimizing Mobile Performance</h3>
-    	<p>Consider connection speed &amp; latency</p>
-    	<ul>
-    		<li>Less images (Sprite, CSS Visual effects, Base64)</li>
-    		<li>Use AppCache</li> 
-    		<li>JavaScript <i>defer</i> parsing</li>
-    		<li>GPU Acceleration</li>
-    		<li>Use CDN</li>
-    	</ul>
-    	
-    	<div id="appcache" class="browser-container small" style="position:relative; top:-255px;left:-60px;">
-			<div class="browser chrome"><span></span></div>
-			<div class="browser android"><span></span></div>
-			<div class="browser safari"><span></span></div>
-			<div class="browser dolphin"><span>β</span></div>
-			<div class="browser moz"><span></span></div>
-			<div class="browser o"><span></span></div>
-			<div class="browser ie"><span>10</span></div>
-    	</div>
-    	
-    	<div id="jsdefer "class="browser-container small" style="position:relative; top:-255px;left:30px;">
-			<div class="browser chrome"><span></span></div>
-			<div class="browser android"><span>3</span></div>
-			<div class="browser safari"><span>5</span></div>
-			<div class="browser dolphin"><span>β</span></div>
-			<div class="browser moz"><span></span></div>
-			<div class="browser ie"><span></span></div>
-    	</div>
+	</div></section>			
 
-    </article> 
-    -->
-    
-    <!-- Slide -->
-	<article>
-    	<h3>User-interaction: Touch Screens</h3>
+		
+	<section class="slide"><div>
+		<h2>Touch Screen User Interaction</h2>
+    	
     	<ul>
-    		<li>No CSS <code>:hover</code></li>
+    		<li>Touch Events
+	    		<ul>
+	    			<li>Touch Events v.1  (note: )</li>
+		    		<li>Pointer Events</li>
+	    		</ul>
+    		</li>   		
     		
-    		<li>DOM Touch Events v.1 </li>   		
-    		
-    		<li>Pointer Events</li>
-			
-    		<li>CSS L4 Media-queries (Future)</li>
+    		<li>CSS L4 Media-queries (Future)
     			<ul>
     				<li><code>pointer</code> - accuracy of a pointing device. <em>none, coarse, fine</em>. "Fat Finger" 
     				<li><code>hover</code> - 0 or 1</li>
     			</ul>
-    	</ul>
-    	
-    	<div id="touchEvents" class="browser-container small" style="position:relative; top:-355px;left: 40px">
-			<div class="browser safari"></div>
-			<div class="browser chrome"></div>
-			<div class="browser android"></div>
-			<div class="browser dolphin"></div>
-			<div class="browser moz"></div>
-			<div class="browser o"></div>
-		</div>
+    		</li>
+    	</ul>		
+	</div></section>	
+	
+
+	<section class="slide"><div>
+		<h3>Pointer Events</h3>
+		<img src="images/pointer.png" alt="Micorsoft Pointer event diagram" align="right" style="z-index:-1;margin-right:-75px;margin-top:10px">
 		
-		<div id="pointerEvents" class="browser-container small" style="position:relative; top:-360px;left:-388px;">
+		<p style="margin-top:2em">For <em>any</em> input devices: touch, mouse, pen...</p>
+		<pre><code class="language-javascript">
+if (navigator.pointerEnabled) {
+    el.addEventListener('pointerdown', 
+                         startHandler, false);
+    el.addEventListener('pointermove', ...);
+    el.addEventListener('pointerup', ...);
+}
+		</code></pre>
+		
+		<footer>
+			Microsoft has submitted the alternative way of the touch event standard proposal to W3C.
+		</footer>
+	</div></section>
+	
+			
+	<section class="slide"><div>
+		<h3>Pointer Events</h3>
+		<p style="margin-top:2em">Only IE10 supports so far...</p>
+		<pre><code class="language-javascript">
+if (navigator.msPointerEnabled) {
+    el.addEventListener('MSPointerDown', startHandler, false);
+    el.addEventListener('MSPointerMove', moveHandler, false);
+    el.addEventListener('MSPointerUp', endHandler, false);
+}
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-30px">
 			<div class="browser ie"><span>10</span></div>
 		</div>
-    		
-    	<p class="source"><a href="http://dev.w3.org/csswg/mediaqueries4/" target="_blank">Media Queries Level 4 Draft</a></p>
-    </article>
+	</div></section>		
 
-    <!-- Slide -->
-	<article class="fill">
-		<img src="images/accelerometer.png"/>
-    	<h3>Device APIs: Interact with Hardware</h3>
-    </article>
+		
+	<section class="slide cover dark"><div>
+		<h2>Device APIs:<br>Interact with Hardware</h2>
+		<img src="images/accelerometer.png" style="width:1024px;height:640px;" alt="gyroscope">
+	</div></section>			
 
 
-	<!-- Slide -->
-	<article>
-    	<h3>URL Schemes</h3>
-    	<p>Old-school from XHTML-MP by OMA and still rocks</p>
-    	<h4>Initiate a phone call</h4>
-		<pre>
-&lt;a href="tel:+14155557777"&gt;Order Pizza Now!&lt;/a&gt;</pre>
 		
-		<h4>Initiate texting</h4>
-		<pre>
-&lt;a href="sms:+14155558888?body=Hello"&gt;Text me!&lt;/a&gt;</pre>
 		
-    </article>
-         
-    
-	<!-- Slide -->
-	<article>
-        <h3>
-          Geolocation
-        </h3>
-        
-        <ol>
-			<li>GPS satellites</li>
-			<li>GSM/CDMA cell IDs</li>
-			<li>A-GPS</li>
-			<li>Wi-Fi base stations</li>
-		</ol>
+	<section class="slide" style="background:#fff url(images/asha300.jpg) 700px 120px no-repeat">
+	<div>
+		<h2>Making a Call (or SMS)</h2>
+		<pre style=""><code class="language-markup">		
+&lt;a href="tel:+14155557777"&gt;
+  Order Pizza Now!
+&lt;/a&gt;
+
+&lt;a href="sms:+14155558888?body=Hello"&gt;
+  Text me!
+&lt;/a&gt;
+		</code></pre>
 		
-		<div class="browser-container med" style="margin:0 0 0 -100px">	
-			<div class="browser safari"><span></span></div>
-			<div class="browser android"><span></span></div>
-			<div class="browser chrome"><span></span></div>
-			<div class="browser dolphin"><span></span></div>
-			<div class="browser moz"><span></span></div>
-			<div class="browser o"><span></span></div>
-			<div class="browser ie"><span>9.0</span></div>
-		</div>
-		
-		<pre>
+		<footer>
+			URL Schemes - Old-school from XHTML-MP by OMA and still rocks.
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide" style="background:#fff url(images/kanazawa.jpg) right top no-repeat">
+	<div>
+		<h2>Locating</h2>
+		<pre style="margin-top: -20px"><code class="language-javascript">		
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(success, fail);
 }
+
 function success(position) {
-  alert('Latitude: ' + position.coords.latitude + 
-      ', Longitude: ' + position.coords.longitude);
+  alert('Latitude: '+ position.coords.latitude + 
+  ', Longitude: '+ position.coords.longitude);
 }
-</pre>
+		</code></pre>
 		
-		<p class="source">W3C Geolocation Working Group</p>
-
-      </article>
-
-      <!-- Slide -->
-	<article>
-    	<h3>Access Permission</h3>
-    	<div style="text-align:center">
+		<footer>
+			Hardware has more than a few ways to detect your location:
+			- GPS satellites
+			- GSM/CDMA cell IDs
+			- A-GPS
+			- Wi-Fi base stations
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h3>Access Permission</h3>
+    	<div style="text-align:center; margin-top:5px;">
     	<img src="images/veer-geolocation.png" width="240"/> 
     	<img src="images/n9-geo.png" width="240"/>
     	<img src="images/webrtc-perm.png" width="240"/> 
     	</div>
-    </article>  
-
-
-	<!-- Slide -->
-	<article>
-    	<h3>Device Orientation Events</h3>
-    	<p>Gyroscope, Accelerometer, Compass</p>
-    	<div style="text-align:center;margin-left:-30px"><img src="images/device-alpha-beta-gamma.png"></div>
-    	
-    	<p>Events: <code>deviceorientation</code>, <code>devicemotion</code>, <code>compassneedscalibration</code></p>
-    	
-    	<div class="browser-container" style="margin: 40px -40px;">
-			<div class="browser safari"><span>4.2</span></div>
-			<div class="browser android"><span>3.0</span></div>
-			<div class="browser chrome"><span>7.0</span></div>
-			<div class="browser dolphin"><span>β</span></div>
-			<div class="browser moz"><span>3.6</span></div>
-			<div class="browser o"><span>12</span></div>
-		</div>
+	</div></section>	
+	
+	
+	<section class="slide"><div>
+		<h2>Device Orientation Events</h2>
 		
-    	<p class="source">
-    		<a href="http://www.w3.org/TR/orientation-event/">W3C Device Orientation</a> | 
+		<p>DOM events for obtaining information about the physical orientation and movement of the hosting device</p>
+		<ul style="margin-top:2em">
+		<li>Gyroscope</li>
+		<li>Accelerometer</li>
+		<li>Compass</li>
+		</ul>
+		
+		<footer>
+		The information provided by the events is not raw sensor data, but rather high-level data which is agnostic to the underlying source of information.
+		Common sources of information include gyroscopes, compasses and accelerometers.
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>Device Orientation Events</h2>
+		<div style="text-align:center;margin-left:-30px"><img src="images/device-alpha-beta-gamma.png"></div>
+    	
+    	<p>Events:<br><code>deviceorientation</code>, <code>devicemotion</code>, <code>compassneedscalibration</code></p>
+    	<p class="credit">
     		<a href="http://dev.opera.com/articles/view/w3c-device-orientation-api">Dev Opera (Diagram)</a>    	
     	</p>
-    </article> 
+    	
+    	<footer>
+    	- deviceorientation, supplies the physical orientation of the device, expressed as a series of rotations from a local coordinate frame.
+    	- devicemotion, supplies the acceleration of the device, expressed in Cartesian coordinates in a coordinate frame defined in the device.
+    	- compassneedscalibration DOM event, which is used to inform Web sites that a compass being used to provide data for one of the above events is in need of calibration.
+    	</footer>
+	</div></section>			
 
-    
-   	<!-- Slide -->
-	<article>
-    	<h3>DeviceOrientation Event Demo</h3>
-    	
-    	<!-- <img src="images/orientation-api.png" alt="Photo: demo on Firefox on Galaxy Nexus"> -->
-    	<iframe seamless src="http://player.vimeo.com/video/51157652?portrait=0&amp;color=ff0179" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="margin-top:-20px"></iframe>
-    	
-    	<p style="font-size:.75em;margin-top:-10px">Try it on supported browsers: http://goo.gl/5Cj4d</p>
-    	<img src="images/qr-8ball.png" style="width:150px; position:relative;left:668px;top:-145px;z-index:10">
-    </article>   
-    
-    
-    <!-- Slide -->
-	<article>
-    	<h3>Media Capture and Streams API</h3>
-    	<p>WebRTC "Web Real Time Communications"</p>
-    	
-    	<div class="browser-container">
-			<div class="browser o"><span>12</span></div></div>
-		</div>
-    	<pre>navigator.getUserMedia({video: true, audio: true}, 
-    	                            onSuccess, onError);</pre>
-    	
-    	<div class="browser-container">
-			<div class="browser chrome" style="opacity:.5"><span>21</span></div>
-			<div class="browser moz"><span>15</span></div>
-		</div>
-    	<pre>
-// with prefix. Chrome desktop only. Moz mobile only.
-navigator.webkitGetUserMedia(...);
-navigator.mozGetUserMedia(...);</pre>
-    	
-    	<p style="margin-top:1em;font-size:.75em">The super silly demo again: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web / Make Me Bob!</a><p>
-    	
-    	<p class="source">Web Real-Time Communications Working Group | 
-	    	<a href="http://www.w3.org/TR/webrtc/">Web RTC</a>
-    	</p>
-    </article>  
-    
-	<!-- Slide -->
-	<article>
-    	<h3>HTML5 Media Capture</h3>
-    	
-    	<div class="browser-container">
-			<div class="browser chrome"><span>18</span></div>
-			<div class="browser android"><span>3.0*</span></div>
-			<div class="browser safari"><span>6.0*</span></div>
-			<div class="browser moz"><span>10*</span></div></div>
-		</div>
-    	<pre>
-    	
-&lt;input type="file" accept="image/*" capture="camera"&gt;
-</pre>
+		
+	<section class="slide"><div>
 
-		<table>
-		<tr>
-		<th>Keywords</th><th>State</th><th>Capture control type</th>
-		</tr>
-		<tr>
-		<td><code>camera</code></td><td>Image Capture</td><td>A camera</td>
-		</tr>
+    	<iframe seamless src="http://player.vimeo.com/video/51157652?portrait=0&amp;color=ff0179" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="margin-top:-30px;width:800px;height:480px"></iframe>
+    	
+    	<p style="font-size:.75em;text-align:right;">Try it on supported browsers: http://goo.gl/5Cj4d</p>
+	</div></section>			
+
 		
-		<tr class="dim">
-		<td><code>camcorder</code></td><td>Video Capture</td><td>A video camera</td>
-		</tr>
+	<section class="slide"><div>
+		<h2>Media Capture and Streams API</h2>
+		<p>WebRTC "Web Real Time Communications"</p>
 		
-		<tr class="dim">
-		<td><code>microphone</code></td><td>Sound Capture</td><td>A sound recorder</td>
-		</tr>
+		<pre style="margin-top: -20px"><code class="language-javascript">
+var gum = navigator.getUserMedia ||
+    navigator.mozGetUserMedia||navigator.webkitGetUserMedia;
+          
+navigator.getUserMedia({video: true, audio: true}, 
+    	                     successCallback, errorCallback);
+		</code></pre>
 		
-		<tr class="dim">
-		<td><code>filesystem</code></td><td>File Upload</td><td>A generic file picker</td>
-		</tr>
-		<tr>
-		</table>
+		<div class="browser-container" style="">
+			<div class="browser o"><span>10</span></div>
+			<div class="browser chrome dim"><span>21*</span></div>
+			<div class="browser moz dim"><span>17*</span></div>
+    	</div>
+    	
+    	<p style="font-size:.75em;text-align:right">The super silly demo again: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web / Make Me Bob!</a><p>
+	</div></section>
 	
-	<p class="source">
-		<a href="http://www.w3.org/TR/2011/WD-FileAPI-20111020/">W3C: File API</a> | 
-		<a href="http://www.w3.org/TR/html-media-capture">HTML Media Capture</a></p>
-    </article>    
-                    
-    
-       	<!-- Slide -->
-	<article>
-    	<h3>HTML Media Capture Demo</h3>
-    	
-    	<!-- <img src="images/orientation-api.png" alt="Photo: demo on Firefox on Galaxy Nexus"> -->
-    	<iframe seamless src="http://player.vimeo.com/video/51243096?portrait=1&amp;color=ff0179" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="margin-top:-10px"></iframe>
-    	
-    </article> 
-  
- 
-	<!-- Slide -->
-	<article>
-    	<h3>Battery Status API</h3>
-    	<div class="browser-container">
-			<!-- <div class="browser chrome"><span>20</span></div> -->
+		
+	<section class="slide"><div>
+		<h2>HTML Media Capture</h2>
+
+		<pre><code class="language-markup">
+&lt;!-- Current implementation (if supported) --&gt;
+&lt;input type="file" accept="image/*" capture="camera"&gt;
+
+&lt;!-- Newly proposed specification --&gt;
+&lt;input type="file" accept="image/*" capture&gt;
+		</code>
+		</pre>
+		
+		<div class="browser-container">
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser android"><span>3</span></div>
+			<div class="browser safari"><span>6*</span></div>
+			<div class="browser moz"><span>10*</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser ie dim"><span>10*</span></div>
+		</div>
+		
+		<footer>
+HTML Media Capture delegates the native camera.
+The native camera returns the pictures as a File object (from File API). 
+
+The values of the attribute can be:
+ -images/* , video/*, or audio/*.
+			
+The capture attribute is a boolean attribute (in the new spec)
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<video controls style="margin-top:-20px; width:800px">
+			<source src="media/coremobcamera.mp4" />
+			Mp4 video is not supported. Download the video <a href="movie.webm">http://sdrv.ms/UF55gM</a>.
+		</video>
+		
+		<footer>
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var battery = navigator.battery || navigator.mozBattery;
+
+battery.addEventListener('chargingchange', updateStatus);  
+
+function updateStatus() {  
+  alert('Battery status: ' + battery.level * 100 + ' %');  
+  if (battery.charging) {
+    alert('Battery is charging...');   
+  }
+}  
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-80px">
 			<div class="browser moz"><span>10*</span></div>
 			<div class="browser moz"><span>16</span></div>
 		</div>
-    	<pre>
-var battery = navigator.battery || 
-          navigator.mozBattery* || navigator.webkitBattery; </pre>
-<pre>function updateBatteryStatus() {  
-  alert("Battery status: " + battery.level * 100 + " %");  
-  if (battery.charging) {
-    alert("Battery is charging");   
-  }
-}  
-battery.addEventListener("chargingchange", 
-                                  updateBatteryStatus);  
-</pre>
-    
-    </article> 
-   
-   	<!-- Slide -->
-	<article>
-    	<h3>Battery Status API</h3>
-    	
-    	<img src="images/battery-api.png" alt="Photo: demo on Firefox on Galaxy Nexus">
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<div style="text-align:center">
+			<img src="images/battery-api.png" alt="Photo: demo on Firefox on Galaxy Nexus" style="height:400px">
+		</div>
     	<p style="font-size:.75em">Try it on Firefox Mobile: http://goo.gl/V1n6h</p>
-    	<img src="images/qr-battery.png" style="width:175px;position:absolute;bottom:0;right:0"> 
-    </article>  
- 
-	<!-- Slide -->
-	<article>
-    	<h3>Vibration API</h3>
-    	<pre>navigator.vibrate(1000); // vibrate for 1sec</pre>
-    	<pre>
-navigator.vibrate([1000, 500, 2000]);
+	</div></section>
+	
+
+	<section class="slide"><div>
+		<h2>Vibration API</h2>
+		
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var vibrate = navigator.vibrate || navigator.mozVibrate;
+
+vibrate(1000); // vibrate for 1sec
+
+vibrate([1000, 500, 2000]);
 // vibrates for 1sec, still for 0.5 seconds, 
 // and vibrates again for 2sec
-</pre>
-
-		<div class="browser-container">
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;">
 			<div class="browser moz"><span>14</span></div>
 		</div>
-		<pre>navigator.mozVibrate(...);</pre>
-		
-    	<p style="font-size:.75em">Try it on Firefox Mobile: http://goo.gl/EWPmL</p>
-    	<img src="images/qr-vibration.png" style="width:175px;position:absolute;bottom:0;right:0"> 
-    </article> 
-       
-        
-    <!-- Slide -->
-	<article>
-    	<h3>Ambient Light Events</h3>
+		<p style="font-size:.75em">Try it on Firefox Mobile: http://goo.gl/EWPmL</p>
+	</div></section>			
 
-    	<div class="browser-container">
-			<div class="browser moz"><span>15</span></div>
-		</div>
-    	<pre>
-window.addEventListener('devicelight', function(event) {
-  alert(event.value);
-});
-</pre>
 		
-		<table>
+	<section class="slide"><div>
+		<h2>Ambient Light Events</h2>
+
+		<pre style="margin-top:-30px"><code class="language-javascript">
+window.addEventListener('devicelight', function(e) {
+   alert(e.value);
+});		
+		</code></pre>		
+		
+		<table style="margin-top:-10px">
 		<tr>
 		<th>Sensor Value</th><th>Lightning Condition</th><th>My Observation on Galaxy Nexus</th>
 		</tr>
@@ -875,160 +788,93 @@ window.addEventListener('devicelight', function(event) {
 		<td>400-1000 lux</td><td>Normal</td><td>By window. Outdoor (Cloudy)</td>
 		</tr>
 		<tr>
-		<td>&gt; 1000 lux</td><td>Light</td><td>Outdoor Daylight? <br/><span style="font-size:.75em">Can't test in foggy SF :-(</span></td>
+		<td>&gt; 1000 lux</td><td>Light</td><td>Outdoor Daylight? <br/><span style="font-size:.75em">Can't test in foggy SF :-p</span></td>
 		</tr>
 		</table>
 		
-		<p class="source"><a href="http://dvcs.w3.org/hg/dap/raw-file/tip/light/Overview.html">W3C: Ambient Light Events</a></p>
-		<!-- http://www.nofluffjuststuff.com/blog/tom_valletta/2012/09/ambient_light_api?utm_source=blogitem&utm_medium=rss&utm_campaign=blogrss -->
-	</article>
+		<div class="browser-container" style="text-align:right;margin-top:-10px">
+			<div class="browser moz"><span>15</span></div>
+		</div>
+	</div></section>
 	
-	
-	<!-- Slide -->
-	<article>
-    	<h3>Ambient Light Events</h3>
-    	
-    	<iframe seamless src="http://player.vimeo.com/video/51322638?portrait=1&amp;color=ff0179" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="margin-top:-10px"></iframe>
-    	<p style="font-size:.75em;margin-top:-7px">Try it on Firefox Mobile: http://goo.gl/WynKX</p>
-    </article> 
-           
-	      
-    <!-- Slide -->
-	<article>
-    	<h3>Contacts/Calendar APIs &amp; Web Intents</h3>
-    	
-    	<pre>
-var intent = new Intent({ 
-               action: "http://webintents.org/pick",
-               type    "http://w3.org/type/contact",
-               extras: {fields: ["displayName", "emails"]}
-});
-navigator.startActivity(intent, onSuccess, onFail);
-</pre>
 
-    </article> 
-    
- 	<!-- Slide -->
-	<article>
-    	<h3>More Device APIs and related APIs</h3>
-    	<ul>
-    		<li>Proximity Events (was Sensor API)</li>
+	<section class="slide"><div>
+		<h2>Light Sensor Demo</h2>
+		
+		<iframe seamless src="http://player.vimeo.com/video/51322638?portrait=1&amp;color=ff0179" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen  style="margin-top:-30px;width:800px;height:480px"></iframe>
+    	<p style="font-size:.75em;margin-top:-7px">Try it on Firefox Mobile: http://goo.gl/WynKX</p>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Proximity Events</h2>
+		
+		<p>The distance of a nearby physical object using the proximity sensor of a device.</p>
+				
+		<pre style=""><code class="language-javascript">
+window.addEventListener('deviceproximity', function(e) {
+   alert(e.value);
+});		
+		</code></pre>	
+		
+
+	</div></section>
+
+		
+	<section class="slide"><div>
+		<h2>More APIs and related APIs</h2>
+		
+		<ul>
     		<li>The Network Information API</li>
     		<li>Network Service Discovery</li>
     		<li>Clipboard API</li>
     		<li>Fullscreen API</li>
     		<li>Gamepad API</li>
+    		<li>Calendar and Contacts APIs</li>
     		<li>...</li>
     	</ul>
-    </article> 
-    
-          
-    <!-- Slide -->
-	<article>
-    	<h3>W3C Core Mobile Web Platform CG</h3>
-    	
-    	<div style="text-align:center">
-    		<img src="images/logo-w3c.svg" class="company-logo" style="height:100px"><br>
-    		<img src="images/logo-facebook.png" class="company-logo">
-    		<img src="images/logo-nokia.svg" class="company-logo">
-    		<img src="images/logo-verizon.svg" class="company-logo">
-    		<img src="images/logo-att.svg" class="company-logo">
-    		<img src="images/logo-francetelecom.svg" class="company-logo">
-    		<img src="images/logo-samsung.svg" class="company-logo">
-    		<img src="images/logo-mozilla.png" class="company-logo">
-    		<img src="images/logo-opera.png" class="company-logo">
-    		<img src="images/logo-rim.png" class="company-logo" style="height:40px">
-    		<img src="images/logo-ft.png" class="company-logo">
-    		<img src="images/logo-hp.svg" class="company-logo">
-    		<img src="images/logo-docomo.svg" class="company-logo" style="height:30px">
-    		<img src="images/logo-kddi.svg" class="company-logo" style="height:30px">
-    		<img src="images/logo-lg.svg" class="company-logo" style="height:30px">
-    		<img src="images/logo-qcom.svg" class="company-logo"  style="height:70px"> etc.
-    	</div>
- 	</ul>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Closing the Gap with Native</h2>
+		
+		<ul>
+			<li>Better UI performance (e.g. Scrolling)</li>
+    		<li>More hardware integrations (e.g. NFC)</li>
+    		<li>App discoverability</li>
+    		<li>Web Payment &amp; In-App Payment</li>
+    		<li>...</li>
     	</ul>
-    </article> 
-    
- 	<!-- Slide -->
-	<article>
-    	<h3>Ringmark - http://rng.io</h3>
-    	<div class="browser-container med full" style="margin-left:-290px;margin-top:-30px">
-			<div class="browser dolphin"><span>β</span></div>
-		</div>
-    	<div style="margin: -10px -50px 0">
-    	<img src="images/ringmark-chrome.png">
-    	<img src="images/ringmark-dolphin.png">
-    	<img src="images/ringmark-iOS.jpg" style="width:280px;">
-    	</div>
-    </article> 
-    
-          
-    <!-- Slide -->
-	<article>
-    	<h3>W3C Core Mobile Web Platform CG</h3>
-    	
-    	<p>Mobile Web App Profile</p>
-    	<div style="text-align:center;margin-top:1em">
-    		<img src="images/mobile_web_app_profile.png">
-    	</div>
-    	<p>Google Docs: http://goo.gl/Jdckj</p>
- 	</ul>
-    	</ul>
-    </article> 
-    
-    <!-- Slide -->
-	<article>
-    	<h3>webplatform.org</h3>
-    	
-    	<div style="text-align:center;margin-top:1em;">
-    		<img src="images/logo-webplatform.png" style="width:500px">
-    	</div>
-    	
- 	</ul>
-    	</ul>
-    	<p class="source"><a href="http://webplatform.org">webplatform.org</a></p>
-    </article> 
-    
-               
-	<!-- Slide -->
-	<article>
+	</div></section>
+
+			
+
+	
+	<section class="slide"><div>
 		<h2>Thank you!</h2>
-		
-
+		<img src="images/tomomi.png" align="right">
 		<p>Tomomi Imura</p>
-		<p>http://girliemac.com</p>
-		<p>@girlie_mac</p>
-		
-		<figure style="position:absolute;top:30px;right:15px">
-			<img src="images/need-more-devices.jpeg" width="450" align="right"/>
-			<figcaption style="font-size:.75em;text-align:center">Milo: 1996 - July 24, 2012</figcaption>
-		</figure>
-
-    </article>
-
-        
-    <!-- Slide -->
-	<article>
-    	<h3>Notes</h3>
-    	<ul>
-    		<li>The Browser Compatibility icons I used for the slids represent mainly for mobile phones/tablet. e.g. Chrome icon indicates Chrome on Android, and Safari means Mobile Safari</li>
-    		<li>The compatibility icons do not include the "Pseudo-browsers" e.g. Chrome for iOS, the earlier version of Dolphin sans Dolphin Engine, etc.</li>
-    		
-    	</ul>
-    </article>
-    
-        <!-- Slide -->
-    <article>
-    	<h3>Photo Credits</h3>
-    	<ul style="font-size:.75em">
-    		<li>Background Graphics: http://www.patterncooler.com/</li>
-    		<li>Coffee cups: http://cutie-kitty-pie.deviantart.com/art/Starbucks-Coffee-Sizes-129806135</li>
-    		<li>Wanna Ride: http://chicquero.com/2011/11/14/wanna-a-ride/</li>
-    	</ul>
-    </article>
-    
-    </section>
-    
-
-  </body>
+		<ul style="margin-top:2em">
+			<li><a href="http://girliemac.com">girliemac.com</a></li>
+			<li><a href="http://twitter.com/girlie_mac">twitter.com/girlie_mac</a></li>
+			<li><a href="http://github.com/girliemac">github.com/girliemac</a></li>
+		</ul>
+	</div></section>
+	
+	<p class="badge"><a href="https://github.com/girliemac/presentation-slides/">Fork me on Github</a></p>
+	
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<script src="../prism/prism.js"></script>
+	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
 </html>
+
+
+

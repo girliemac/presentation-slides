@@ -1,0 +1,690 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Responsive Web Design and Web Standard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="screen-custom.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#Picture h2 {
+			color:#FFF;
+			}
+	</style>
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>Responsive Web Design and Web Standard</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	<section class="slide cover"><div>
+		<h2>Responsive Web Design<br>and Web Standard</h2>
+		<h4>Tomomi Imura</h4>
+		<img src="images/html5-lumia.png" style="position:relative;left:290px;margin-top:-90px;" alt="Lumia phone">
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<!-- Hello, my name is CSS sticker -->
+		<div class="vcard" style="margin: 120px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
+		    <div> 
+		        <p>Hello</p> 
+		        <p>my name is</p> 
+		    </div> 
+		    <div class="fn"> 
+		        <p class="given-name">Tomomi</p> 
+		        <address class="nickname">Nokia Silicon Valley</address> 
+		    </div>
+		</div>
+		<!-- sticker end -->
+		<ul class="animList" style="position:relative; left: 180px;">
+			<li>Developer Relations in DX</li>
+			<li>Mobile Front-end, UI/UX Developer</li>
+			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
+			<li>Worked for N-Gage in 2005-06!</li>
+		</ul>
+
+	</div></section>
+
+		
+	<section class="slide"><div>
+		<h2>Desktop to Mobile</h2>
+		<ol class="large-list" style="margin-top: 3em">
+			<li>Do Nothing</li>
+			<li>Adaptive Design</li>
+			<li>Separated Mobile Experience</li>
+		</ol>		
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Adoptive Design &amp; RWD</h2>
+		<div align="center">
+		<img src="images/adaptive.png" alt="adaptive design">
+		</div>		
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Adaptive Design</h2>
+		<ol class="build">
+			<li>Progressive Enhancement
+				<ul>
+					<li>Enhancing Experiences based on browser capabilities</li> 
+					<li>Graceful Degradation - Fallbacks</li>
+				</ul>
+			</li>
+			<li style="margin-top:.75em">Responsive Design
+				<ul>
+					<li>Fluid Layout</li>
+					<li>Flexible Images</li>
+					<li>Media Queries</li>
+				</ul>
+			</li>
+		</ol>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Responsive Web Design</h2>
+		<div style="margin-left:-10px">
+			<img src="images/mediaqueri-es.png">
+		</div>
+		<p class="credit"><a href="http://mediaqueri.es/" target="_blank">mediaqueri.es</a><p>		
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<div style="text-align:center">
+			<img src="images/rwd.png">
+		</div>
+		<p style="font-size:.75em; margin-top:2em;text-align:right">A super silly example I wrote: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web</a><p>		
+	</div></section>
+	
+
+
+	<section class="slide"><div>
+		<h2>Why Should You Consider RWD?</h2>
+		<ul>
+			<li>One URL works across the browsers</li>
+			<ul>
+			<li>No redirect</li>
+			<li>No User-Agent sniffing</li>
+			</ul>
+			<li>Maintainable</li>
+			<ul>
+			<li>A single content</li>
+			<li>No separate markup</li>
+			</ul>
+		</ul>
+		
+		<footer>
+		- using a single content and scale the UI to fit on any browser types also window size/orientations
+		- Maintainable - a single markup/content to manage
+		</footer>		
+	</div></section>
+	
+	
+	<section class="slide cover"><div>
+		<h2 style="text-align:right">@media</h2>
+		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;;margin-top:15px">
+		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+	</div></section>
+		
+	
+	<section class="slide"><div>
+		<h2>CSS2 Media-Types</h2>
+		<pre style="margin-top: -20px"><code class="language-css">		
+@media handheld {
+  /* Some mobile-specific CSS here */
+}
+		</code></pre>
+		
+		<p>Only supported by: </p>
+		<ul class="small">
+			<li>Opera Mini
+			<li>OpenWave
+			<li>Obigo
+			<li>PIE (partial)
+		</ul>
+
+		<li class="next">
+			<img src="images/fu-android.png" style="position:relative; top:-240px; left:500px;">
+		</li>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>CSS3: Media-Queries</h2>
+		
+		<p>Controlling the presentation without modifying the content itself.</p>
+	
+		<div style="text-align:center"><img style="margin-top:0" src="images/screens.png"></div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">Separate styles by the width of the target viewport</p>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen
+   and (min-width : 768px)
+   and (max-width : 1024px) {
+  
+  /* Styles */
+}
+</code></pre>
+		
+		<footer>- the width of the target viewport, which is a browser display area</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">by device-width, the width of the device's screen size</p>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen 
+   and (min-device-width : 320px) 
+   and (max-device-width : 480px) {
+  
+  /* Styles */
+}
+		</code></pre>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">combined with screen orientations</p>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen
+   and (min-device-width : 768px)
+   and (max-device-width : 1024px)
+   and (orientation : landscape) {
+  
+  /* Styles */
+}...
+		</code></pre>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h3>CSS3: Media-Queries</h3>
+		<p style="margin-top:2em">separate styles by device pixel ratio</p>
+		
+		<img class="centered" style="margin-top:20px" src="images/screens-ipad.png">
+	</div></section>
+	
+	
+	<section class="slide cover dark"><div>
+		<h2>High Pixel Density Displays</h2>
+		<img src="images/jobs-retina.jpg" alt="Steve Jobs" style="width:1024px;height:640px;">
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>The High DPI problem</h2>
+		
+		<div style="margin-top:-10px">
+			<img src="images/resolutions-display.png">
+		</div>
+		
+				<footer>When a browser maps one pixel to one high resolution screen pixel, text and images of the web sites made for smaller resolution displays become too small.</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h3>The High DPI problem: Solution</h3>
+		
+		<div style="text-align:center;margin-top:20px"><img src="images/retina-display.png" style="width:540px"></div>
+		
+		<footer>Automatically scale up the UI and content (fit to HVGA, for instance).</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>CSS Pixel vs. Device Pixel</h2>
+		<ul style="margin-top:50px">
+			<li style="font-size:48px;line-height:100px;">Pixel in CSS is relative</li>
+			<li style="font-size:48px;line-height:100px;">1 CSS pixel <strong>!=</strong> 1 device pixel</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Pixel Density in DOM</h2>
+		
+		<code>
+window.devicePixelRatio
+		</code>
+		
+		<table>
+		<tr>
+		<th>Device</th><th>Browser</th><th>Pixel Density</th>
+		</tr>
+		<tr>
+		<td>Nexus One</td><td>Android browser</td><td>1.5</td>
+		</tr>
+		<tr>
+		<td>Galaxy Nexus</td><td>Chrome</td><td>2.0</td>
+		</tr>
+		<tr>
+		<td>Galaxy Nexus</td><td>Opera Mobile</td><td>2.25</td>
+		</tr>
+		</table>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Media-Queries for "Retina"</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen and (min-device-pixel-ratio: 2) {
+	   /* some hi-res css */
+}
+		</code></pre>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>WTF Vendor Prefix!</h2>
+		
+		<div class="browser-container half">
+			<div class="browser chrome"><span></span></div>
+			<div class="browser android"><span></span></div>
+			<div class="browser safari"><span></span></div>
+			<div class="browser bb"><span></span></div>
+		</div>
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {...}			
+		</code></pre>
+		
+		
+		<div class="browser-container half">
+			<div class="browser moz"><span></span></div>
+		</div>
+		<pre style="margin-top: -30px"><code class="language-css">
+@media only screen and (min--moz-device-pixel-ratio: 1.5) {...}			
+		</code></pre>
+
+
+		<div class="browser-container half">
+			<div class="browser o"><span></span></div>
+		</div>		
+		<pre style="margin-top: -30px"><code class="language-css">
+@media only screen and (-o-min-device-pixel-ratio: 3/2) {...}			
+		</code></pre>
+		
+		<footer>with a zoom factor of 150% (e.g. 320px to 480px)</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Unprefix: resolution media query</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+       ...
+}		</code></pre>
+
+		<p style="margin-top:2em">Typical Screen: 96dpi (96px = 1in in CSS units)</p>
+		
+		<div class="browser-container" style="margin-top:3em">
+			<div class="browser moz"><span></span></div>
+			<div class="browser o"><span></span></div>
+			<div class="browser ie dim"><span></span></div>
+		</div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>...even easier</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media (-webkit-min-device-pixel-ratio: 2),  
+       (min-resolution: 2dppx) {
+...
+}		</code></pre>		
+
+		<div class="browser-container" style="margin-top:3em">
+			<div class="browser chrome"><span>21</span></div>
+			<div class="browser moz"><span>16</span></div>
+		</div>
+	</div></section>
+	
+	
+			
+	<section class="slide"><div>
+		<h2>CSSOM View Module</h2>
+		
+		<pre style=""><code class="language-javascript">
+var mql = window.matchMedia('(orientation:landscape)');
+if (mql.matches) {  
+  /* the current orientation is in landscape */  
+} else {
+  /* portrait */ 
+}		
+		</code></pre>
+		
+		<div class="browser-container" style="">
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser android"><span>3.0</span></div>
+			<div class="browser safari"><span>5.1</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser moz"><span>14</span></div>
+			<div class="browser ie"><span>10</span></div>
+    	</div>
+	</div></section>	
+			
+	
+	<section class="slide"><div>
+		<h2>CSS Device Adaptation</h2>
+		
+		<pre style=""><code class="language-markup">
+&lt;meta name="viewport" content="width=device-width"&gt;	
+		</code></pre>
+		
+		<div align="center"><span style="font-size:2em">&darr;</span> CSS</div>
+		
+		<pre style=""><code class="language-css">
+@viewport {
+  width: device-width;
+}
+		</code></pre>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>CSS Device Adaptation</h2>
+		
+		<pre style=""><code class="language-css">
+@-o-viewport {width: device-width}
+@-ms-viewport {width: device-width} *
+@viewport {width: device-width}
+		</code></pre>
+		
+		<div class="browser-container" style="">
+			<div class="browser o"><span>18</span></div>
+			<div class="browser ie"><span>10</span></div>
+    	</div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>@viewport with @media</h2>
+		
+		<pre style=""><code class="language-css">
+@media screen and (orientation: portrait) {
+  @-ms-viewport {
+    width: 768px;
+    height: 1024px;
+  }
+  /* CSS for portrait layout goes here */
+}
+		</code></pre>
+		
+		<footer>
+@media [media query logic here] {
+  @-ms-viewport {
+    [viewport size here]
+  }
+  [CSS for this layout combination goes here.]
+}
+		</footer>
+	</div></section>
+		
+	
+	<section class="slide"><div>
+		<h2>Media Queries Level 4</h2>
+			<ul>
+    			<li>
+    				"pointer" - accuracy of a pointing device.
+    				<ul>
+    					<li><code>none</code></li>
+    					<li><code>coarse</code> aka fat finger</li>
+    					<li><code>fine</code></li>
+    				</ul>
+    			</li> 
+    			<li>"hover"
+    				<ul>
+    					<li><code>0</code></li>
+    					<li><code>1</code></li>
+    				</ul>
+    			</li>
+    		</ul>
+	</div></section>
+	
+	
+	<section class="slide cover"><div>
+		<h2 style="text-align:right">Responsive Images</h2>
+		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;margin-top:15px">
+		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Fuzzy Images</h2>
+		<div align="center"><img src="images/responsive-image.png" style="margin-top:-15px; height: 500px"></div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Up-Res Images</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+.banner {
+    background-image: url(banner.png);
+    width: 320px; height: 160px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+       only screen and (min-resolution: 192dpi) {
+  .banner {
+      background-image: url(banner-2x.png);
+      background-size: 100%;
+  }
+}
+		</code></pre>
+		
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>SVG</h2>
+		
+		<div class="live-code">
+			<pre><code>
+&lt;img src="logo.svg" width="<input type="number" value="432" step="10" oninput="resizeSVG(this)">"&gt;
+			</code></pre>
+		</div>
+		
+		<div style="text-align:center;height:260px">
+			<img id="svgImg" src="images/HTML5_sticker.svg" width="432">
+		</div>
+		
+		<script defer>
+		function resizeSVG(el) {
+			var obj = document.getElementById('svgImg');
+			obj.width = el.value;
+		}
+		</script>
+	</div></section>			
+
+	
+	<section class="slide"><div>
+		<h2>Web Font Icons</h2>
+
+		<p style="text-align:center;margin-top:-30px">
+			<span aria-hidden="true" data-icon="&#xe003;" class="icon-36">36px</span>
+			<span aria-hidden="true" data-icon="&#xe003;" class="icon-72">72px</span>
+			<span aria-hidden="true" data-icon="&#xe003;" class="icon-108">108px</span>
+			<span aria-hidden="true" data-icon="&#xe003;" class="icon-144">144px</span> 
+			<div aria-hidden="true" data-icon="&#xe003;" class="icon-288" style="text-align:center">288px</div>
+		</p>
+		
+		<p class="credit"><a href="http://keyamoon.com/icomoon" target="_blank">IcoMoon</a></p>
+
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>Web Font Icons</h2>
+		
+		<pre style=""><code class="language-markup">&lt;span aria-hidden="true" data-icon="&amp;#xe000;"&gt;fork me&lt;/span&gt;	
+		</code></pre>
+		<pre style="margin-top:-30px"><code class="language-css">
+@font-face {
+	font-family: 'icons';
+	src: url('fonts/icons.woff') format('woff');
+}
+[data-icon]::before {
+	font-family: 'icons';
+	content: attr(data-icon);
+	font-size: 72px;
+}		
+		</code></pre>
+		
+		<footer>
+			data-* attributes are attributes for private use. We can make up any data-* attribute for any private use.		
+			For icons, I am using Unicode Private Use Area (PUA) range.
+		</footer>
+	</div></section>
+		
+	
+	<section class="slide"><div>
+		<h2>Responsive &lt;img&gt;?</h2>
+		<p style="margin-top:2.5em;font-size:48px">OH NOES! <span style="color:#f18">&lt;img&gt;</span> was not made for the responsive design!</p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Proposal: Picture Element</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-markup">
+&lt;picture width="500" height="500"&gt;
+   &lt;source media="(min-width: 45em)" src="large.jpg"&gt;
+   &lt;source media="(min-width: 18em)" src="med.jpg"&gt;
+   &lt;source src="small.jpg"&gt;
+   &lt;img src="fallback.jpg"&gt;
+   &lt;p&gt;Accessible text&lt;/p&gt;
+&lt;/picture&gt;
+		</code></pre>
+		
+		<footer>
+		The `picture` element markup pattern was proposed by the Responsive Images Community Group.
+		By providing a means of declaring multiple sources, authors can use media queries to control which version of an image is displayed and under what conditions.
+		</footer>
+	</div></section>			
+
+		
+	
+	<section class="slide cover"><div>
+		<h2 style="text-align:right">Fluid Layout</h2>
+		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;margin-top:15px">
+		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Then</h2>
+			<ul>
+				<li>The CSS "Holy Grail" Column Liquid Layout
+					<ul>
+						<li>Float</li>
+						<li>Negative margins</li>
+						<li>endless pains</li>
+					</ul>
+				</li>
+				<li>UI Frameworks for Grid Layout
+					<ul>
+						<li>YUI</li>
+						<li>jQuery Masonry</li>
+					</ul>
+				</li>
+			</ul>
+	</div></section>
+	
+		<section class="slide"><div>
+		<h2>Now and Future: CSS3</h2>
+			<ul>
+				<li>Flexible Box Layout ("FlexBox")</li>
+				<li>Grid Layout</li>
+				<li>Exclusions and Shapes (Magazine layout)
+			</ul>
+	</div></section>
+			
+	
+	<section class="slide cover"><div>
+		<h2 style="text-align:right">Finally...</h2>
+		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;margin-top:15px">
+		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Fun Experiment</h2>
+		<p><a href="http://webdesign.maratz.com/lab/responsivetypography/" target="_blank">Responsive Typography</a> by Marko Dugonjić</p>
+		
+		<footer>
+		using face detection to calculates the proximity a user is from the screen, and then adjusts font size accordingly.
+		</footer>
+	</div></section>
+		
+		
+	<section class="slide" style="background:#fff url(images/alain-delorme-chicquero8.jpg) 640px 0px no-repeat"><div>
+		<h2 style="text-shadow: 2px 3px 2px #fff">Think twice before going RWD</h2>
+		
+		<ul style="text-shadow: 1px 2px 2px #fff">
+	    	<li>Heavy resource loading
+	    		<ul>
+	    			<li>Extra http requests</li>
+	    			<li>Large images</li>
+	    			<li>Image resizing performance</li>
+	    			<li>Data transfer can be costly</li>
+	    			<li>Battery consumption</li>
+	    		</ul>
+	    	</li>
+	    	<li>Don't try to impress developers,<div style="margin-left:220px">but think about users</siv>
+    	</ul>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Thank you!</h2>
+		<img src="images/tomomi.png" align="right" style="width:280px;margin-top:30px;margin-right:-30px">
+		<p>Tomomi Imura</p>
+		<ul style="margin-top:2em">
+			<li><a href="http://twitter.com/girlie_mac" target="_blank">@girlie_mac</a></li>
+			<li><a href="http://girliemac.com" target="_blank">girliemac.com</a></li>
+			<li><a href="http://www.developer.nokia.com/Blogs/Code/author/girlie_mac/" target="_blank">developer.nokia.com/blogs/code</a></li>
+			<li><a href="http://github.com/girliemac" target="_blank">github.com/girliemac</a></li>
+		</ul>
+	</div></section>
+	
+	<p class="badge"><a href="https://github.com/girliemac/presentation-slides/">Fork me on Github</a></p>
+	
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<script src="../prism/prism.js"></script>
+	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
+
+
+
