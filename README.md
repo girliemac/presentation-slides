@@ -5,7 +5,7 @@ My Presentation Slide Decks
 
 ### Mobile <3 JavaScript: Hardware Access & Device APIs
 
-http://girliemac.github.com/presentation-slides/html5-mobile-usecases
+http://girliemac.github.com/presentation-slides/html5-mobile-approach/deviceAPIs.html
 
 - JS Conf 2013
 
