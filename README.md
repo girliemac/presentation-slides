@@ -1,14 +1,20 @@
-My Presentation slides
+My Presentation Slide Decks
 ===================
 
 - Use arrow keys / spacebar to navigate
+
+### Mobile <3 JavaScript: Hardware Access & Device APIs
+
+http://girliemac.github.com/presentation-slides/html5-mobile-usecases
+
+- JS Conf 2013
 
 ### HTML5 Mobile Real-life Use cases
 
 http://girliemac.github.com/presentation-slides/html5-mobile-usecases
 
-- W3Conf (Video: http://youtu.be/3Afi-v-m_Gc)
-
+- W3Conf 2013 (Video: http://youtu.be/3Afi-v-m_Gc)
+- HTML5 Dev Conf 2013
 
 ### HTML5 Mobile Approaches
 
