@@ -29,6 +29,14 @@ body {
 	line-height: 1.2em;
 }
 
+.slide.cover h3 {
+	color: #f18;
+	margin-left: -50px;
+	margin-top: -20px;
+	font-size: 59px;
+	line-height: 1.2em;
+}
+
 .slide.cover.dark h2 {
 	color: #fff;
 	text-shadow: 3px 3px 8px black;
@@ -54,7 +62,7 @@ body {
 	margin:0 0 37px;
 }
 
-.slide h3 {
+.slide:not(.cover) h3 {
 	color: #fff;
 	background: #26B8E0;
 	font-size: 40px;
@@ -107,7 +115,7 @@ body {
 	text-indent: -1em;
 }
 
-.slide ol.small li, .slide ul.small li {
+.slide ol.small li, .slide ul.small li, .slide ul.small li span, .slide ol.small li span {
 	font-size: 25px;
 	text-indent: 0;
 }
@@ -142,9 +150,17 @@ th, td {
 	vertical-align: top;
 }
 
+td.small {
+	font-size: .5em;
+}
+
 .center-large {
 	font-size: 68px;
 	padding: 180px 0;
+}
+
+.pink {
+	color: #f18;
 }
 
 /* brower support icons */
@@ -186,6 +202,10 @@ th, td {
 }
 .browser.dolphin {
 	background-position: -667px 0;
+	width: 88px;
+}
+.browser.tizen {
+	background-position: -764px 0;
 	width: 88px;
 }
 .browser.dim {
@@ -299,12 +319,16 @@ th, td {
 	-webkit-font-smoothing: antialiased;
 
 	font-size: 80px;
-/*
+
 	padding-right: 0.5em;
 	position: relative;
 	top: 18px;
 	left: 24px;
-*/
+
+}
+.github {
+	font-size: 48px;
+	padding: 180px 0;
 }
 
 /* Live Code - content editable */

@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>HTML5 Mobile: Hardware Access and Device APIs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="screen-custom.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#Picture h2 {
+			color:#FFF;
+		}
+		p {font-size: 28px;}
+	</style>
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>HTML5 Mobile: Mobile Loves JS</h1>
+		<h2>Hardware Access and Device APIs</h2>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	<section class="slide cover" style="background:#fff;"><div>
+		<h2>Mobile &hearts; JavaScript</h2>
+		<h3>Hardware Access &amp; Device APIs</h3>
+		<h4 style="margin-top:170px;color:#333;">Tomomi Imura</h4>
+		<p style="margin-left:-50px;color:#333;">May 29, 2013 @JS Conf</p>
+		<img src="images/bkgd-js.png" style="width:1024px;height:640px;" alt="Lumia phone">
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<!-- Hello, my name is CSS sticker -->
+		<div class="vcard" style="margin: 120px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
+		    <div> 
+		        <p>Hello</p> 
+		        <p>my name is</p> 
+		    </div> 
+		    <div class="fn"> 
+		        <p class="given-name">Tomomi</p> 
+		        <address class="nickname">@girlie_mac</address> 
+		    </div>
+		</div>
+		<!-- sticker end -->
+		<ul class="animList" style="position:relative; left: 180px;">
+			<li>Mobile Front-end, UI/UX Developer</li>
+			<li>Open Web Advocate at Nokia</li>
+			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
+			<li>HTTP Status Cats lady</li>
+		</ul>
+
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="images/403.jpg" alt="HTTP Status Cats" style="width:1024px;height:640px;">
+	</div></section>	
+	
+	
+	<section class="slide cover"><div>
+		<img src="images/js-html5.png" alt="HTML5" style="width:1024px;height:640px;">
+	</div></section>	
+	
+	
+	<section class="slide cover"><div>
+		<img src="images/bananaphone.jpg" alt="Mobile" style="width:1024px;margin-top:150px">
+	</div></section>
+	
+
+	
+
+		
+	<section class="slide" style="background:#fff url(images/asha300.jpg) 700px 120px no-repeat">
+	<div>
+		<h2>URI Schemes: Making a Call</h2>
+		<pre style=""><code class="language-markup">		
+&lt;a href="tel:+14155557777"&gt;
+  Order Pizza Now!
+&lt;/a&gt;
+
+&lt;a href="sms:+14155558888?body=O%20Hai"&gt;
+  Text me!
+&lt;/a&gt;
+
+		</code></pre>
+		
+		<footer>
+			URI Schemes - Old-school from XHTML-MP by OMA and still rocks.
+			
+			WHATWG has whitelisted bitcoin scheme recently.
+			custom url scheme like fb:// opens facebook app on iOS. - non-standard.
+		</footer>
+	</div></section>
+	
+		<section class="slide" style="background:#fff url(images/asha300.jpg) 700px 120px no-repeat">
+	<div>
+		<h2>URI Schemes: UX</h2>
+		<img src="images/uri-scheme-ie10m.png"> 
+		<img src="images/uri-scheme-chrome26.png"> 
+		<img src="images/uri-scheme-sms-chrome26.png">
+		<footer>
+			sms/mms fails on IE10
+			sms/ssm fails to insert recipients number on FF on Android
+		</footer>
+	</div></section>
+	
+	
+	
+	<section class="slide" style="background:#fff url(images/kanazawa.jpg) right top no-repeat">
+	<div>
+		<h2>Geolocation</h2>
+
+			<p>Hardware has more than a few ways to detect your location:</p>
+			
+			<ul>
+			<li>GPS satellites</li>
+			<li>GSM/CDMA cell IDs</li>
+			<li>A-GPS</li>
+			<li>Wi-Fi base stations</li>
+			</ul>
+	</div></section>
+	
+	
+	<section class="slide" style="background:#fff url(images/kanazawa.jpg) right top no-repeat">
+	<div>
+		<h2>Geolocation</h2>
+		<pre style="margin-top: -20px"><code class="language-javascript">		
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, fail);
+}
+
+function success(position) {
+  alert('Latitude: '+ position.coords.latitude + 
+  ', Longitude: '+ position.coords.longitude);
+}
+		</code></pre>
+
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h3>Access Permission</h3>
+    	<div style="text-align:center; margin-top:5px;">
+    	<img src="images/veer-geolocation.png" width="240"/> 
+    	<img src="images/n9-geo.png" width="240"/>
+    	<img src="images/webrtc-perm.png" width="240"/> 
+    	</div>
+	</div></section>	
+	
+	
+	<section class="slide"><div>
+		<h2>Device Orientation Events</h2>
+		
+		<p>DOM events for obtaining information about the physical orientation and movement of the hosting device</p>
+		<ul style="margin-top:2em">
+		<li>Gyroscope</li>
+		<li>Accelerometer</li>
+		<li>Compass</li>
+		</ul>
+		
+		<footer>
+		The information provided by the events is not raw sensor data, but rather high-level data which is agnostic to the underlying source of information.
+		Common sources of information include gyroscopes, compasses and accelerometers.
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>Device Orientation Events</h2>
+		<div style="text-align:center;margin-left:-30px"><img src="images/device-alpha-beta-gamma.png"></div>
+    	
+    	<p>Events:<br><code>deviceorientation</code>, <code>devicemotion</code>, <code>compassneedscalibration</code></p>
+    	<p class="credit">
+    		<a href="http://dev.opera.com/articles/view/w3c-device-orientation-api">Dev Opera (Diagram)</a>    	
+    	</p>
+    	
+    	<footer>
+    	The deviceorientation event is fired when new data is available from a magnetometer sensor
+    	    	
+    	- deviceorientation: supplies the physical orientation of the device.    	
+    	- devicemotion: supplies the acceleration of the device.    	
+    	- compassneedscalibration
+    	
+    	iOS5 has webkitCompassHeading property but it is not a standard.
+    	</footer>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+
+    	<iframe seamless src="http://player.vimeo.com/video/51157652?portrait=0&amp;color=ff0179" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="margin-top:-30px;width:800px;height:480px"></iframe>
+    	
+    	<!-- <p><a href="http://player.vimeo.com/video/51157652">Watch the demo video on Vemeo</a></p> -->
+    	<p style="font-size:.75em;text-align:right;">Try it on supported browsers: http://goo.gl/5Cj4d</p>
+    	<p style="font-size:.75em;text-align:right;">Also: <a href="http://github.com/404" target="_blank">github 404</a></p>
+	</div></section>			
+
+	
+	
+	<section class="slide"><div>
+
+		<pre style="margin-top: -20px"><code class="language-javascript">
+if (window.DeviceOrientationEvent) {
+  window.addEventListener('deviceorientation', function(e) {
+    a = Math.floor(e.alpha);
+	b = Math.floor(e.beta);
+	g = Math.floor(e.gamma);
+	el.style.transform = 'rotateZ('+a+'deg) 
+	                   rotateX('+b+'deg) rotateY('+g+'deg)';
+ ... }, true);
+} 
+		</code></pre>
+		
+		<div class="browser-container" style="margin-top: -10px">
+			<div class="browser safari"><span>4.2</span></div>
+			<div class="browser android"><span>3.0</span></div>
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser moz"><span>14</span></div>
+			<div class="browser o"><span>12</span></div>
+			<div class="browser tizen"><span>2.1</span></div>
+    	</div>
+    	
+    	<footer>
+    	FF 14 and Chrome 18 are the oldest for Android.
+    	FF on my slides are for Android only, not including older Fennec. Also, I have not tested on FirefoxOS.
+    	</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h3>User Cases</h3>
+		<div align="center">
+		<img src="images/pizza-compass.jpg" style="margin-top:10px"><p>Can we re-create this iOS app in HTML5/JS?</p></div>
+		<p class="credit">http://pizza-compass.com/</p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h3>Pizza Compass in JavaScript</h3>
+		<ol style="margin-top:2em">
+			<li>Get location - navigator.geolocation</li>
+			<li>Use compass - deviceorientation event (use <code>alpha</code>)</li>
+			<li>Order a pizza - tel: URI scheme</li>
+		</ol>
+	</div></section>
+	
+			
+	<section class="slide"><div>
+		<h2>Media Capture and Streams API</h2>
+		<p><img src="images/webRTC-logo.png" style="margin-right: 30px"> "Web Real Time Communications"</p>
+		
+		<pre style="margin-top: -20px"><code class="language-javascript">
+var gum = navigator.getUserMedia ||
+    navigator.mozGetUserMedia||navigator.webkitGetUserMedia;
+          
+navigator.getUserMedia({video: true, audio: true}, 
+    	                     successCallback, errorCallback);
+		</code></pre>
+		
+		<div class="browser-container" style="">
+			<div class="browser o"><span>10</span></div>
+			<div class="browser chrome"><span>26*</span></div>
+			<div class="browser moz dim"><span>17*</span></div>
+			<div class="browser tizen dim"><span>2.1*</span></div>
+    	</div>
+    	
+		<p style="font-size:.75em;text-align:right" class="small">** not supported by Opera 14 for Android (WebKit)</p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div align="center"><img src="images/webrtc-mobile.jpg" width="400"><p>on Chrome 27 for Android</p></div>
+		<p style="font-size:.75em;text-align:right">The super silly demo: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web / Make Me Bob!</a><p>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<h2>HTML Media Capture</h2>
+
+		<pre><code class="language-markup">
+&lt;!-- Current implementation (if supported) --&gt;
+&lt;input type="file" accept="image/*" capture="camera"&gt;
+
+&lt;!-- Newly proposed specification --&gt;
+&lt;input type="file" accept="image/*" capture&gt;
+		</code></pre>
+		
+		<div class="browser-container">
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser android"><span>3</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser tizen"><span>2.1</span></div>
+			<div class="browser safari"><span>6**</span></div>
+			<div class="browser moz"><span>10**</span></div>
+			<div class="browser ie dim"><span>10**</span></div>
+		</div>
+		<p style="font-size:.75em;text-align:right" class="small">** Partial support: 'capture' attr not supported</p>
+		
+		<footer>
+HTML Media Capture delegates the native camera.
+The native camera returns the pictures as a File object (from File API). 
+
+The values of the attribute can be:
+ -images/* , video/*, or audio/*.
+			
+The capture attribute is a boolean attribute (in the new spec)
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<video controls style="margin-top:-20px; width:800px">
+			<source src="media/coremobcamera.mp4" />
+			Mp4 video is not supported.
+		</video>
+		<!-- <p style="font-size:.75em;text-align:right;"><a href="http://sdrv.ms/UF55gM">Watch the demo video.</a></p> -->
+		<p style="font-size:.75em;text-align:right;"><a href="https://github.com/coremob/camera">Github: Coremob Camera</a></p>
+		<footer>
+		</footer>
+	</div></section>
+	
+			
+	<section class="slide"><div>
+		<h3>Camera App in HTML5</h3>
+		<ol class="small" style="margin-top:1.5em">
+			<li>Take a picture with the native camera via <span class="pink">HTML Media Capture</span></li>
+			<li>The camera returns the pictures as a File object from <span class="pink">FileReader()</span></li>
+			<li>drawImage() to draw the image object in <span class="pink">canvas</span></li>
+			<li>getImageData() to obtain an ImageData object containing a copy of the pixel data for a context, then tweak the pixels (filter effect)</li>
+			<li>canvas.toBlob() to store the <span class="pink">blob</span> locally with <span class="pink">IndexedDB</span>*</li>
+			<li>Upload the final photo with <span class="pink">XHR2</span>/<span class="pink">CORS</span></li>
+		</ol>
+	</div></section>
+	
+	<section class="slide"><div>
+		<p align="center" aria-hidden="true" data-icon="&#xe003;" class="github">
+			<span class="pink"> github</span>.com/coremob/camera
+		</p>
+	</div></section>
+		
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var battery = navigator.battery || navigator.webkitBattery;
+
+battery.addEventListener('chargingchange', updateStatus);  
+battery.addEventListener('levelchange', updateStatus);
+
+function updateStatus() {  
+  alert('Battery status: ' + battery.level * 100 + ' %');  
+  if (battery.charging) {
+    alert('Battery is charging...');   
+  }
+}  
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-80px">
+			<div class="browser moz"><span>14*</span></div>
+			<div class="browser moz"><span>16</span></div>
+			<div class="browser tizen"><span>2.1*</span></div>
+		</div>
+		
+		<footer>
+		The battery object provides information about the system's battery charge level.
+		</footer>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<div style="text-align:center">
+			<img src="images/battery-api.png" alt="Photo: demo on Firefox on Galaxy Nexus" style="height:400px">
+		</div>
+    	<p style="font-size:.75em;text-align:right;">http://goo.gl/V1n6h (Pictured: Firefox)</p>
+	</div></section>
+	
+
+	<section class="slide"><div>
+		<h2>Vibration API</h2>
+		
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var vibrate = navigator.vibrate || navigator.mozVibrate;
+
+vibrate(1000); // vibrate for 1sec
+
+vibrate([1000, 500, 2000]);
+// vibrates for 1sec, still for 0.5 seconds, 
+// and vibrates again for 2sec
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;">
+			<div class="browser moz"><span>14*</span></div>
+			<div class="browser moz"><span>16</span></div>
+			<div class="browser tizen"><span>2.1</span></div>
+		</div>
+		<p style="font-size:.75em">Demo on JSFiddle: http://goo.gl/EWPmL</p>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Ambient Light Events</h2>
+
+		<pre style="margin-top:-30px"><code class="language-javascript">
+window.addEventListener('devicelight', function(e) {
+   alert(e.value); // value in double
+});		
+		</code></pre>
+		
+		<table style="margin-top:-10px">
+		<tr>
+			<th>returned value (in lux)</th><th>My Observation on Galaxy Nexus</th>
+		</tr>
+		<tr>
+			<td>&lt; 400</td><td>Indoor</td>
+		</tr>
+		<tr>
+			<td>400-1000</td><td>Office lighting. Outdoor (in foggy San Francisco)</td>
+		</tr>
+		<tr>
+			<td>&gt; 1000</td><td>Outdoor daylight (anywhere else in California)</td>
+		</tr>
+		</table>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-10px">
+			<div class="browser moz"><span>15</span></div>
+		</div>
+	</div></section>
+	
+	
+		<section class="slide"><div>
+		<h2>Ambient Light Events</h2>
+
+		<pre style="margin-top:-30px"><code class="language-javascript">
+window.addEventListener('lightlevel', function(e) {
+   alert(e.value); // value in string
+});		
+		</code></pre>		
+		
+		<table style="margin-top:-10px">
+		<tr>
+		<th>returned value</th><th>Illuminance</th><th>Description</th>
+		</tr>
+		<tr>
+		<td>dim</td><td>&lt; 50 lux</td><td class="small">dark enough that the light produced by a white background is eye-straining or distracting</td>
+		</tr>
+		<tr>
+		<td>normal</td><td>50-10000 lux</td><td class="small">office building hallway, very dark overcast day, office lighting, sunrise or sunset on a clear day, overcast day, or similar</td>
+		</tr>
+		<tr>
+		<td>bright</td><td>&gt; 10000 lux</td><td class="small">direct sunlight, or similarly bright conditions that make it hard to see things that aren't high-contrast</td>
+		</tr>
+		</table>
+		
+		<div style="text-align:right;margin-top:10px">
+			<div class="">*Currently no browser supports</div>
+		</div>
+		
+		<footer>
+			The lux ranges that map to the current light level states are left to the implementation, as devices with different sensitivities could map them slightly differently.
+		</footer>
+	</div></section>
+	
+
+	<section class="slide"><div>
+		<h2>Light Sensor Demo</h2>
+		
+		<iframe seamless src="http://player.vimeo.com/video/51322638?portrait=1&amp;color=ff0179" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen  style="margin-top:-30px;width:800px;height:480px"></iframe>
+		<!-- <p><a href="http://player.vimeo.com/video/51322638">Watch the demo video on Vemeo</a></p> -->
+    	<p style="font-size:.75em;margin-top:-7px">Try it on Firefox Mobile: http://goo.gl/WynKX</p>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Proximity Events</h2>
+		
+		<p>The distance of a nearby physical object using the proximity sensor of a device.</p>
+		
+		<p>Events: <code>deviceproximity</code> and <code>userproximity</code></p> 
+				
+		<pre style=""><code class="language-javascript">
+window.addEventListener('deviceproximity', function(e) {
+   alert(e.value);
+});		
+		</code></pre>	
+		
+		<footer>
+		These events occur when the the device sensor detect if an object become closer or farther from the device.
+		</footer>
+	</div></section>
+
+	
+	<section class="slide"><div>
+		<h2>More...</h2>
+		
+		<ul>
+    		<li>The Network Information API</li>
+    		<li>Clipboard API (<code>cut</code>, <code>copy</code>, <code>paste</code> events)</li>
+    		<li>Network Service Discovery (UPnP multi-media device control)</li>
+    		<li>Fullscreen API</li>
+    		<li>Gamepad API</li>
+    		<li>Push API (Push Notification)</li>
+    	</ul>
+    	
+    	<footer>
+    	
+    	Push API:
+    	http://www.w3.org/TR/push-api/
+    	Google Cloud Messaging - http://developer.chrome.com/apps/cloudMessaging.html
+    	</footer>
+	</div></section>			
+
+	<section class="slide"><div>
+		<h2>Uncertain APIs</h2>
+		<img align="right" src="images/broken-web-intents.png">
+		
+		<p>Bye-bye Web Intents</p>
+		<ul>
+    		<li>Contacts APIs</li>
+    		<li>Calendar APIs</li>
+    		<li>...</li>
+    	</ul>
+    	
+    	<p>Hello, Web Activities?</p>
+	</div></section>
+	
+		
+	
+	<section class="slide"><div>
+		<h2>Thank you!</h2>
+		<img src="images/tomomi.png" align="right">
+		<p>Tomomi Imura</p>
+		<ul style="margin-top:2em">
+			<li><a href="http://girliemac.com">girliemac.com</a></li>
+			<li><a href="http://twitter.com/girlie_mac">twitter.com/girlie_mac</a></li>
+			<li><a href="http://github.com/girliemac">github.com/girliemac</a></li>
+		</ul>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Notes</h2>
+		<p>
+		People, who has not attended my talks but stumbled upon my slides sometimes complains (in passive-aggressive manner) that my browser stats are wrong -
+		I have to tell you that all the browsers I am talking about are <em>mobile</em>!<br>
+		Even if you are so sure that certain features are supported on desktop, it may not be true for the mobile version.<br>
+		If you spot my mistakes on <em>mobile</em> browsers, just let me know :-)
+		<br><br>
+		xoxo,<br>Tomomi (@girlie_mac) 
+		</p>
+	</div></section>
+	
+	<p class="badge"><a href="https://github.com/girliemac/presentation-slides/">Fork me on Github</a></p>
+	
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<script src="../prism/prism.js"></script>
+	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
+
+
+
