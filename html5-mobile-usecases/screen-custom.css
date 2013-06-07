@@ -151,6 +151,10 @@ body {
 	background-position: -667px 0;
 	width: 88px;
 }
+.browser.tizen {
+	background-position: -764px 0;
+	width: 88px;
+}
 .browser.dim {
 	opacity: .5;
 }
