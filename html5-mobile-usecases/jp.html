@@ -48,9 +48,8 @@
 		<!-- sticker end -->
 		<ul class="animList" style="position:relative; left: 180px;">
 			<li>Mobile Front-end, UI/UX Developer</li>
-			<li>Open Web Advocate at Nokia</li>
+			<li>Open Web Advocate at Nokia Silicon Valley</li>
 			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
-			<li>Based in Silicon Valley</li>
 		</ul>
 
 	</div></section>
@@ -83,19 +82,11 @@
 		<h2>Project Goals</h2>
 
 		<ol class="large-list">
-			<li>Showcase the capabilities of the Web platform</li>
-			<li>Educate Web developers</li>
-			<li>Help improve browsers</li>
+			<li>Showcase the capabilities of the Web platform<br>ウェブプラットフォームで何ができるかを紹介</li>
+			<li>Educate Web developers<br>ウェブディベロッパのみんなにも知ってもらう</li>
+			<li>Help improve browsers<br>ブラウザを良くするのを助ける</li>
 		</ol>
 		
-		<footer>
-			We have set three main goals to this project:
-
-			1. showcase the capabilities of the Web platform and more specifically of the subset of features Coremob is driving,
-			2. educate Web developers about how to best use these technologies to build modern Web applications, 
-			and
-			3. help improve browsers by providing vendors with an app which tests some of the key features and performance requirements of the platform.
-		</footer>
 	</div></section>
 	
 	
@@ -104,10 +95,9 @@
 		<h2>HTML Media Capture</h2>
 		<img src="images/coremobcamera-01.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-60px">
 		
-		<p>Taking a photo with using a native camera</p>
+		<p>Taking a photo with using a native camera<br>デバイスのカメラで写真を撮る</p>
 		<pre>
-		<code class="language-markup">
-&lt;input type="file" accept="image/*" 
+		<code class="language-markup">&lt;input type="file" accept="image/*" 
                            capture="camera"&gt;
 
 // New
@@ -148,7 +138,9 @@ If specified, a browser captures of media directly from the device's environment
 	<section class="slide"><div>
 		<h2>File API</h2>
 
-		<p>Returning the photo as a <code>file</code> object</p>		
+		<p>Returning the photo as a <code>file</code> object<br>
+			撮った写真を <code>file</code> オブジェクトとしてかえす
+		</p>		
 
 		<pre style="mar">
 		<code class="language-javascript">var input = document.querySelector('input[type=file]'); 
@@ -178,11 +170,12 @@ When a user snap a photo, the API returns a file object list.
 		<h2>Canvas</h2>
 		<img src="images/coremobcamera-02.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-90px;cursor:pointer;" onclick="javascript:this.src='images/coremobcamera-02a.png';return false;">
 		
-		<p>Applying filters to the photo</p>
+		<p>Applying filters to the photo<br>
+			写真にフィルタをかける
+		</p>
 	
 		<pre>
-		<code class="language-javascript">
-var c = document.createElement('canvas');
+		<code class="language-javascript">var c = document.createElement('canvas');
 var ctx = this.c.getContext('2d');
 ctx.drawImage(imgObj, 0, 0);
 var imgData = ctx.getImageData(x, y, w, h); 
@@ -312,7 +305,9 @@ var imgURL = URL.createObjectURL(blob);
 	<section class="slide"><div>
 		<h2>IndexedDB</h2>
 		<img src="images/coremobcamera-03.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-60px">
-		<p>Storing the photos locally</p>
+		<p>Storing the photos locally<br>
+			ブラウザに写真を保存
+		</p>
 	
 		<pre>
 		<code class="language-javascript">
@@ -344,7 +339,7 @@ var indexedDB = window.indexedDB || window.webkitIndexedDB;
 		</code>
 		</pre>
 		
-		<p>"Basic" Async iDB Support</p>
+		<p>"Basic" Async iDB Support （ごく基本的な非同期サポート）</p>
 		<div class="browser-container">
 			<div class="browser chrome"><span>18*</span></div>
 			<div class="browser chrome"><span>25</span></div>
@@ -361,9 +356,9 @@ var indexedDB = window.indexedDB || window.webkitIndexedDB;
 	<section class="slide"><div>
 		<h2>IndexedDB: <br>Spotty Browser Support</h2>
 		
-		<ul>
-			<li>Safari and Opera do not support at all</li>
-			<li>Chrome &lt;24, Firefox &lt;13, and BB 10 use deprecated specs</li>
+		<ul class="small">
+			<li>Safari and Opera do not support</li>
+			<li>Chrome &lt;24, Firefox &lt;13, and BB 10 use deprecated specs（古いスペック）</li>
 			<ul>
 				<li><code>setVersion()</code> vs. <code style="background-color:#aefaa3">onupgradeneeded</code></li>
 				<li><code>IDBTransaction.READ_WRITE</code> vs. <code style="background-color:#aefaa3">"readwrite"</code></li>
@@ -388,7 +383,7 @@ var indexedDB = window.indexedDB || window.webkitIndexedDB;
 	<section class="slide"><div>
 		<h2>XMLHttpRequest Level 2</h2>
 		<img src="images/coremobcamera-05.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-40px">
-		<p>Sending a photo</p>
+		<p>Sending a photo<br>写真の送信</p>
 
 		
 		<pre><code class="language-javascript">
@@ -502,7 +497,7 @@ The example shown here is how to set on Apache server.
 	<section class="slide"><div>
 		<h2>Touch Events v.1</h2>
 		<img src="images/coremobcamera-04.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-60px">
-		<p>Photo Gallery Carousel</p>
+		<p>Photo Gallery Carousel<br>フォトギャラリーのカルーセルパネル UI</p>
 		
 		<pre><code class="language-javascript">
 el.addEventListener('touchstart', 
@@ -524,7 +519,9 @@ el.addEventListener('touchend'...);
 		<h2>Pointer Events</h2>
 		<img src="images/pointer.png" alt="Micorsoft Pointer event diagram" align="right" style="z-index:-1;margin-right:-75px;margin-top:10px">
 		
-		<p>For <em>any</em> input devices: touch, mouse, pen...</p>
+		<p>For <em>any</em> input devices: touch, mouse, pen...<br>
+			あらゆるインプット（タッチ、マウス、ペン）
+		</p>
 		<pre><code class="language-javascript">
 if (navigator.pointerEnabled) {
   el.addEventListener('pointerdown', 
@@ -585,8 +582,10 @@ if (navigator.msPointerEnabled) {
 		<h2>PhoneGap</h2>
 		<img src="images/cordova-wp8.png" alt="Windows Phone 8" align="right" style=";margin-top:-70px;">
 		
-		<p>HTML5 + Native</p>
-		<p>Filling the gap of missing HTML5 features</p>
+		<p>HTML5 + Native<br>HTML5 とネイティブ</p>
+		<p>Filling the gap of missing HTML5 features<br>
+			未サポートの HTML5 機能との溝を埋める
+		</p>
 		
 		<footer>
 So what if the shiny new HTML5 features are not well supported by mobile browsers?
