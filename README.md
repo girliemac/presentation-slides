@@ -3,6 +3,13 @@ My Presentation Slide Decks
 
 - Use arrow keys / spacebar to navigate
 
+### Responsive Cross-Device Development with Web Standard
+
+http://girliemac.github.io/presentation-slides/html5-mobile-approach/rwd.html
+
+- Open Web Camp 5 (2013)
+
+
 ### Mobile <3 JavaScript: Hardware Access & Device APIs
 
 http://girliemac.github.com/presentation-slides/html5-mobile-approach/deviceAPIs.html
