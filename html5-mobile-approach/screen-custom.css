@@ -18,6 +18,34 @@ body {
 	font: 25px/2 "Bree Serif", sans-serif
 }
 
+q {
+	quotes: "“" "”" "‘" "’";
+	display: block;
+	font-size: 42px;
+	line-height: 58px;
+	margin: 1em;
+	position: relative;
+}
+
+q:before {
+    content: open-quote;
+    font-family: Arial, sans-serif;
+	position: absolute;
+	top: 24px;
+	left: -50px;
+	font-size: 180px;
+	color: #bbb;
+}
+
+q:after {
+    content: close-quote;
+    font-family: Arial, sans-serif;
+    color: #bbb;
+}
+figcaption {
+	font-size: 16px;
+}
+
 .full,
 .slide.cover {
 	background: #fff;
