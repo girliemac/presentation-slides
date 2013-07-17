@@ -16,7 +16,17 @@
 	<style>
 		#Picture h2 {
 			color:#FFF;
+		}
+		.blurry-screenshot {
+			width: 494px;
+			height: 550px;
+		}
+		@media print {
+			.blurry-screenshot { 
+				width: auto;
+				height: auto;
 			}
+		}
 	</style>
 </head>
 <body class="list">
@@ -828,7 +838,7 @@ if (mql.matches) {
 		
 	<section class="slide"><div>
 		<h2>Blurry Images on Hi-DPI Screens</h2>
-		<div align="center"><img src="images/responsive-image.png" width="494" height="550"></div>
+		<div align="center"><img src="images/responsive-image.png" class="blurry-screenshot"></div>
 	</div></section>
 	
 	
