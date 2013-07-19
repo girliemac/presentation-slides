@@ -22,14 +22,14 @@
 <body class="list">
 	
 	<header class="caption">
-		<h1>Mobile HTML5 Use-Cases</h1>
+		<h1>CoreMob Camera App:<br>Real Life HTML5 Use Cases for Mobile</h1>
 		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
 	</header>
 	
 	
 	<section class="slide cover dark"><div>
-		<h2>Mobile HTML5 Use-Cases</h2>
-		<!-- <h4 style="color:#fff;font-size:37px;margin:380px -50px;text-align:right">April 2, 2013 &bull; HTML5 Dev Conf</h4> -->
+		<h2>Real Life HTML5 Use Cases for Mobile</h2>
+		<h4 style="color:#fff;font-size:42px;margin-left:-50px;">CoreMob Camera App</h4>
 		<img src="images/sandy.jpg" style="width:1024px;height:640px;" alt="Sabdy the cat using a mobile phone">
 	</div></section>
 	
@@ -51,10 +51,13 @@
 			<li>Mobile Front-end, UI/UX Developer</li>
 			<li>Open Web Advocate at Nokia</li>
 			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
-			<li>girliemac.com</li>
+			<li>HTTP Status Cats lady</li>
 		</ul>
 	</div></section>
 	
+	<section class="slide cover"><div>
+		<img src="../html5-mobile-approach/images/403.jpg" alt="HTTP Status Cats" style="width:1024px;height:640px;">
+	</div></section>
 	
 	<section class="slide cover dark"><div>
 		<h2 style="margin-top:390px">Mobile (vs. Sessile)</h2>
@@ -244,7 +247,7 @@ function success(position) {
 	
 	<section class="slide">
 	<div>
-		<h2>2D Gaming</h2>
+		<h2>Gaming</h2>
 	
 		<ul>
 			<li>Canvas</li>
@@ -252,6 +255,7 @@ function success(position) {
 			<li>Audio</li>
 			<li>CSS Animations and Transforms</li>
 			<li>Web Sockets</li>
+			<li>WebGL for 3D Gaiming</li>
 		</ul>
 		<footer>
 			...
@@ -307,6 +311,7 @@ Nokia, Samsung, AT&T, Verizon, Vodafone, Orange, Telefónica, KDDI, Softbank Qua
 	</div></section>
 	
 	
+<!--
 	<section class="slide">
 	<div>
 		<h2>Core Mobile Web Platform — 2012</h2>
@@ -317,6 +322,7 @@ Nokia, Samsung, AT&T, Verizon, Vodafone, Orange, Telefónica, KDDI, Softbank Qua
 		<footer>
 			The final CG specification is now on github.
 	</div></section>
+-->
 	
 	
 	<section class="slide cover dark" id="Picture"><div>
@@ -335,8 +341,8 @@ Nokia, Samsung, AT&T, Verizon, Vodafone, Orange, Telefónica, KDDI, Softbank Qua
 			Mp4 video is not supported.
 		</video>
 		
-		<p style="text-align:right">Try on mobile: http://goo.gl/MX7fe (Temp url)</p>
-		<!-- <p style="text-align:right">Watch the Video: http://sdrv.ms/UF55gM</p> -->
+		<!-- <p style="text-align:right">Try on mobile: http://goo.gl/MX7fe (Temp url)</p> -->
+		<p style="text-align:right">Watch the Video: http://sdrv.ms/UF55gM</p>
 		<footer>
 		</footer>
 	</div></section>
@@ -372,14 +378,14 @@ Nokia, Samsung, AT&T, Verizon, Vodafone, Orange, Telefónica, KDDI, Softbank Qua
 		<code class="language-markup">
 &lt;input type="file" accept="image/*" 
                            capture="camera"&gt;
-
-// New
+// New spec
 &lt;input type="file" accept="image/*" capture&gt;
 		</code>
 		</pre>
 		
 		<div class="browser-container">
 			<div class="browser chrome"><span>18</span></div>
+			<div class="browser o"><span>15bl</span></div>
 			<div class="browser android"><span>3</span></div>
 			<div class="browser bb"><span>10</span></div>
 			<div class="browser safari"><span>6*</span></div>
@@ -575,12 +581,14 @@ if (canvas.toBlob) {
 		<code>&lt;img src="blob:958c1b50-09a0-2543-8528-8697ae387667"&gt;</code>
 
 		<pre><code class="language-javascript">
-var URL = window.URL || window.webkitURL;
+var URL = window.URL || window.webkitURL*;
 var imgURL = URL.createObjectURL(blob);
 		</code></pre>
 		
 		<div class="browser-container">
 			<div class="browser chrome"><span>18*</span></div>
+			<div class="browser chrome"><span>23</span></div>
+			<div class="browser o"><span>15bl</span></div>
 			<div class="browser android"><span>4*</span></div>
 			<div class="browser safari"><span>6*</span></div>
 			<div class="browser bb"><span>10*</span></div>
@@ -635,6 +643,7 @@ var indexedDB = window.indexedDB || window.webkitIndexedDB;
 		<div class="browser-container">
 			<div class="browser chrome"><span>18*</span></div>
 			<div class="browser chrome"><span>25</span></div>
+			<div class="browser o"><span>15bl</span></div>
 			<div class="browser bb"><span>10*</span></div>
 			<div class="browser moz"><span>16</span></div>
 			<div class="browser ie"><span>10</span></div>
@@ -649,13 +658,13 @@ var indexedDB = window.indexedDB || window.webkitIndexedDB;
 		<h2>IndexedDB: <br>Spotty Browser Support</h2>
 		
 		<ul>
-			<li>Safari and Opera do not support at all</li>
+			<li>Safari and Opera (presto) do not support at all</li>
 			<li>Chrome &lt;24, Firefox &lt;13, and BB 10 use deprecated specs</li>
 			<ul>
 				<li><code>setVersion()</code> vs. <code style="background-color:#aefaa3">onupgradeneeded</code></li>
 				<li><code>IDBTransaction.READ_WRITE</code> vs. <code style="background-color:#aefaa3">"readwrite"</code></li>
 			</ul>
-			<li>Chrome (any versions) does not support <code>blob</code>
+			<li>Chrome &amp; Opera (blink) does not support <code>blob</code>
 		</ul>
 	
 		
@@ -691,6 +700,7 @@ formData.append('photo', blob);
 			<div class="browser moz"><span></span></div>
 			<div class="browser ie"><span>10</span></div>
 			<div class="browser o"><span>12</span></div>
+			<div class="browser o"><span>15bl</span></div>
 		</div>
 
 		<footer>
@@ -768,8 +778,9 @@ I only display the % in integer to fit the app UI, but it is cool if you use the
 			<div class="browser safari"><span></span></div>
 			<div class="browser moz"><span></span></div>
 			<div class="browser ie"><span></span></div>
-			<div class="browser o"><span>12</span></div>
 			<div class="browser bb"><span></span></div>
+			<div class="browser o"><span>12</span></div>
+			<div class="browser o"><span>15bl</span></div>
 		</div>
 		
 		<footer>
@@ -899,6 +910,17 @@ Well, there is PhoneGap for that!
 		</footer>
 	</div></section>
 
+	<section class="slide"><div>
+		<p align="center" style="font-size:38px">
+			<img src="images/qrcode-camera.png"/><br>			
+			coremob.<span style="color:#f18">github</span>.io/camera/vanilla/index.html<br>
+			<span style="color:#f18">goo.gl</span>/My8mf
+		</p>
+
+		<footer>
+			source code
+		</footer>
+	</div></section>
 	
 	
 	<section class="slide"><div>
