@@ -22,6 +22,8 @@ http://girliemac.github.com/presentation-slides/html5-mobile-usecases
 
 - W3Conf 2013 (Video: http://youtu.be/3Afi-v-m_Gc)
 - HTML5 Dev Conf 2013
+- W3C Developer Meetup in Tokyo (Short Version with Japanese translation)
+- O'Reilly OSCON 2013
 
 ### HTML5 Mobile Approaches
 
