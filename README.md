@@ -3,6 +3,13 @@ My Presentation Slide Decks
 
 - Use arrow keys / spacebar to navigate
 
+### IndexedDB: storing data locally on browsers with HTML5
+
+http://girliemac.github.io/presentation-slides/html5-indexedDB/index.html
+
+- All Your Base Conf 2013
+
+
 ### Responsive Cross-Device Development with Web Standard
 
 http://girliemac.github.io/presentation-slides/html5-mobile-approach/rwd.html
