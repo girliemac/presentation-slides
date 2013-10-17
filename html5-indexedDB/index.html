@@ -1,0 +1,733 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="screen-custom.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#Picture h2 {
+			color:#FFF;
+			}
+	</style>
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>IndexedDB:<br/>storing data locally on browsers with HTML5</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	<section class="slide cover dark"><div>
+		<h2 style="margin-top:260px;">IndexedDB</h2>
+		<h4 style="color:#fff;font-size:42px;margin-left:-50px;margin-top:-20px;text-shadow:2px 2px 6px black;">Storing data on browsers with HTML5</h4>
+		<img src="images/126297401_org.jpg" style="width:1024px;height:640px;" alt="a cat in a bucket">
+		<p class="credit">http://photozou.jp/photo/show/1033469/126297401 by je5xkd<span class="cc">bnd</span></p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<!-- Hello, my name is CSS sticker -->
+		<div class="vcard" style="margin: 120px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
+		    <div> 
+		        <p>Hello</p> 
+		        <p>my name is</p> 
+		    </div> 
+		    <div class="fn"> 
+		        <p class="given-name">Tomomi</p> 
+		        <address class="nickname">@girlie_mac</address> 
+		    </div>
+		</div>
+		<!-- sticker end -->
+		<ul class="animList" style="position:relative; left: 180px;">
+			<li>Mobile Front-end, UI/UX Developer</li>
+			<li>Open Web Advocate at Nokia</li>
+			<li>Working with W3C Communities</li>
+			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
+		</ul>
+	</div></section>
+	
+<!--
+	<section class="slide cover"><div>
+		<img src="../html5-mobile-approach/images/403.jpg" alt="HTTP Status Cats" style="width:1024px;height:640px;">
+	</div></section>
+-->
+	
+
+	<section class="slide"><div>
+		<h2>Storing Data with HTML5</h2>
+		<div style="display:-webkit-flex; display:flex">
+			<div style="margin-right:1em">
+				<img src="images/html5-umbrella.png"/>
+			</div>
+			<ul style="margin-top:1em;">
+				<li>Cookie
+				<li>DOM Storage
+					<ul>
+						<li>Local Storage
+						<li>Session Storage
+					</ul>
+				<li>IndexedDB
+				<li style="color:#999">WebSQL (Deprecated)
+			</ul>
+		</div>
+	</div></section>
+	
+
+	<section class="slide"><div>
+		<h2>Cookies</h2>
+		<div style="display:-webkit-flex; display:flex">
+			<ul style="margin-top:1em; -webkit-flex:1 1 auto; flex:1 1 auto;">
+				<li>name/value pair
+				<li>4k limit per cookie
+				<li>Sent with the HTTP header
+				<li>Old-School but cross-browser
+			</ul>
+			<div style="-webkit-flex:0 0 330px; flex:0 0 330px;">
+				<img src="images/cookie.jpg"/>
+			</div>
+		</div>
+		<p class="credit">http://www.flickr.com/photos/melissacorey/4210541084/ by Melissa Corey <span class="cc">bna</span></p>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<h2>HTML5 DOM Storage</h2>
+		<div style="display:-webkit-flex; display:flex">
+			<ul style="margin-top:1em; -webkit-flex:1 1 auto; flex:1 1 auto;">
+				<li>name/value pair
+				<li>2.5MB - 10MB per origin 
+				<li>Read in client - JavaScript
+				<li>Not supported on IE6, 7, and Opera 10.
+			</ul>
+		</div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Local Storage</h2>
+			<ul>
+				<li>Persistent and scoped to the origin
+			</ul>
+		
+		<h2>Session Storage</h2>
+			<ul>
+				<li>Non persistent - scoped only to the current window
+			</ul>
+		<footer>
+		SessionStorage that maintains data during of the page session. 
+		It survives over page reloads and restores. Opening a page in a new tab or window will cause a new session.		
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>WebSQL</h2>
+		<h3>Deprecated by W3C</h3>
+		<div style="display:-webkit-flex; display:flex">
+			<ul style="margin-top:1em; -webkit-flex:1 1 auto; flex:1 1 auto;">
+				<li>Relational DB on client - SQLite syntax
+				<li>Converting JS obj into relational schema is PITA
+				<li>Still supported on Safari, Chrome, Opera, and Blackberry browsers
+			</ul>
+		</div>
+		<footer>
+		No longer actively supported by W3C since Nov. 2010
+		</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<div style="position:absolute;top:0"><img src="websql-spec.png" height="640"></div>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>IndexedDB</h2>
+		<div style="display:-webkit-flex; display:flex">
+			<ul style="margin-top:1em; -webkit-flex:1 1 auto; flex:1 1 auto;">
+				<li>W3C Standard (w3.org/TR/IndexedDB)</li>
+				<li>NoSQL
+				<li>fast indexing and searching of objects
+				<li>JS objects &amp; keys (<code>objectStore</code>)
+				<li><del>synchronous &amp;</del> asynchronous API
+			</ul>
+		</div>
+		<footer>
+		IndexedDB persistently store data. Works online and offline.
+		
+		- a collection of "objectStore" that contains Javascript objects
+		- async on window (global)
+		
+		Storage space - depending on browser, # of web apps running, and users' HD space.
+		If storage quota was reached, you get the QuotaExceededError error.
+		</footer>
+	</div></section>
+		
+		
+	<section class="slide"><div>
+		<h2>Quota Management API</h2>
+		
+<pre><code class="language-javascript">		
+navigator.temporaryStorage.queryUsageAndQuota(
+    function(usage, quota){...}, 
+    function(error){...}
+  );
+</code></pre>	
+		<p style="margin-top: 2em">* webkitTemporaryStorage</p>
+		<p class="credit">w3.org/TR/quota-api</p>
+		<footer>
+		Chrome (webkit prefix) navigator.webkitTemporaryStorage and navigator.webkitPersistentStorage
+		</footer>
+	</div></section>
+	
+		
+<!--
+	<section class="slide"><div>
+		<h2>Why IndexedDB?</h2>
+		<div style="display:-webkit-flex; display:flex">
+			<ul style="margin-top:1em; -webkit-flex:1 1 auto; flex:1 1 auto;">
+				<li>W3C Standard</li>
+				<li>Better performance
+				<li>Async interaction does not block UI
+				<li>Transactional model
+				<li>Offline App
+			</ul>
+		<div>
+		<footer>
+		</footer>
+	</div></section>
+-->
+	
+			
+	<section class="slide"><div>
+		<h2>Browser Support</h2>
+		
+		<p><em>Basic</em> Async iDB Support</p>
+		<div class="browser-container" style="margin-top:40px">
+			<div class="browser chrome"><span>11</span></div>
+			<div class="browser o"><span>15bl</span></div>
+			<div class="browser moz"><span>4</span></div>
+			<div class="browser ie"><span>10</span></div>
+		</div>
+		<footer>
+			* old spec
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Mobile Browser Support</h2>
+
+		<p><em>Basic</em> Async iDB Support</p>
+		<div class="browser-container" style="margin-top:40px">
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser o"><span>14wk</span></div>
+			<div class="browser o"><span>15bl</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser moz"><span>16</span></div>
+			<div class="browser ie"><span>10</span></div>
+		</div>
+		<footer>
+
+		</footer>
+	</div></section>
+	
+
+	<section class="slide"><div>
+		<h2>Feature Detection</h2>
+		
+		<pre><code class="language-javascript">var indexedDB = window.indexedDB || 
+                window.webkitIndexedDB ||
+                window.mozIndexedDB;
+if(indexedDB) {
+   // Yay, iDB is supported!
+} 
+		</code></pre>
+		<p>
+			&bull; Chrome &lt; 23 &amp; Blackberry require the <code>webkit</code> prefix.<br>
+			&bull; Firefox &lt; 16 requires the <code>moz</code> prefix.<br>
+			&bull; Pre-released ver IE10 requires <code>ms</code>, but not production IE10+.
+		</p>
+	</div></section>
+
+			
+	<section class="slide"><div>
+		<h2>Demo: Grocery List</h2>
+		
+		<section class="demo">
+			<input type="text" id="shopInput" placeholder="What do you need to buy?" style="font-size:28px; width:14em; border: 1px silver solid; border-radius:8px; padding:6px">
+			<button id="addButton" style="color:#fff; background:#26B8E0; font-weight:bold; border:0; font-size:28px; border-radius:8px; padding:4px 12px">+</button>
+			
+			<ol id="shopList" style="margin:1em 2em;">
+			</ol>
+			<p class="credit">Try the demo on: http://goo.gl/zLG83c</p>
+		</section>
+		
+		<footer>
+			some chars are reserved for the preso - avoid "H", "J", "K", "L", space for demo. 
+			Try, "eggs", "banana", "yogurt", "tofu"
+		</footer>
+	</div></section>
+		
+
+	<section class="slide"><div>
+		<h2>Creating A Simple Grocery List</h2>
+		
+		<ol style="padding-left:2em">
+			<li>Open an iDB
+			<li>Retrieve data
+			<li>Display the data
+		</ol>
+		
+		<p style="font-size:33px;color:#f18;">User Interaction</p>
+		<ul style="padding-left:2em">
+			<li>Add an item 
+			<li>Delete an item
+		</ul>
+		
+		<footer>
+		</footer>
+	</div></section>
+	
+					
+	<section class="slide"><div>
+		<h2>Opening a DB</h2>
+		<pre><code class="language-javascript">
+if(indexedDB) {
+   var req = indexedDB.open('myDatabase'); 
+   
+   // async callbacks
+   req.onsuccess = function(e) {
+      ...
+   };
+   ...
+} 
+		</code>
+		</pre>
+		
+		<footer>
+			use open() method and specify a database name to connect to a DB.
+			You can specify the version (the 2nd param), otherwise the initial value 1.
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<p>Latest spec (FF, IE10, Chrome >= 23)</p>
+		<pre><code class="language-javascript">...
+req.onsuccess = function(e) {
+   // retrieve data from DB
+};
+req.onerror = function(e) {console.log(e);};
+
+req.onupgradeneeded = function(e) {
+   e.target.result.createObjectStore('shop', {
+      keyPath: 'id', autoIncrement: true
+   });
+};
+		</code>
+		</pre>
+		<footer>
+			The database did not previously exist, so create object stores and indexes within the onupgradeneeded callback.
+			
+			The event is also called when the specified version at open() was different from the exiting.
+			(You can't specified a version smaller than the previous version! It will give you an error!)
+			
+			Browsers that support the older spec, you need to create obj store in a setVersions transaction.
+		</footer>
+	</div></section>
+	
+	
+				
+	<section class="slide"><div>
+		<h2>Retrieve All Data</h2>
+		<pre><code class="language-javascript">var tx = db.transaction('shop', 'readonly');
+var objStore = tx.objectStore('shop');
+var cursorReq = objStore.openCursor();  
+var arr = [];
+cursorReq.onsuccess = function(e) {
+   var cursor = e.target.result;
+   if(cursor) {
+      arr.push(cursor.value);
+      cursor.continue();
+   } else {
+      // Display the data in DOM
+   }
+}
+		</code>
+		</pre>
+		
+		<footer>
+		A transaction is used to interact with the data in a database.
+			1. Open a transaction on the object store.
+			2. Open a cursor and iterate with it on the list.
+			Data is retrieved asynchronously.
+			
+			You can specify the range with openCursor().
+			
+		To get a specified data, use get(key). It retrieves matched data.
+		</footer>
+	</div></section>
+	
+	
+					
+	<section class="slide"><div>
+		<h2>Add Data</h2>
+		<pre><code class="language-javascript">var input = document.getElementsByTagName('input')[0];
+var data = {
+   item: input.value,
+   created: new Date()
+};
+var tx = db.transaction('shop', 'readwrite');	    
+var objStore = tx.objectStore('shop');      
+var req = objStore.put(data);
+               
+req.onsuccess = function(e) {
+   // Display the data
+};
+		</code></pre>
+		
+		<footer>
+			get a reference to the database object, initiate a 'readwrite' transaction and get a reference to our object store.
+		</footer>
+	</div></section>
+	
+					
+	<section class="slide"><div>
+		<h2>Delete Data</h2>
+		<pre><code class="language-javascript">var tx = db.transaction('shop', 'readwrite');
+var objStore = tx.objectStore('shop');
+var req = objStore.delete(key);
+      
+req.onsuccess = function(e) {
+   // Display the remaining data
+};
+		</code></pre>
+		
+		<footer>
+		delete(key) to delete specified data.
+		
+		clear() to delete all data.
+		Also update(obj) to update data although not used in the demo.
+		</footer>
+	</div></section>
+	
+
+		
+	<section class="slide"><div>
+		<h2>Chrome DevTools</h2>
+		<p>You can inspect:</p>
+		
+		<div style="display:-webkit-flex; display:flex">
+			<ul style="margin-top:1em; -webkit-flex:1 1 auto; flex:1 1 auto;">
+				<li>A List of Database</li>
+				<li>Properties of a DB</li>
+				<li>DB's Object stores</li>
+			</ul>
+			<div style="-webkit-flex:0 0 330px; flex:0 0 330px; opacity:.3">
+				<img src="images/chrome-lg.png"/>
+			</div>
+		<div>
+		
+		<footer>
+		</footer>
+	</div></section>
+		
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-80px; left:-40px"><img src="images/inspector-idb-01.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-80px; left:-40px"><img src="images/inspector-idb-02.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-80px; left:-40px"><img src="images/inspector-idb-03.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-80px; left:-40px"><img src="images/inspector-idb-04.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-80px; left:-40px"><img src="images/inspector-idb-05.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-80px; left:-40px"><img src="images/inspector-idb-06.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-80px; left:-40px"><img src="images/inspector-idb-07.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+			
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-70px; left:-120px; visibility:hidden;"><img src="images/diagram-idb-top.png"></div>
+		<div style="position:relative; top:-70px; left:-120px"><img src="images/diagram-idb-bottom.png"></div>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div style="position:relative; top:-70px; left:-120px"><img src="images/diagram-idb-top.png"></div>
+		<div style="position:relative; top:-70px; left:-120px"><img src="images/diagram-idb-bottom.png"></div>
+		
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<video controls style="margin-top:-20px; width:800px">
+			<source src="../html5-mobile-usecases/media/coremobcamera.mp4" />
+			Mp4 video is not supported.
+		</video>
+		
+		<p style="text-align:right">Try on mobile: http://goo.gl/MX7fe</p>
+		<!-- <p style="text-align:right">Watch the Video: http://sdrv.ms/UF55gM</p> -->
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<p align="center" aria-hidden="true" data-icon="&#xe003;" class="github">
+			<span style="color:#f18">github</span>.com/coremob/camera
+		</p>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Storing Blob</h2>
+		<p>e.g. Convert a canvas data to blob, then store it in iDB</p>
+		<pre><code class="language-javascript">canvas.toBlob(function(blob) {
+   data = {
+        name: 'cat',
+        photo: blob
+    };
+   var tx = db.transaction('gallery', 'readwrite');	    
+   var objStore = tx.objectStore('gallery');      
+   var req = objStore.put(data);
+   ...
+}, 'image/jpeg');
+		</code></pre>
+		
+		<footer>
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>Blob URLs</h2>
+		
+		<p>Displaying Blob</p>
+		
+		<code>&lt;img src="blob:958c1b50-09a0-2543-8528-8697ae387667"&gt;</code>
+
+		<pre><code class="language-javascript">
+var URL = window.URL || window.webkitURL*;
+var imgURL = URL.createObjectURL(blob);
+		</code></pre>
+		
+		<footer>
+- The object URL represents the specified Blob object.
+- Creates a new object URL, whose lifetime is tied to the document in the window on which it was created. 
+- Release the url with revokeObjectURL() if you no longer need them.
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>So, can we use it now?</h2>
+
+		<footer>
+		</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2 style="position:absolute; z-index:1;">So, can we use it now?</h2>
+		
+		<img src="images/no-idb-safari.jpg" style="position:absolute; top:0; left:0"/>
+		
+		<footer>
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>Meh: Spotty Browser Support</h2>
+		
+		<ul>
+			<li>Safari and Opera (presto) do not support at all</li>
+			<li>Deprecated specs: Chrome &lt;24, Firefox &lt;13, &amp; BB 10</li>
+			<ul>
+				<li><code>setVersion()</code> vs. <code style="background-color:#aefaa3">onupgradeneeded</code></li>
+				<li><code>IDBTransaction.READ_WRITE</code> vs. <code style="background-color:#aefaa3">"readwrite"</code></li>
+				<li>Chrome uses <em>string</em> for version</li>
+			</ul>
+			<li>Chrome &amp; Opera (blink) does not support <code>blob</code>
+		</ul>
+	
+		
+		<footer>
+			https://developer.mozilla.org/en-US/docs/IndexedDB/IDBDatabase
+			
+- There are multiple specifications have been modified since, for example, Firefox has started supporting iDB. 
+   - The basic support starts since ver4, setVersion() was deprecated at ver 10, 
+   - and transaction mode has been switched to string from constant since 13.
+			
+- Blob, which in this case the filtered photo, is unfortunately not supported by Chrome at all. (used Base64 dataURL string)...
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>Polyfill</h2>
+		
+		<p>Prolly, you need to polyfill with Web SQL for now...</p>
+		
+		<ul>
+		<li><a href="http://nparashuram.com/IndexedDBShim/" target=_blank>IndexedDB Shim</a> by Parashuram "Axe" Narasimhan
+		<li><a href="https://github.com/facebook/IndexedDB-polyfill" target=_blank>IndexedDB-polyfill</a> by Facebook
+		</ul>
+		
+		<footer>
+		both are using webSQL to fill the gap
+		</footer>
+	</div></section>
+
+	
+	
+	<section class="slide"><div>
+
+		<table class="centered">
+		<tr>
+			<th style="width:200px"></th>
+			<th style="width:180px">Indexed DB</th>
+			<th style="width:180px">Web SQL</th>
+		</tr>
+		<tr>
+			<td>Chrome 31</td>
+			<td class="yes">Yes</td>
+			<td class="yes">Yes</td>
+		</tr>		
+		<tr>
+			<td>Opera 17</td>
+			<td class="yes">Yes</td>
+			<td class="yes">Yes</td>
+		</tr>		
+		<tr>
+			<td>Blackberry 10</td>
+			<td class="yes">Yes</td>
+			<td class="yes">Yes</td>
+		</tr>
+		<tr>
+			<td>Firefox 25</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		<tr>
+			<td>IE 11</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		<tr>
+			<td>Safari 7</td>
+			<td class="no">No</td>
+			<td class="yes">Yes</td>
+		</tr>
+		<tr>
+			<td>Android 4.2</td>
+			<td class="no">No</td>
+			<td class="yes">Yes</td>
+		</tr>
+		</table>
+		
+		<div style="position:absolute; bottom:80px; right:75px; -webkit-transform:rotate(15deg); transform:rotate(15deg);">
+			<img src="images/polyfilla.png" height="200">
+		</div>
+		
+		<div style="font-size:120px; position:absolute; bottom:107px; right:280px;">}</div>
+
+		<p class="credit">caniuse.com</p>
+	</div></section>
+
+	
+	
+	<section class="slide"><div>
+		<h2>Thank you!</h2>
+		<img src="../html5-mobile-approach/images/tomomi.png" align="right">
+		<p>Tomomi Imura</p>
+		<ul style="margin-top:2em">
+			<li><a href="http://girliemac.com">girliemac.com</a></li>
+			<li><a href="http://twitter.com/girlie_mac">twitter.com/girlie_mac</a></li>
+			<li><a href="http://github.com/girliemac">github.com/girliemac</a></li>
+		</ul>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Mandatory Kitteh</h2>
+		
+		<div style="display:-webkit-flex; display:flex; margin-right:1em">
+			<div>
+				<img src="images/tacocat.jpg" style="margin-right:2em"/>
+			</div>
+			<div style="-webkit-flex:0 0 400px; flex:0 0 400px; position:relative">
+				<p style="position:absolute; top:180px">Taco cat spelt backwards is taco cat</p>
+			</div>
+		<div>
+		<p class="credit">http://www.flickr.com/photos/ilovepaisley/6943837126/ by ilovepaisley<span class="cc">bd</span></p>
+
+	</div></section>
+	
+	
+
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<script src="../prism/prism.js"></script>
+	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+	
+	<script src="demo/idb-demo.js"></script>
+</body>
+</html>
+
+
+
