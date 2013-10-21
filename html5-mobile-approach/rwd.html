@@ -32,17 +32,26 @@
 <body class="list">
 	
 	<header class="caption">
-		<h1>Cross-Device Development with Web Standards</h1>
+		<h1>Cross-Device Responsive Web Development with Web Standards</h1>
 		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
 	</header>
 	
 	
-	<section class="slide cover"><div>
-		<h2 style="font-size: 68px">Cross-Device Development<br>with Web Standards</h2>
-		<h4>Tomomi Imura</h4>
-		<p style="margin-left: -50px">July 13, 2013<br>Open Web Camp &bull; San Jose, CA</p>
-		<img src="images/cover-rwd.png" style="width:1024px;height:640px;" alt="rwd">
+	<section class="slide cover dark"><div>
+		<h2 style="color:#fff;font-size:52px; text-align:right; margin-right:-20px">Cross-Device Development<br>with Web Standards</h2>
+		<h4 style="text-align:right; text-shadow:2px 2px 6px black; margin-top:-30px;  margin-right:-20px">Tomomi Imura</h4>
+		<img src="images/cover-rwd.jpg" style="width:1024px;height:640px;" alt="rwd">
+		<p class="credit">flickr.com/photos/64855052@N00/3967578543/ by Yoichi Nakanishi<span class="cc">b</span></p>
 	</div></section>
+	
+	
+	
+	<section class="slide cover dark"><div>
+		<h2 style="color:#fff;font-size:42px; margin-top:460px">CSS Dev Conference @ The Stanley Hotel</h2>
+		<img src="images/stanley-hotel.jpg" style="width:1024px;height:640px;" alt="rwd">
+		<p class="credit"></p>
+	</div></section>
+	
 	
 	
 	<section class="slide"><div>
@@ -62,6 +71,7 @@
 			<li>Mobile Front-end, UI/UX Developer</li>
 			<li>Open Web Advocate at Nokia</li>
 			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
+			<li>HTTP Status Cat lady</li>
 		</ul>
 
 	</div></section>
@@ -95,18 +105,7 @@
 		<img src="images/screen-sizes-large.jpg" style="width:1024px;height:640px;" alt="Phone/Phablet/tablet">
 	</div></section>
 	
-	
-<!--
-	<section class="slide"><div>
-		<h2>Desktop to Mobile</h2>
-		<ol class="large-list" style="margin-top: 3em">
-			<li>Do Nothing</li>
-			<li>One Web Approach</li>
-			<li>Separated Mobile Experience</li>
-		</ol>		
-	</div></section>
--->
-	
+
 		
 	<section class="slide"><div>
 		<h2>Adaptive Design</h2>
@@ -129,8 +128,8 @@
 			<li style="margin-top:.75em">Responsive Design
 				<ul>
 					<li>Fluid Layout</li>
-					<li>Flexible Images</li>
 					<li>Media Queries</li>
+					<li>Responsive Images</li>
 				</ul>
 			</li>
 		</ol>
@@ -143,9 +142,10 @@
 			<img src="images/rwd.png">
 		</div>
 		<!-- <p style="font-size:.75em; margin-top:2em;text-align:right">A super silly example I wrote: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web</a><p>		 -->
+		<footer>using a single content and scale the UI to fit on any browser types also window size/orientations</footer>
 	</div></section>
 	
-		
+	
 	<section class="slide"><div>
 		<h2>Responsive Web Design</h2>
 		<div style="margin-left:-10px">
@@ -154,9 +154,7 @@
 		<p class="credit"><a href="http://mediaqueri.es/" target="_blank">mediaqueri.es</a><p>		
 	</div></section>
 	
-
 	
-		
 	<section class="slide"><div>
 		<h2>Why Should You Consider?</h2>
 		<ul>
@@ -173,15 +171,170 @@
 		</ul>
 		
 		<footer>
-		- using a single content and scale the UI to fit on any browser types also window size/orientations
-		- Maintainable - a single markup/content to manage
 		</footer>		
 	</div></section>
+		
 	
+	
+		
+	
+	
+	<!-- FLUID LAYOUT -->
+		
 	<section class="slide cover"><div>
+		<h2>Fluid Layout<br>Neue</h2>
+		<img src="images/milk-crown.jpg" alt="fluid" style="width:1024px;height:640px;">
+		<p class="credit">flickr.com/photos/meantux/378103724/ by Denis-Carl Robidoux <span class="cc">bn</span></p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Then</h2>
+			<ul>
+				<li>HTML Table Layout (Party like it's 1999)</li>
+				<li>The CSS "Holy Grail" Column Liquid Layout
+					<ul>
+						<li>Float</li>
+						<li>Negative margin</li>
+						<li>All the hacks that are PITA</li>
+					</ul>
+				</li>
+				<li>UI Frameworks for Grid Layout
+					<ul>
+						<li>YUI</li>
+						<li>jQuery Masonry</li>
+					</ul>
+				</li>
+			</ul>
+			<img src="images/css-is-awesome.png" style="position:absolute; bottom:150px; right:100px;">
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Now and Future: CSS3</h2>
+			<ul>
+				<li>Column</li>
+				<li>Flexible Box Layout ("FlexBox")</li>
+				<li>Grid Layout</li>
+				<!-- <li>Exclusions and Shapes (Magazine layout) -->
+			</ul>
+		<footer>
+		CSS Template Layout Module too? but the doc is stalled since 2011
+		</footer>
+	</div></section>
+	
+
+	
+	<section class="slide"><div>
+		<h2>Fluid Columns</h2>
+		<div style="margin-left:-25px;margin-right:-50px">
+		<img src="images/column-mobile.png" height="300"><img src="images/column-tablet.png" height="300"><img src="images/column-desktop.png" height="300">	
+		</div>
+		<p class="credit"><a href="http://jsfiddle.net/girlie_mac/grNUC/embedded/result/" target="_blank">Demo on JSFiddle</a></p>
+		<footer>
+		This gives one column only layout if the width of the browser windows is small.
+		It becomes two-column when the window is wider than 200 x 2 + margin + column-gap (1em but browser dependent).
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>CSS Multi-column Layout Module</h2>
+<pre style=""><code class="language-css">		
+.col {
+    -webkit-columns: 200px; 
+    -moz-columns: 200px;
+    columns: 200px;
+    /* column-count: auto */
+}
+
+</code></pre>		
+
+		<p>Browser Support:</p>
+		<div class="browser-container" style="">
+			<div class="browser chrome"><span>*</span></div>
+			<div class="browser android"><span>2.1*</span></div>
+			<div class="browser safari"><span>3*</span></div>
+			<div class="browser bb"><span>7*</span></div>
+			<div class="browser moz"><span>*</span></div>
+			<div class="browser ie"><span>10</span></div>
+			<div class="browser o"><span>11.5p</span></div>
+			<div class="browser o"><span>15Bl*</span></div>
+    	</div>
+		<p class="credit">http://www.w3.org/TR/css3-multicol/</p>
+		<footer>
+		</footer>
+	</div></section>
+
+	
+	
+	<section class="slide"><div>
+		<h2>Flexbox Layout with MQ</h2>
+		<img src="images/flexbox-desktop.png" height="400">
+		<img src="images/flexbox-mobile.png" height="450" style="vertical-align:top;">	
+		<p class="credit"><a href="http://jsfiddle.net/girlie_mac/tGPWW/embedded/result/" target="_blank">Demo on JSFiddle</a></p>	
+		<footer>
+		</footer>
+	</div></section>
+	
+		
+	<section class="slide"><div>
+		<h2>CSS Flexible Box Layout Module</h2>
+<pre style=""><code class="language-css">#main {
+	display: flex;
+	flex-flow: row;
+} ...
+@media all and (max-width: 640px) {
+	#main {
+	    flex-flow: column;
+	}
+}
+</code></pre>		
+
+		<p>Latest syntax:</p>
+		<div class="browser-container" style="">
+			<div class="browser chrome"><span>21*</span></div>
+			<div class="browser safari"><span>7*</span></div>
+			<div class="browser bb"><span>10*</span></div>
+			<div class="browser ie"><span>11</span></div>
+			<div class="browser o"><span>12p</span></div>
+			<div class="browser o"><span>15Bl</span></div>
+    	</div>
+    	
+		<p class="credit">http://www.w3.org/TR/css3-flexbox/</p>
+		<footer>
+		</footer>
+	</div></section>
+
+	
+	
+	<section class="slide"><div>
+		<h2>Grid Layout with MQ</h2>
+		<figure style="display:inline-block; margin-right: 1em">
+		<img src="images/grid-portrait.png"><figcaption>An arrangement suitable for ‘<span class="pink">portrait</span>’ orientation.</figcaption>
+		</figure>
+		
+		<figure style="display:inline-block">
+		<img src="images/grid-landscape.png"><figcaption>An arrangement suitable for ‘<span class="pink">landscape</span>’ orientation.</figcaption>	
+		</figure>
+		
+		<div class="browser-container" style="">
+			<div class="browser ie"><span>10*</span></div>
+    	</div>
+    	
+		<p class="credit">http://www.w3.org/TR/css3-grid-layout/</p>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	
+	<!-- Media Quesries -->
+	
+	
+	<section class="slide cover dark"><div>
 		<h2 style="text-align:right">Media-Queries</h2>
-		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;;margin-top:15px">
-		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+		<img src="images/spoons.jpg" alt="spoons">
+		<p class="credit">http://commons.wikimedia.org/wiki/File:Metric_Volume_Measuring_Vessels_Frontsides-In_use.jpg <span class="cc">ba</span></p>
 		<footer>
 		First proposed in 2001 by Opera and MS, but not implemented until recently.
 		</footer>
@@ -209,12 +362,18 @@
 		</li>
 	</div></section>
 	
-	
+		
 	<section class="slide"><div>
 		<h2>CSS3: Media-Queries</h2>
-		<p>allows content rendering to adapt to conditions (e.g. screen resolution)</p>
+		<p>allows content rendering to adapt to conditions:</p>
 	
-		<div style="text-align:center"><img style="margin-top:0" src="images/screens.png"></div>
+		<ul>
+			<li>width of the target viewport
+			<li>width of the device's screen size
+			<li>screen orientations (landscape v. portrait)
+			<li>device pixel ratio (aka. Retina)
+		</ul>
+		etc...
 		
 		<footer>
 		Controlling the presentation without modifying the content itself.
@@ -272,7 +431,7 @@
 	
 		<section class="slide"><div>
 		<h3>CSS3: Media-Queries</h3>
-		<p style="margin-top:2em">Yay, CSS3 is awesome!</p>
+		<p style="margin-top:2em">CSS3, Hell Yeah!</p>
 		
 		<pre style="margin-top: -20px"><code class="language-css">
 @media only screen
@@ -298,7 +457,7 @@
 	
 	
 	<section class="slide"><div>
-		<h2>The High DPI problem</h2>
+		<h2>The High DPI</h2>
 		
 		<div style="margin-top:-10px">
 			<img src="images/resolutions-display.png">
@@ -311,20 +470,41 @@
 			When a browser maps one pixel to one high resolution screen pixel, text and images of the web sites made for smaller resolution displays become too small.</footer>
 	</div></section>
 	
+	
 	<section class="slide"><div>
-		<h3>The High DPI problem: Solution</h3>
+		<h3>The High DPI: small screens</h3>
+		<div style="text-align:center;"><img src="images/retinafy-01.png" style="width:800px"></div>
 		
-		<div style="text-align:center;margin-top:20px"><img src="images/retina-display.png" style="width:540px"></div>
-		
-		<footer>Automatically scale up the UI and content (fit to HVGA, for instance).</footer>
 	</div></section>
+		
+	<section class="slide"><div>
+		<h3>The High DPI: small screens</h3>
+		<div style="text-align:center"><img src="images/retinafy-02.png" style="width:800px"></div>
+	</div></section>
+			
+	<section class="slide"><div>
+		<h3>The High DPI: small screens</h3>
+		<div style="text-align:center"><img src="images/retinafy-03.png" style="width:800px"></div>
+	</div></section>
+		
+	<section class="slide"><div>
+		<h3>The High DPI: small screens</h3>
+		<div style="text-align:center"><img src="images/retinafy-04.png" style="width:800px"></div>
+		<footer>UI and contents are automatically scaled up.</footer>
+	</div></section>
+			
+	<section class="slide"><div>
+		<h3>The High DPI: small screens</h3>
+		<div style="text-align:center"><img src="images/retinafy-05.png" style="width:800px"></div>
+	</div></section>
+			
 	
 	
 	<section class="slide"><div>
 		<h2>CSS Pixel vs. Device Pixel</h2>
 		<ul style="margin-top:50px">
 			<li style="font-size:48px;line-height:100px;">Pixel in CSS is relative</li>
-			<li style="font-size:48px;line-height:100px;">1 CSS pixel <strong>!=</strong> 1 device pixel</li>
+			<li style="font-size:48px;line-height:100px;">1 CSS pixel <strong class="pink">!=</strong> 1 device pixel</li>
 		</ul>
 	</div></section>
 	
@@ -348,7 +528,20 @@ window.devicePixelRatio
 		<tr>
 		<td>Galaxy Nexus</td><td>Opera Mobile</td><td>2.25</td>
 		</tr>
+		<tr>
+		<td>Samsung Galaxy S4</td><td>Chrome</td><td>3.0</td>
+		</tr>
 		</table>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Zoom Dependent Pixel Density</h2>
+		
+		<img src="images/zoom.png">
+		<p><span style="font-size:2em; border:1px silver solid; border-radius:8px; padding: 0 10px;">⌘+</span> and <span style="font-size:2em; border:1px silver solid; border-radius:8px; padding: 0 10px;">⌘-</span>, but not for pinch-zoom</p>
+		
+		<p align=right><a href="https://dl.dropboxusercontent.com/u/1330446/tests/dpr.html" target=_blank>Test page (Firefox and Chrome 31+)</a></p>
+		<footer>This is not meant to be work on touch screen when a user pinch-zoom.
 	</div></section>
 	
 	
@@ -443,13 +636,13 @@ window.devicePixelRatio
 var mql = window.matchMedia(<em>mediaQueryString</em>);
 		</code></pre>
 		
-		<p>Basic Support:</p>
+		<p>Browser Support:</p>
 		<div class="browser-container" style="">
-			<div class="browser chrome"><span>18</span></div>
-			<div class="browser android"><span>3.0</span></div>
-			<div class="browser safari"><span>5.1</span></div>
+			<div class="browser chrome"><span>9</span></div>
+			<div class="browser android"><span>3</span></div>
+			<div class="browser safari"><span>5</span></div>
 			<div class="browser bb"><span>10</span></div>
-			<div class="browser moz"><span>14</span></div>
+			<div class="browser moz"><span>6</span></div>
 			<div class="browser ie"><span>10</span></div>
 			<div class="browser o"><span>12.1p</span></div>
 			<div class="browser o"><span>15Bl</span></div>
@@ -506,7 +699,7 @@ if (mql.matches) {
 		</code></pre>
 		
 		<div class="browser-container" style="">
-			<div class="browser o"><span>11pf</span></div>
+			<div class="browser o"><span>11P</span></div>
 			<div class="browser ie"><span>10</span></div>
     	</div>
     	<p>* bug in IE10 - reports in device pixel value</p>
@@ -564,6 +757,18 @@ if (mql.matches) {
 	
 	
 	<section class="slide"><div>
+		<h2>Media Queries Level 4</h2>
+		<pre style=""><code class="language-css">
+@media (hover) {
+   .menu li:hover {
+      background-color: #bada55;
+   }
+}
+		</code></pre>
+	</div></section>
+	
+	
+	<section class="slide"><div>
 		<h2>MQ L4 - Ambient Light Detection</h2>
 		<pre style=""><code class="language-css">
 @media (luminosity: normal) {
@@ -585,177 +790,47 @@ if (mql.matches) {
 		</footer>
 	</div></section>
 	
-	
-	
-	
-	<!-- FLUID LAYOUT -->
-		
-	<section class="slide cover"><div>
-		<h2 style="text-align:right">Fluid Layout<br>Neue</h2>
-		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;margin-top:15px">
-		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
-	</div></section>
-	
-	
-	<section class="slide"><div>
-		<h2>Then</h2>
-			<ul>
-				<li>The CSS "Holy Grail" Column Liquid Layout
-					<ul>
-						<li>Float</li>
-						<li>Negative margins</li>
-						<li>PITA</li>
-					</ul>
-				</li>
-				<li>UI Frameworks for Grid Layout
-					<ul>
-						<li>YUI</li>
-						<li>jQuery Masonry</li>
-					</ul>
-				</li>
-			</ul>
-	</div></section>
-	
-	<section class="slide"><div>
-		<h2>Now and Future: CSS3</h2>
-			<ul>
-				<li>Column</li>
-				<li>Flexible Box Layout ("FlexBox")</li>
-				<li>Grid Layout</li>
-				<!-- <li>Exclusions and Shapes (Magazine layout) -->
-			</ul>
-		<footer>
-		CSS Template Layout Module too? but the doc is stalled since 2011
-		</footer>
-	</div></section>
-	
-	
-	<section class="slide"><div>
-		<h2>CSS Multi-column Layout Module</h2>
-<pre style=""><code class="language-css">		
-.col {
-    -webkit-columns: 200px; -moz-columns: 200px;
-    columns: 200px;
-    /* column-count: auto */
-}
 
-</code></pre>		
 
-		<p>Basic Support:</p>
-		<div class="browser-container" style="">
-			<div class="browser chrome"><span>18*</span></div>
-			<div class="browser android"><span>2.1*</span></div>
-			<div class="browser safari"><span>3.2*</span></div>
-			<div class="browser bb"><span>7*</span></div>
-			<div class="browser moz"><span>*</span></div>
-			<div class="browser ie"><span>10</span></div>
-			<div class="browser o"><span>11.5p</span></div>
-			<div class="browser o"><span>14Bl</span></div>
-    	</div>
-		<p class="credit">http://www.w3.org/TR/css3-multicol/</p>
-		<footer>
-		</footer>
-	</div></section>
-	
-	<section class="slide"><div>
-		<h2>Fluid Columns</h2>
-		<div style="margin-left:-25px;margin-right:-50px">
-		<img src="images/column-desktop.png" height="300"><img src="images/column-tablet.png" height="300"><img src="images/column-mobile.png" height="300">	
-		</div>
-		<p class="credit"><a href="http://jsfiddle.net/girlie_mac/grNUC/embedded/result/" target="_blank">Demo on JSFiddle</a></p>
-		<footer>
-		This gives one column only layout if the width of the browser windows is small.
-		It becomes two-column when the window is wider than 200 x 2 + margin + column-gap (1em but browser dependent).
-		</footer>
-	</div></section>
-	
-	
-	<section class="slide"><div>
-		<h2>CSS Flexible Box Layout Module</h2>
-<pre style=""><code class="language-css">#main {
-	display: flex;
-	flex-flow: row;
-} ...
-@media all and (max-width: 640px) {
-	#main {
-	    flex-flow: column;
-	}
-}
-</code></pre>		
-
-		<p>Latest syntax:</p>
-		<div class="browser-container" style="">
-			<div class="browser chrome"><span>21*</span></div>
-			<div class="browser safari"><span>7*</span></div>
-			<div class="browser bb"><span>10*</span></div>
-			<div class="browser ie"><span>11</span></div>
-			<div class="browser o"><span>12p</span></div>
-			<div class="browser o"><span>15Bl</span></div>
-    	</div>
-    	
-		<p class="credit">http://www.w3.org/TR/css3-flexbox/</p>
-		<footer>
-		</footer>
-	</div></section>
-	
-	<section class="slide"><div>
-		<h2>Flexbox Layout with MQ</h2>
-		<img src="images/flexbox-desktop.png" height="400">
-		<img src="images/flexbox-mobile.png" height="450" style="vertical-align:top;">	
-		<p class="credit"><a href="http://jsfiddle.net/girlie_mac/tGPWW/embedded/result/" target="_blank">Demo on JSFiddle</a></p>	
-		<footer>
-		</footer>
-	</div></section>
-	
-	
-	<section class="slide"><div>
-		<h2>Grid Layout with MQ</h2>
-		<figure style="display:inline-block; margin-right: 1em">
-		<img src="images/grid-portrait.png"><figcaption>An arrangement suitable for ‘<span class="pink">portrait</span>’ orientation.</figcaption>
-		</figure>
-		
-		<figure style="display:inline-block">
-		<img src="images/grid-landscape.png"><figcaption>An arrangement suitable for ‘<span class="pink">landscape</span>’ orientation.</figcaption>	
-		</figure>
-		
-		<div class="browser-container" style="">
-			<div class="browser ie"><span>10*</span></div>
-    	</div>
-    	
-		<p class="credit">http://www.w3.org/TR/css3-grid-layout/</p>
-		<footer>
-		</footer>
-	</div></section>
-	
-	
-	
 	
 	<!-- RESP IMAGES -->
 	
-	<section class="slide cover"><div>
-		<h2 style="text-align:right">Responsive Images</h2>
-		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;margin-top:15px">
-		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+	<section class="slide cover dark"><div>
+		<h2 style="text-align:right; margin-top:190px;">Responsive Images</h2>
+		<img src="images/frames.jpg" alt="photo frames" style="width:1024px;height:640px;">
+		<p class="credit">flickr.com/photos/joaomoura/2348271655/<span class="cc">bna</span></p>
 	</div></section>
 	
 	
 	<section class="slide"><div>
-		<h2>Images Across Devices</h2>
+		<h2>Responsive Images Use Cases</h2>
+		
+		<ol>
+			<li>Resolution switching
+			<li>Art Direction
+			<li>High-res images for screens with higher DPR
+		</ol>
+	</div></section>
+	
+	
+		
+	<section class="slide"><div>
+		<h2>Methods</h2>
 		
 		<ul>
 			<li>Providing different images with media-queries</li>
-			<li>with JavaScript</li>
-			<li>with Server-side solutions</li>
-			<li>Resizing a single image dynamically with CSS</li>
-			<li>Resizing a single vector image</li>
+			<li>...with JavaScript</li>
+			<li>...with server-side content negotiation</li>
+			<li>Resizing / cropping a single image</li>
 			<li>Creative Hacks</li>
-			<li>Proposed solutions</li>
+			<li>New: proposed solutions</li>
 		</ul>		
 	</div></section>
+			
 	
 	
 	<section class="slide"><div>
-		<h2>Different assets with MQ</h2>
+		<h2>Different images with MQ</h2>
 		<p>Resolution switching</p>
 		<img src="images/assets-resize.png">		
 	</div></section>
@@ -763,44 +838,12 @@ if (mql.matches) {
 
 	
 	<section class="slide"><div>
-		<h2>Different assets with MQ</h2>
-		<p>Art-Direction, instead of simple resizing</p>
+		<h2>Different images with MQ</h2>
+		<p>Art-Direction, instead of simple scaling</p>
 		<img src="images/assets-crop.png">		
 	</div></section>
-			
-			
-<!--
-
-	<section class="slide"><div>
-		<h2>Art Direction</h2>
-		
-		<img src="images/crop-img-desktop.png" height="450">
-		<img src="images/crop-img-mobile.png" height="400" style="vertical-align:top; display:inline-block; box-shadow: 2px 6px 20px rgba(0,0,0,.65);">
-		
-	</div></section>
 	
--->
-		
-	<section class="slide"><div>
-		<h2>Cropping with CSS</h2>
-		
-		<pre style="margin-top: -20px"><code class="language-markup">
-&lt;div class="image-container"&gt;	
-  &lt;img src="images/relatively-large-photo.jpg"&gt;&lt;/div&gt;		</code></pre>
-		<pre><code class="language-css">
-.image-container {position: relative;}
-.image-container img {position: absolute;}
 
-@media only screen and (max-width: 480px) {
-  .image-container img {
-      clip: rect(0 380px 200px 100px);
-  }
-}
-		</code></pre>
-	</div></section>		
-
-
-	
 	<section class="slide"><div>
 		<h2>Dynamically Resizing an Image</h2>
 		
@@ -812,7 +855,7 @@ if (mql.matches) {
 		
 	<section class="slide"><div>
 		<h2>Dynamically Resizing an Image</h2>
-		<p>Shrink and Stretch</p>
+		<p>Shrink and Stretch without MQ</p>
 		
 		<pre style="margin-top: -20px"><code class="language-markup">
 		
@@ -824,9 +867,54 @@ if (mql.matches) {
 }
 		</code></pre>
 		
+		<footer>This cause a browser reflow. The browser has to re-calculate the image dimension, and block operation.</footer>
 	</div></section>
 	
 	
+	<section class="slide"><div>
+		<h2>Art Direction: Cropping with CSS</h2>
+		
+		<img src="images/crop-img-desktop.png" height="450">
+		<img src="images/crop-img-mobile.png" height="400" style="vertical-align:top; display:inline-block; box-shadow: 2px 6px 20px rgba(0,0,0,.65);">
+		<p class="credit">https://dl.dropboxusercontent.com/u/1330446/tests/clip.html</p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>CSS2 Clip Property</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-markup">
+&lt;div class="image-container"&gt;	
+  &lt;img src="images/sushi-large.jpg"&gt;&lt;/div&gt;		</code></pre>
+		<pre><code class="language-css">
+.image-container {position: relative;}
+.image-container img {position: absolute;}
+
+@media only screen and (max-width: 480px) {
+  .image-container img {
+      clip: rect(80px 270px 270px 240px); // BLEH!!!
+  }
+}
+		</code></pre>
+		<footer>
+		This is pretty cumbersome. I don't really rem=commend this method.
+		</footer>
+	</div></section>		
+
+
+<section class="slide"><div>
+		<h2>CSS2 Clip Property</h2>
+		
+		<pre><code class="language-css">position: absolute;
+clip: rect(top right bottom left);		
+		</code></pre>
+		
+		<div align="center"><img src="images/css-clip.jpg"></div>
+		
+		<p class="credit">Photo: http://www.flickr.com/photos/nicolelee/1798352472/ by Nicole Lee<span class="cc">bna</span></p>
+		
+	</div></section>
+	
+
 	<section class="slide"><div>
 		<h2>High Resolution Images</h2>
 		<div style="margin-left:160px">
@@ -858,7 +946,8 @@ if (mql.matches) {
   }
 }
 		</code></pre>
-		
+	
+	<footer>Using a background-image for a content image is not semantic!</footer>
 	</div></section>	
 	
 	
@@ -914,7 +1003,7 @@ if (mql.matches) {
 			<img id="svgImg" src="images/HTML5_sticker.svg" width="432">
 		</div>
 		
-		<script defer>
+		<script>
 		function resizeSVG(el) {
 			var obj = document.getElementById('svgImg');
 			obj.width = el.value;
@@ -982,6 +1071,7 @@ if (mql.matches) {
 				<li>Clown Car Technique
 			</ul>
 		</ul>
+		<footer>Clown Car Technique uses Media queries within SVG. It is called Clown Car because all of the images are stuffed into a single SVG file</footer>
 	</div></section>
 	
 	
@@ -1008,8 +1098,9 @@ if (mql.matches) {
              banner-phone.jpeg 100w, 
              banner-phone-HD.jpeg 100w 2x"&gt;
 		</code></pre>
-		<p class="credit"><a href="http://www.w3.org/TR/html-srcset/" target="_blank"></a>The srcset attribute -
-An HTML extension for adaptive images</p>
+		<p>WebKit Nightly r154002</p>
+		<p class="credit"><a href="http://www.w3.org/TR/html-srcset/" target="_blank">The srcset attribute -
+An HTML extension for adaptive images</a></p>
 	</div></section>
 	
 	
@@ -1034,13 +1125,35 @@ An HTML extension for adaptive images</p>
 		</footer>
 	</div></section>			
 
+
+	<section class="slide"><div>
+		<h2>HTTP Client-Hints</h2>
 		
+		<p>Proposal from Google: let the server selects the right asset</p>
+		
+		<pre><code>
+[Request]
+
+GET /kitten.jpg HTTP/1.1
+User-Agent: ...	
+Accept: image/webp, image/jpg
+CH: dpr=2.0  
+		</code></pre>
+		
+		<p class="credit">http://www.igvita.com/2013/08/29/automating-dpr-switching-with-client-hints/</p>
+
+		<footer>It is basically a request header. and the server can automatically pick the appropriate version of the image.
+		Unlike UA sniffing, it does not require any 3rd party database like WURFL, and client-hints is actually feature-proof.
+		
+		It is implemented in the latest Chromium build, and requires --enable-client-hints switch.
+		﻿</footer>
+	</div></section>
 			
 	
-	<section class="slide cover"><div>
-		<h2 style="text-align:right">What's Next?</h2>
-		<img src="images/matryoshka.jpg" alt="HTML5" style="width:1024px;height:640px;margin-top:15px">
-		<p class="credit">http://www.flickr.com/photos/archer10/4312413546/</p>
+	<section class="slide cover dark"><div>
+		<h2>What's<br>Next?</h2>
+		<img src="images/roomba.jpg" alt="HTML5" style="width:1024px;height:640px;">
+		<p class="credit">http://www.flickr.com/photos/barbostick/3581760713/ <span class="cc">ba</span></p>
 	</div></section>
 	
 
@@ -1072,9 +1185,9 @@ An HTML extension for adaptive images</p>
 	</div></section>
 	
 	<section class="slide"><div>
-		<h2>Wearable Devices</h2>
-		<div align=center><img src="images/google-glass-for-cats.jpg" width="500"></div>
-		<p class="credit">memecenter.com</p>
+		<h2>Wearable Devices & IoT</h2>
+		<div align=center><img src="images/grumpy-cat-glass.png" width="400"></div>
+		<p class="credit">http://imgur.com/g/memes/qKH2tM8</p>
 	</div></section>
 	
 <!--
@@ -1105,21 +1218,13 @@ An HTML extension for adaptive images</p>
 			<li><a href="http://twitter.com/girlie_mac" target="_blank">@girlie_mac</a></li>
 			<li><a href="http://girliemac.com" target="_blank">girliemac.com</a></li>
 			<li><a href="http://github.com/girliemac" target="_blank">github.com/girliemac</a></li>
+			<li><a href="http://github.com/girliemac" target="_blank">speakerdeck.com/girlie_mac</a></li>
 		</ul>
-		<p>Web: girliemac.github.io/presentation-slides/<br>
-		PDF: speakerdeck.com/girlie_mac/</p>
+		<p>Slide: http://girliemac.github.io/presentation-slides/html5-mobile-approach/rwd.html</p>
 	</div></section>
 	
 	
-	<section class="slide"><div>
-		<h2>Note</h2>
-		<p>Firefox listed in my "Compat list" (icons with versions) is <em>Firefox for Android</em> and not <em>FirefoxOS</em> browser.
-			Why!? Because geeksphone.com always sell out devices!!! If you have an extra fox, I am happy to adopt one :-D</p>
-		</p>
 
-	</div></section>
-	
-	
 	<p class="badge"><a href="https://github.com/girliemac/presentation-slides/">Fork me on Github</a></p>
 	
 	<!--

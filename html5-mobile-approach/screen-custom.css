@@ -14,6 +14,13 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'CC icons';
+	src: url('../fonts/cc-icons.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	font: 25px/2 "Bree Serif", sans-serif
 }
@@ -65,10 +72,15 @@ figcaption {
 	line-height: 1.2em;
 }
 
-.slide.cover.dark h2 {
+.slide.cover.dark  {
 	color: #fff;
+}
+
+.slide.cover.dark h2 {
+    color: #fff;
 	text-shadow: 3px 3px 8px black;
 }
+
 
 .slide.cover.small h2 {
 	font-size: 50px;
@@ -264,7 +276,13 @@ td.small {
 	background: url('images/browser_logos.png') no-repeat 0 0;
 }
 
-
+/* Creative Commons Icons */
+.cc {
+	font-family: "CC icons";
+	letter-spacing: 2px; 
+	margin-left: 10px;
+	font-size: 1.4em;
+}
 
 /* vcard */
 
