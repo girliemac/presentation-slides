@@ -45,15 +45,6 @@
 	</div></section>
 	
 	
-	
-	<section class="slide cover dark"><div>
-		<h2 style="color:#fff;font-size:42px; margin:480px 0 0 180px">@ The Stanley Hotel</h2>
-		<img src="images/stanley-hotel.jpg" style="width:1024px;height:640px;" alt="rwd">
-		<p class="credit"></p>
-	</div></section>
-	
-	
-	
 	<section class="slide"><div>
 		<!-- Hello, my name is CSS sticker -->
 		<div class="vcard" style="margin: 120px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
@@ -68,10 +59,10 @@
 		</div>
 		<!-- sticker end -->
 		<ul class="animList" style="position:relative; left: 180px;">
-			<li>Mobile Front-end, UI/UX Developer</li>
+			<li>Front-end, UI/UX Developer</li>
+			<li>Mobile Geek</li>
 			<li>Open Web Advocate at Nokia</li>
 			<li>Formally at Palm webOS, Yahoo! Mobile etc.</li>
-			<li>HTTP Status Cat lady</li>
 		</ul>
 
 	</div></section>
@@ -136,15 +127,17 @@
 	</div></section>
 	
 		
+<!--
 	<section class="slide"><div>
 		<h2>Responsive Web Design</h2>
 		<div style="text-align:center">
 			<img src="images/rwd.png">
 		</div>
-		<!-- <p style="font-size:.75em; margin-top:2em;text-align:right">A super silly example I wrote: <a href="http://girliemac.github.com/Respongebob-Web/" target="blank">RespongeBob Web</a><p>		 -->
 		<footer>using a single content and scale the UI to fit on any browser types also window size/orientations</footer>
 	</div></section>
+-->
 	
+<!--
 	
 	<section class="slide"><div>
 		<h2>Responsive Web Design</h2>
@@ -153,8 +146,10 @@
 		</div>
 		<p class="credit"><a href="http://mediaqueri.es/" target="_blank">mediaqueri.es</a><p>		
 	</div></section>
+-->
 	
 	
+<!--
 	<section class="slide"><div>
 		<h2>Why Should You Consider?</h2>
 		<ul>
@@ -173,6 +168,7 @@
 		<footer>
 		</footer>		
 	</div></section>
+-->
 		
 	
 	
@@ -210,11 +206,12 @@
 	</div></section>
 	
 	<section class="slide"><div>
-		<h2>Now and Future: CSS3</h2>
+		<h2>Now and Future: CSS3 Layouts</h2>
 			<ul>
-				<li>Column</li>
-				<li>Flexible Box Layout ("FlexBox")</li>
-				<li>Grid Layout</li>
+				<li>Columns</li>
+				<li>Flexible Box ("FlexBox")</li>
+				<li>Regions</li>
+				<li>Grids</li>
 				<!-- <li>Exclusions and Shapes (Magazine layout) -->
 			</ul>
 		<footer>
@@ -269,8 +266,8 @@
 	
 	<section class="slide"><div>
 		<h2>Flexbox Layout with MQ</h2>
-		<img src="images/flexbox-desktop.png" height="400">
-		<img src="images/flexbox-mobile.png" height="450" style="vertical-align:top;">	
+		<img src="images/fluid-layout/flexbox-desktop.png" height="400">
+		<img src="images/fluid-layout/flexbox-mobile.png" height="450" style="vertical-align:top;">	
 		<p class="credit"><a href="http://jsfiddle.net/girlie_mac/tGPWW/embedded/result/" target="_blank">Demo on JSFiddle</a></p>	
 		<footer>
 		</footer>
@@ -305,16 +302,78 @@
 		</footer>
 	</div></section>
 
+
 	
+	<section class="slide"><div>
+		<h2>Responsive Regions Layout</h2>
+		
+		<figure style="display:inline-block; margin-right: 1em">
+		<img src="images/fluid-layout/regions-tablet.png" height="450">
+		</figure>
+		
+		<figure style="display:inline-block">
+		<img src="images/fluid-layout/regions-mobile.png" height="450">	
+		</figure>
+
+		<p class="credit"><a href="http://cdpn.io/LbAFq" target="_blank">Demo on Codepen: http://cdpn.io/LbAFq</a></p>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<h2>CSS Regions Module</h2>
+		
+		<figure style="display:inline-block; vertical-align:top;">
+		<img src="images/fluid-layout/intro-example-layout.svg" width="390">
+		</figure>
+		
+		<figure style="display:inline-block;">
+		<img src="images/fluid-layout/region-styling.png" width="380">
+		</figure>
+		<p class="credit">http://dev.w3.org/csswg/css-regions/</p>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Responsive Regions Layout</h2>
+		
+		<pre style=""><code class="language-markup">&lt;div class="region region1"&gt;&lt;/div&gt;
+&lt;div class="region region2"&gt;&lt;/div&gt;	...	
+
+&lt;article class="content"&gt;content here...&lt;/article&gt;
+		</code></pre>
+		
+		<pre style=""><code class="language-css">.content {flow-into: article;}
+.region {flow-from: article;}
+
+@media screen and (max-width: 400px) {
+  .content {flow-into: none;}
+  .region {display: none;}
+}
+		</code></pre>
+		<div class="browser-container" style="position:relative;top:-180px;" align="right">
+			<div class="browser safari"><span>7*</span></div>
+			<div class="browser ie"><span>10*</span></div>
+			<p style="font-size:.75em">IE10 requires iframe</p>
+    	</div>
+		
+		<footer>
+		</footer>
+	</div></section>
+			
 	
 	<section class="slide"><div>
 		<h2>Responsive Grid</h2>
 		<figure style="display:inline-block; margin-right: 1em">
-		<img src="images/grid-portrait.png"><figcaption>An arrangement suitable for ‘<span class="pink">portrait</span>’ orientation.</figcaption>
+		<img src="images/fluid-layout/grid-portrait.png"><figcaption>An arrangement suitable for ‘<span class="pink">portrait</span>’ orientation.</figcaption>
 		</figure>
 		
 		<figure style="display:inline-block">
-		<img src="images/grid-landscape.png"><figcaption>An arrangement suitable for ‘<span class="pink">landscape</span>’ orientation.</figcaption>	
+		<img src="images/fluid-layout/grid-landscape.png"><figcaption>An arrangement suitable for ‘<span class="pink">landscape</span>’ orientation.</figcaption>	
 		</figure>
 		
 		<div class="browser-container" style="">
@@ -383,7 +442,7 @@
 	
 	<section class="slide"><div>
 		<h3>CSS3: Media-Queries</h3>
-		<p style="margin-top:2em">Separate styles by the width of the target viewport</p>
+		<p style="margin-top:2em">Separate styles by the width of the target viewport (browser display area)</p>
 		
 		<pre style="margin-top: -20px"><code class="language-css">
 @media only screen
@@ -394,7 +453,7 @@
 }
 </code></pre>
 		
-		<footer>target viewport = a browser display area</footer>
+		<footer></footer>
 	</div></section>
 	
 	
@@ -657,7 +716,7 @@ var mql = window.matchMedia(<em>mediaQueryString</em>);
 			
 
 	<section class="slide"><div>
-		<h2>matchMedia()</h2>
+		<!-- <h2>matchMedia()</h2> -->
 		
 		<pre style=""><code class="language-javascript">
 var mql = window.matchMedia('(orientation:landscape)');
@@ -677,10 +736,8 @@ if (mql.matches) {
 		<h2>CSS Device Adaptation</h2>
 		
 		<pre style=""><code class="language-markup">
-&lt;meta name="viewport" content="width=device-width"&gt;	
-		</code></pre>
-		
-		<div align="center" class="pink"><span style="font-size:2em">&darr;</span> CSS</div>
+&lt;meta name="viewport" content="width=device-width"&gt;	</code></pre>
+		<div class="pink" style="margin-left:100px;"><span style="font-size:3em">&darr;</span> CSS</div>
 		
 		<pre style=""><code class="language-css">@viewport {
   width: device-width;
@@ -741,7 +798,7 @@ if (mql.matches) {
     				"pointer" - accuracy of a pointing device.
     				<ul>
     					<li><code>none</code></li>
-    					<li><code>coarse</code> aka fat finger</li>
+    					<li><code>coarse</code> aka "fat finger"</li>
     					<li><code>fine</code></li>
     				</ul>
     			</li> 
@@ -766,19 +823,37 @@ if (mql.matches) {
 }
 		</code></pre>
 	</div></section>
-	
+		
+		
+		
+	<section class="slide"><div>
+		<h2>MQ L4: Range Features</h2>
+		
+		<pre style=""><code class="language-javascript">
+@media (min-height: 600px) { ... }
+		</code></pre>
+		<div class="pink" style="margin-left:100px;margin-top:-50px;"><span style="font-size:3em">&darr;</span></div>
+		<pre style=""><code class="language-javascript">@media (height >=  600px) { ... }
+		</code></pre>
+		
+    	<p class="credit">http://dev.w3.org/csswg/mediaqueries/#mq-range-context</p>
+    	
+    	<footer>
+    	We will be bale to use the ">=" operator. It is the same thing as "min-" prefix.
+    	</footer>
+	</div></section>
+
 	
 	<section class="slide"><div>
-		<h2>MQ L4 - Ambient Light Detection</h2>
-		<pre style=""><code class="language-css">
-@media (luminosity: normal) {
-	/* normal light environment - no adjustment needed */
+		<h2>MQ L4: Luminosity</h2>
+		<pre style=""><code class="language-css">@media (luminosity: normal) {
+  body {background-color: #ddd; color: #000;}
 }
 @media (luminosity: dim) {
-	/* styles for dimmed light environment */
+  body {background-color: #444; color: #fff;}
 }
 @media (luminosity: washed) {
-	/* styles for bright light env - e.g. under sunlight */
+  body {background-color: #fff; color: #333;}
 }
 		</code></pre>
 		
@@ -790,7 +865,17 @@ if (mql.matches) {
 		</footer>
 	</div></section>
 	
-
+	
+	<section class="slide"><div>
+		<h2>DOM Ambient Light Events Demo</h2>
+		
+		<video controls style="margin-top:-20px; width:800px">
+			<source src="media/luminosity.mp4" />
+			Mp4 video is not supported.
+		</video>
+    	<p style="font-size:.75em;margin-top:-7px">Codepen Demo: http://cdpn.io/pvmBs</p>
+	</div></section>	
+	
 
 	
 	<!-- RESP IMAGES -->
@@ -808,53 +893,57 @@ if (mql.matches) {
 		<ol>
 			<li>Resolution switching
 			<li>Art Direction
-			<li>High-res images for screens with higher DPR
+			<li>DPR Switching (High-Res images)
 		</ol>
 	</div></section>
 	
-	
-		
 	<section class="slide"><div>
-		<h2>Methods</h2>
-		
-		<ul>
-			<li>Providing different images with media-queries</li>
-			<li>...with JavaScript</li>
-			<li>...with server-side content negotiation</li>
-			<li>Resizing / cropping a single image</li>
-			<li>Creative Hacks</li>
-			<li>New: proposed solutions</li>
-		</ul>		
+		<h2>Resolution switching</h2>
+		<p>&nbsp;</p>  
+		<img src="images/assets-resize.png">	
+		<footer>
+			Feeding different image dimensions to different devices, screen sizes, and orientations.
+		</footer>	
 	</div></section>
 			
 	
+	<section class="slide"><div>
+		<h2>Art-Direction</h2>
+		<p>instead of simple scaling</p>
+		<img src="images/assets-crop.png">
+		<footer>
+			Giving different images to match the layout on each device, screen, and orientation.
+		</footer>		
+	</div></section>
+	
 	
 	<section class="slide"><div>
-		<h2>Different images with MQ</h2>
-		<p>Resolution switching</p>
-		<img src="images/assets-resize.png">		
+		<h2>DPR Switching: High-Res Images</h2>
+		<div style="margin-left:160px">
+			<img src="images/HTML5_sticker.svg" width="260"> 1x
+			<img src="images/HTML5_sticker.svg" width="520"> 2x
+		</div>
+		<footer>
+			Serving high resolution images to high DPI screens e.g. Retina.
+		</footer>
 	</div></section>
+	
 			
-
-	
 	<section class="slide"><div>
-		<h2>Different images with MQ</h2>
-		<p>Art-Direction, instead of simple scaling</p>
-		<img src="images/assets-crop.png">		
+		<h2 class="title-only">Currently used methods<br>and problems</h2>
 	</div></section>
 	
 
 	<section class="slide"><div>
-		<h2>Dynamically Resizing an Image</h2>
+		<h2>Fluid Resizing an Image</h2>
 		
 		<img src="images/dynamic-img-desktop.png" height="450">
 		<img src="images/dynamic-img-mobile.png" height="400" style="vertical-align:top; display:inline-block; box-shadow: 2px 6px 20px rgba(0,0,0,.65);">
-		
 	</div></section>
 	
 		
 	<section class="slide"><div>
-		<h2>Dynamically Resizing an Image</h2>
+		<h2>Fluid Resizing an Image</h2>
 		<p>Shrink and Stretch without MQ</p>
 		
 		<pre style="margin-top: -20px"><code class="language-markup">
@@ -867,7 +956,28 @@ if (mql.matches) {
 }
 		</code></pre>
 		
-		<footer>This cause a browser reflow. The browser has to re-calculate the image dimension, and block operation.</footer>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+			
+	<section class="slide"><div>
+		<h2>Yay</h2>
+		<ul>
+			<li>Only one asset
+			<li>Easy to implement. No MQ breakpoints needed.
+		</ul>
+		<h2>Meh</h2>
+		<ul>
+			<li>CPU	intensive
+			<li>Westing bandwidth	
+		</ul>
+		<footer>
+		This is a super easy way - just provide a one single relatively high quality image and let browsers to resize. Decent browsers resize images bicubic-cally so resized quality should be too bad. No artifacts and such.  
+		However, this cause a browser reflow. The browser has to re-calculate the image dimension, and block operation. This operation is pretty CPU intensive. For mobile user, heavy CPU can cause battery draining.
+		
+		Also,not to mention it is wasting bandwith. Mobile users don't need to download 1000px-width photo which is downsized to 320px x 100px or so. </footer>
 	</div></section>
 	
 	
@@ -895,13 +1005,10 @@ if (mql.matches) {
   }
 }
 		</code></pre>
-		<footer>
-		This is pretty cumbersome. I don't really rem=commend this method.
-		</footer>
-	</div></section>		
-
-
-<section class="slide"><div>
+	</div></section>
+	
+	
+	<section class="slide"><div>
 		<h2>CSS2 Clip Property</h2>
 		
 		<pre><code class="language-css">position: absolute;
@@ -914,18 +1021,26 @@ clip: rect(top right bottom left);
 		
 	</div></section>
 	
-
+	
 	<section class="slide"><div>
-		<h2>High Resolution Images</h2>
-		<div style="margin-left:160px">
-			<img src="images/HTML5_sticker.svg" width="260"> 1x
-			<img src="images/HTML5_sticker.svg" width="520"> 2x
-		</div>
-	</div></section>
+		<h2>Yay</h2>
+		<ul>
+			<li>Only one asset
+		</ul>
+		<h2>Meh</h2>
+		<ul>
+			<li>CSS clip is cumbersome
+			<li>Westing bandwidth	
+		</ul>
+		<footer>
+		Again, using only one image is handy, but feeding a large image to mobile users can be a problem.
+		Data transfer can be costly.
+		</footer>
+	</div></section>		
 		
 		
 	<section class="slide"><div>
-		<h2>Blurry Images on Hi-DPI Screens</h2>
+		<h2>Up-Res for Hi-DPI Screens</h2>
 		<div align="center"><img src="images/responsive-image.png" class="blurry-screenshot"></div>
 	</div></section>
 	
@@ -938,8 +1053,8 @@ clip: rect(top right bottom left);
     background-image: url(banner.png);
     width: 320px; height: 160px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), 
-       only screen and (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 2dppx) {
   .banner {
       background-image: url(banner-2x.png);
       background-size: 100%;
@@ -947,8 +1062,30 @@ clip: rect(top right bottom left);
 }
 		</code></pre>
 	
-	<footer>Using a background-image for a content image is not semantic!</footer>
+	<footer></footer>
 	</div></section>	
+	
+	
+	<section class="slide"><div>
+		<h2>Yay</h2>
+		<ul>
+			<li>Simple enough to implement
+		</ul>
+		<h2>Meh</h2>
+		<ul>
+			<li>Browser-dependent MQ data types / prefix
+			<li>Not semantic to use <code>background</code> for contents
+			<li>Some browsers download all assets (<a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank">Tests by Tim Kadlec</a>)
+		</ul>
+		<footer>
+		It is great, because media-queries are awesome, and the simple code works just fine w/o JS, Server-side etc.
+		
+		However, the problem is the media-queries in general too -
+		resolution data-type is not supported by Safari, still needs -webkit vender prefix for device-pixel-ratio.
+		
+		Also, using a background-image for a content image is not semantic.
+		</footer>
+	</div></section>
 	
 	
 	<section class="slide"><div>
@@ -966,15 +1103,34 @@ clip: rect(top right bottom left);
 }</code></pre>
 
 		<div class="browser-container" style="">
-			<div class="browser safari"><span>6</span></div>
-			<div class="browser chrome"><span>20</span></div>
-			<div class="browser o"><span>15bl</span></div>
+			<div class="browser safari"><span>6*</span></div>
+			<div class="browser chrome"><span>19*</span></div>
+			<div class="browser o"><span>15bl*</span></div>
     	</div>
     	
 		<p class="credit"><a href="http://dev.w3.org/csswg/css-images/#image-set-notation" target="_blank">CSS Image Values and Replaced Content Module Level 4</a></p>
+		
+		<footer>This -image-set is a new solution for Hi-DPI screens and first proposed by Apple for CSS Level 4, and supported by Google too.
 	</div></section>
 	
 	
+	<section class="slide"><div>
+		<h2>Yay</h2>
+		<ul>
+			<li>Less hassle syntax
+		</ul>
+		<h2>Meh</h2>
+		<ul>
+			<li>Not enough browser supports. Spec is unstable.
+			<li>Not semantic to use <code>background</code> for contents
+		</ul>
+		<footer>
+
+		</footer>
+	</div></section>
+	
+	
+<!--
 	<section class="slide" style="background:#fff url(images/alain-delorme-chicquero8.jpg) 600px 0px no-repeat"><div>
 		<h2 style="text-shadow: 2px 3px 2px #fff">Heavy resource loading</h2>
 		<p>Hi-Res Image loading problems:</p>
@@ -988,8 +1144,13 @@ clip: rect(top right bottom left);
 		</ul>
 	
 	</div></section>	
+-->
 	
-		
+	<section class="slide"><div>
+		<h2 class="title-only">Vector Graphics FTW!</h2>
+	</div></section>
+	
+	
 	<section class="slide"><div>
 		<h2>SVG</h2>
 		
@@ -1056,41 +1217,44 @@ clip: rect(top right bottom left);
 	<section class="slide"><div>
 		<h2>Other Solutions</h2>
 		<ul>
-		<li>JavaScript
+		<li>Javascript
 			<ul>
-				<li>matchMedia()
-				<li>Picturefill.js
+				<li>Mobify.js etc.
+				<li>Polyfills (Picturefill.js, x-picture/Polymer)
 			</ul>
 		<li>Server-side
 			<ul>
 				<li>"Adaptive Images" (PHP)
-				<li>Sencha.io Src (UA lookup in DB)
+				<li>Sencha.io Src (UA lookup in Cloud)
 			</ul>
 		<li>Creative Hacks
 			<ul>
 				<li>Clown Car Technique
 			</ul>
 		</ul>
+
 		<footer>Clown Car Technique uses Media queries within SVG. It is called Clown Car because all of the images are stuffed into a single SVG file</footer>
 	</div></section>
 	
 	
-	
 	<section class="slide"><div>
-		<h2>Responsive &lt;img&gt;?</h2>
+		<h2 class="title-only">Responsive &lt;img&gt;?</h2>
+	</div></section>
+	
+		
+	<section class="slide"><div>
 		<p style="margin-top:2.5em;font-size:48px">O NOES! <span style="color:#f18">&lt;img&gt;</span> was not made for the responsive design!</p>
 	</div></section>
 	
 	
 	<section class="slide"><div>
-		<h2>Responsive &lt;img&gt;?</h2>
-		<p style="margin-top:2.5em;font-size:48px">We need a solution.<br><span style="padding-left: 10em">... or two.</span></p>
+		<p style="margin-top:2.5em;font-size:48px">We need a standard solution.<br><span style="padding-left: 10em">... or a few.</span></p>
 	</div></section>
 	
 	
 	<section class="slide"><div>
 		<h2>The srcset attribute</h2>
-		<p>Proposal by Apple</p>
+		<p>Proposal by Apple &amp; adopted by WhatWG <img src="images/hixie.png" width="42"></p>
 		<pre style="margin-top: -20px"><code class="language-markup">
 &lt;img alt="The Breakfast Combo"
      src="banner.jpeg"
@@ -1106,7 +1270,7 @@ An HTML extension for adaptive images</a></p>
 	
 	<section class="slide"><div>
 		<h2>Picture Element</h2>
-		<p>Proposal by RespImg CG</p>
+		<p>Proposal RespImg CG (Original idea by <a href="https://www.google.com/search?espv=210&es_sm=119&biw=1001&bih=669&tbm=isch&sa=1&q=bruce+lawson&oq=bruce+lawson&gs_l=img.12...0.0.0.19993.0.0.0.0.0.0.0.0..0.0....0...1c..31.img..0.0.0.QlKC1fSa298" target="_blank">Bruce Lawson</a>)</p>
 		<pre style="margin-top: -20px"><code class="language-markup">
 &lt;picture width="500" height="500"&gt;
    &lt;source media="(min-width: 45em)" src="large.jpg"&gt;
@@ -1224,9 +1388,10 @@ CH: dpr=2.0
 	</div></section>
 	
 	
-	<section class="slide cover dark"><div>
-		<img src="images/cat-the-shining.jpg" width="1024">
-		<p class="credit">http://motleynews.net/2012/07/12/the-parting-shot-for-july-12-2012/</p>
+	<section class="slide"><div>
+		<div align="center">
+		<img src="images/429.jpg" width="640">
+		</div>
 	</div></section>
 
 	<p class="badge"><a href="https://github.com/girliemac/presentation-slides/">Fork me on Github</a></p>

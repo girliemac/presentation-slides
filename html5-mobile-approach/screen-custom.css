@@ -102,6 +102,12 @@ figcaption {
 	margin:0 0 37px;
 }
 
+h2.title-only {
+	line-height: 1.4em; 
+	margin-top: 2.5em;
+	color: #26B8E0;
+}
+
 .slide:not(.cover) h3 {
 	color: #fff;
 	background: #26B8E0;
