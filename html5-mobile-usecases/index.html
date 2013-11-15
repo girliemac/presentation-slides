@@ -154,116 +154,118 @@
 		<footer>What about HTML5?</footer>
 	</div></section>	
 	
-
+<!--
 	
-	<section class="slide" style="background:#fff url(images/asha300.jpg) 700px 120px no-repeat">
-	<div>
-		<h2>Making a Call (or SMS)</h2>
-		<pre style=""><code class="language-markup">		
-&lt;a href="tel:+14155557777"&gt;
-  Order Pizza Now!
-&lt;/a&gt;
-
-&lt;a href="sms:+14155558888?body=Hello"&gt;
-  Text me!
-&lt;/a&gt;
-		</code></pre>
 		
-		<footer>
-			URL Schemes - Old-school from XHTML-MP by OMA and still rocks.
-			You can initiate a phone call or texting easily with a element.
-		</footer>
-	</div></section>
-
-
-	<section class="slide" style="background:#fff url(images/kanazawa.jpg) right top no-repeat">
-	<div>
-		<h2>Locating</h2>
-		<pre style="margin-top: -20px"><code class="language-javascript">		
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(success, fail);
-}
-
-function success(position) {
-  alert('Latitude: '+ position.coords.latitude + 
-  ', Longitude: '+ position.coords.longitude);
-}
-		</code></pre>
+		<section class="slide" style="background:#fff url(images/asha300.jpg) 700px 120px no-repeat">
+		<div>
+			<h2>Making a Call (or SMS)</h2>
+			<pre style=""><code class="language-markup">		
+	&lt;a href="tel:+14155557777"&gt;
+	  Order Pizza Now!
+	&lt;/a&gt;
+	
+	&lt;a href="sms:+14155558888?body=Hello"&gt;
+	  Text me!
+	&lt;/a&gt;
+			</code></pre>
+			
+			<footer>
+				URL Schemes - Old-school from XHTML-MP by OMA and still rocks.
+				You can initiate a phone call or texting easily with a element.
+			</footer>
+		</div></section>
+	
+	
+		<section class="slide" style="background:#fff url(images/kanazawa.jpg) right top no-repeat">
+		<div>
+			<h2>Locating</h2>
+			<pre style="margin-top: -20px"><code class="language-javascript">		
+	if (navigator.geolocation) {
+	  navigator.geolocation.getCurrentPosition(success, fail);
+	}
+	
+	function success(position) {
+	  alert('Latitude: '+ position.coords.latitude + 
+	  ', Longitude: '+ position.coords.longitude);
+	}
+			</code></pre>
+			
+			<p><em>Kanazawa no Sakamichi</em> &bull; stamp-pon.com/slopes</p>
+			<p class="credit white">http://www.flickr.com/photos/icgm/5470416802/</p>
+			
+			<footer>
+				Hardware has more than a few ways to detect your location:
+				- GPS satellites
+				- GSM/CDMA cell IDs
+				- A-GPS
+				- Wi-Fi base stations
+			</footer>
+		</div></section>
 		
-		<p><em>Kanazawa no Sakamichi</em> &bull; stamp-pon.com/slopes</p>
-		<p class="credit white">http://www.flickr.com/photos/icgm/5470416802/</p>
 		
-		<footer>
-			Hardware has more than a few ways to detect your location:
-			- GPS satellites
-			- GSM/CDMA cell IDs
-			- A-GPS
-			- Wi-Fi base stations
-		</footer>
-	</div></section>
-	
-	
-	<section class="slide"><div>
-		<h2>Supporting Various Screen Types</h2>
+		<section class="slide"><div>
+			<h2>Supporting Various Screen Types</h2>
+			
+			<p>CSS Media-queires</p>
+			
+			<div style="margin-left:340px">
+			<pre style="margin-top: -20px"><code class="language-css">
+	@media only screen 
+	   and (min-device-width: 768px) 
+	   and (max-device-width: 1024px) 
+	   and (orientation: landscape) {
+	      /* styles */
+	}
+			</code></pre>
+			</div>
+			<img src="images/rwd.png" style="width:340px; margin-top:-160px;margin-left:-30px;">
+			
+			<footer>
+				Using Media-queries to control the presentation of content, without modifying the content itself.
+				The idea of adaptive design has been around for a while, but the term RWD was a huge buzz last year.
+			</footer>
+		</div></section>
 		
-		<p>CSS Media-queires</p>
 		
-		<div style="margin-left:340px">
-		<pre style="margin-top: -20px"><code class="language-css">
-@media only screen 
-   and (min-device-width: 768px) 
-   and (max-device-width: 1024px) 
-   and (orientation: landscape) {
-      /* styles */
-}
-		</code></pre>
-		</div>
-		<img src="images/rwd.png" style="width:340px; margin-top:-160px;margin-left:-30px;">
+		<section class="slide">
+		<div>
+			<h2>Publishing</h2>
+			<img src="images/ft.png" align="right" style="margin-right: -20px">
+			<ul>
+				<li>CSS Media-queries</li>
+				<li>CSS Flexbox / Grid</li>
+				<li>Touch events</li>
+				<li>Offline storage</li>
+			</ul>
+			
+			<p class="credit">Financial Times</p>
+			<footer>
+				...
+			</footer>
+		</div></section>
+			
 		
-		<footer>
-			Using Media-queries to control the presentation of content, without modifying the content itself.
-			The idea of adaptive design has been around for a while, but the term RWD was a huge buzz last year.
-		</footer>
-	</div></section>
-	
-	
-	<section class="slide">
-	<div>
-		<h2>Publishing</h2>
-		<img src="images/ft.png" align="right" style="margin-right: -20px">
-		<ul>
-			<li>CSS Media-queries</li>
-			<li>CSS Flexbox / Grid</li>
-			<li>Touch events</li>
-			<li>Offline storage</li>
-		</ul>
+		<section class="slide">
+		<div>
+			<h2>Gaming</h2>
 		
-		<p class="credit">Financial Times</p>
-		<footer>
-			...
-		</footer>
-	</div></section>
+			<ul>
+				<li>Canvas</li>
+				<li>Touch events</li>
+				<li>Audio</li>
+				<li>CSS Animations and Transforms</li>
+				<li>Web Sockets</li>
+				<li>WebGL for 3D Gaiming</li>
+			</ul>
+			<footer>
+				...
+			</footer>
+		</div></section>
 		
 	
-	<section class="slide">
-	<div>
-		<h2>Gaming</h2>
-	
-		<ul>
-			<li>Canvas</li>
-			<li>Touch events</li>
-			<li>Audio</li>
-			<li>CSS Animations and Transforms</li>
-			<li>Web Sockets</li>
-			<li>WebGL for 3D Gaiming</li>
-		</ul>
-		<footer>
-			...
-		</footer>
-	</div></section>
-	
-
-	
+-->
+		
 	<section class="slide">
 	<div>
 		<h2>Core Mobile Web Platform CG</h2>
@@ -297,7 +299,7 @@ Nokia, Samsung, AT&T, Verizon, Vodafone, Orange, Telefónica, KDDI, Softbank Qua
 
 		<ol>
 			<li>Agree on core features developers can depend on</li>
-			<li>Compile related conformance test suites*</li>
+			<li>Compile related conformance test suites</li>
 			<li>Provide use cases, scenarios, and other input to drive successful mobile deployment</li>
 		</ol>
 		
@@ -336,19 +338,6 @@ Nokia, Samsung, AT&T, Verizon, Vodafone, Orange, Telefónica, KDDI, Softbank Qua
 	
 
 	<section class="slide"><div>
-		<video controls style="margin-top:-20px; width:800px">
-			<source src="media/coremobcamera.mp4" />
-			Mp4 video is not supported.
-		</video>
-		
-		<!-- <p style="text-align:right">Try on mobile: http://goo.gl/MX7fe (Temp url)</p> -->
-		<p style="text-align:right">Watch the Video: http://sdrv.ms/UF55gM</p>
-		<footer>
-		</footer>
-	</div></section>
-	
-	
-	<section class="slide"><div>
 		<h2>Project Goals</h2>
 
 		<ol class="large-list">
@@ -364,6 +353,20 @@ Nokia, Samsung, AT&T, Verizon, Vodafone, Orange, Telefónica, KDDI, Softbank Qua
 			2. educate Web developers about how to best use these technologies to build modern Web applications, 
 			and
 			3. help improve browsers by providing vendors with an app which tests some of the key features and performance requirements of the platform.
+		</footer>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<video controls style="margin-top:-20px; width:800px">
+			<source src="media/coremobcamera.mp4" />
+			Mp4 video is not supported.
+		</video>
+		
+		<!-- <p style="text-align:right">Try on mobile: http://goo.gl/MX7fe (Temp url)</p> -->
+		<p style="text-align:right">Watch the Video: http://sdrv.ms/UF55gM</p>
+		<footer>
 		</footer>
 	</div></section>
 	
@@ -519,6 +522,7 @@ IT IS SLOW!
 	</div></section>
 	
 	
+<!--
 	<section class="slide"><div>
 		<h2>Faster Canvas (Wish List)</h2>
 		
@@ -548,6 +552,7 @@ http://stackoverflow.com/questions/9823219/is-html-5-canvas-hardware-accelerated
 		https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays/
 		</footer>
 	</div></section>
+-->
 	
 	
 	<section class="slide"><div>

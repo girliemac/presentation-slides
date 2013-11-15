@@ -1,0 +1,113 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww14280\viewh16540\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Cross-Device Development and Web Standards\
+\
+3\
+
+\b One Web Approach
+\b0 \
+"One Web means making, as far as is reasonable, the same information and services available to users irrespective of the device they are using. "\
+\
+"
+\b However
+\b0 , it does not mean that exactly the same information is available in exactly the same representation across all devices. The context of mobile use, device capability variations, bandwidth issues and mobile network capabilities all affect the representation. Furthermore, some services and information are more suitable for and targeted at particular user contexts"\
+\
+\
+11\
+
+\b Why Should You Consider?
+\b0 \
+Maintainable\
+- using a 
+\b single content
+\b0  and scale the UI to fit on any browser types also window size/orientations\
+\
+12\
+
+\b Media-Queries
+\b0 \
+First proposed in 2001 by Opera and MS, but not implemented until recently.\
+\
+14\
+
+\b CSS3: Media-Queries
+\b0 \
+The idea is that you control the presentation without modifying the content itself.\
+\
+15\
+target viewport = a browser display area\
+\
+\
+21\
+
+\b The High DPI problem
+\b0 \
+CRT monitors with Lo-res -- shifting to --> LCD with hi-res:\
+When a browser maps one pixel to one high resolution screen pixel, text and images of the web sites made for smaller resolution displays become too small.\
+\
+22\
+Automatically scale up the UI and content (fit to HVGA, for instance).\
+\
+\
+28\
+
+\b Even easier
+\b0 \
+Note on Chrome: dppx unit is only supported for image-resolution property, does not work with resolution media type in MQ. (tested on Chrome 27)\
+\
+\
+29\
+
+\b CSSOM View Module: matchMedia()
+\b0 \
+- it is like the media queries equivalent to querySelector.\
+- matchMedia() method returns a new MediaQueryList object representing the parsed results of the specified media query string.\
+\
+30\
+addListener() and removeListener() methods - to listen to query changes. Now supported by all browsers yet.\
+\
+32\
+
+\b CSS Device Adaptation\
+
+\b0 IE bug, on my own test:\
+In <meta name=viewport content=width=device-width> gives 320px width (correct), while @-ms-viewport \{width:device-width\} is 768px on Lumia 920 (It's a device px. incorrect css value.)\
+\
+33\
+
+\b @viewport in @media
+\b0 \
+@media [media query logic here] \{\
+  @-ms-viewport \{\
+    [viewport size here]\
+  \}\
+  [CSS for this layout combination goes here.]\
+\}\
+\
+\
+35\
+
+\b MQ L4 - Ambient Light Detection
+\b0 \
+IE10+ supports the proprietary, -ms-high-contrast media feature.\
+\
+\
+39\
+
+\b CSS Multi-column Layout Module
+\b0 \
+This gives one column only layout if the width of the browser windows is small.\
+It becomes two-column when the window is wider than 200 x 2 + margin + column-gap (1em but browser dependent).\
+\
+\
+63\
+
+\b Picture Element
+\b0 \
+The `picture` element markup pattern was proposed by the Responsive Images Community Group.\
+By providing a means of declaring multiple sources, authors can use media queries to control which version of an image is displayed and under what conditions.\
+}
