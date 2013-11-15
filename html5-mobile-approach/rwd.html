@@ -933,7 +933,41 @@ if (mql.matches) {
 		<h2 class="title-only">Currently used methods<br>and problems</h2>
 	</div></section>
 	
+	<section class="slide"><div>
+	<h2>Using Media-Queries</h2>
+		
+		<pre style="margin-top: -20px"><code class="language-css">
+@media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) {
+    background-image: url(cat-tablet.jpg);
+    width: 640px; height: 320px;
+}
+@media only screen and (min-width : 1224px) {
+	background-image: url(cat-desktop.jpg); 
+	...
+}
+		</code></pre>
+	</div></section>
 
+
+			
+	<section class="slide"><div>
+		<h2>Yay</h2>
+		<ul>
+			<li>Easy enough. No scripts.
+		</ul>
+		<h2>Meh</h2>
+		<ul>
+			<li>Hard to figure out MQ Breakpoint
+			<li>Not semantic to use <code>background</code> for contents
+			<li>Some browsers download all assets (<a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank">Tests by Tim Kadlec</a>)	
+		</ul>
+		<footer></footer>
+	</div></section>
+	
+	
+	
 	<section class="slide"><div>
 		<h2>Fluid Resizing an Image</h2>
 		
@@ -1270,7 +1304,7 @@ An HTML extension for adaptive images</a></p>
 	
 	<section class="slide"><div>
 		<h2>Picture Element</h2>
-		<p>Proposal RespImg CG (Original idea by <a href="https://www.google.com/search?espv=210&es_sm=119&biw=1001&bih=669&tbm=isch&sa=1&q=bruce+lawson&oq=bruce+lawson&gs_l=img.12...0.0.0.19993.0.0.0.0.0.0.0.0..0.0....0...1c..31.img..0.0.0.QlKC1fSa298" target="_blank">Bruce Lawson</a>)</p>
+		<p>Proposal RespImg CG</p>
 		<pre style="margin-top: -20px"><code class="language-markup">
 &lt;picture width="500" height="500"&gt;
    &lt;source media="(min-width: 45em)" src="large.jpg"&gt;
