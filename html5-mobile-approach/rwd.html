@@ -21,6 +21,9 @@
 			width: 494px;
 			height: 550px;
 		}
+		.print-only {
+			display: none;
+		}
 		@media print {
 			.blurry-screenshot { 
 				width: auto;
@@ -28,6 +31,9 @@
 			}
 			.no-print {
 				display: none !important;
+			}
+			.print-only {
+				display: block;
 			}
 		}
 	</style>
@@ -875,7 +881,7 @@ if (mql.matches) {
 			<source src="media/luminosity.mp4" />
 			Mp4 video is not supported.
 		</video>
-    	<p style="font-size:.75em;margin-top:-7px">Codepen Demo: http://cdpn.io/pvmBs</p>
+    	<p style="font-size:.75em;margin-top:-7px"><span class="print-only">Video Link: https://vimeo.com/79466285 &bull; </span>Codepen Demo: http://cdpn.io/pvmBs</p>
 	</div></section>	
 	
 
