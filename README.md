@@ -16,6 +16,7 @@ http://girliemac.github.io/presentation-slides/html5-mobile-approach/rwd.html
 
 - Open Web Camp 5 (2013)
 - CSS Dev Conf 2013
+- SF HTML5 No 2013
 
 
 ### Mobile <3 JavaScript: Hardware Access & Device APIs
