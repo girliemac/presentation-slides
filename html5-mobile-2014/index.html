@@ -1,0 +1,1033 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">	
+	<script src="../prism/prism.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../bower_components/shower-bright/styles/screen.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>State of Mobile HTML5<br>2013 - 2014</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	<section class="slide cover dark"><div>
+		<h2 style="text-align:right">State of Mobile HTML5</h2>
+		<h3 style="text-align:right">Half full or half empty?</h3>
+		<h4 style="text-align:right; margin-top:200px">Tomomi Imura (@girlie_mac)</h4>
+		<img src="images/cover.jpg" style="width:1024px;height:640px;" alt="html5 mug">
+		<p class="credit dim">https://flic.kr/p/9WjAnE by slavik_V<span class="cc">b</span></p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<!-- Hello, my name is CSS sticker -->
+		<div class="vcard" style="margin: 120px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
+		    <div> 
+		        <p>Hello</p> 
+		        <p>my name is</p> 
+		    </div> 
+		    <div class="fn"> 
+		        <p class="given-name">Tomomi</p> 
+		        <address class="nickname">@girlie_mac</address> 
+		    </div>
+		</div>
+		<!-- sticker end -->
+		<ul class="animList" style="position:relative; left: 180px;">
+			<li>Open Web Advocate</li>
+			<li>Mobile geek</li>
+			<li>worked at Yahoo! Mobile, Palm, Nokia</li>
+		</ul>
+	</div></section>
+
+	
+	<section class="slide">
+	<div>
+		<h2>Mobile Browser Releases 2013 -</h2>
+		
+		<img src="images/browser-timeline.png" class="center" style="margin-top:-10px">
+		
+		<footer>	
+		In past one year or so, Chrome and Mozilla have released new versions so frequently, while Apple and Microsoft had one major release.
+		
+		An interesting thing happened in the browser world in 2013 was 
+		1) Opera announced to ditch Presto for Webkit
+		2) Then webkit was forked to Blink
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide cover dark">
+	<div>
+		<img src="images/chrome-cake.jpg" style="width:1024px;height:640px;">
+		<p class="credit white">https://flic.kr/p/7634a3 (modified) by Danny Choo<span class="cc">ban</span></p>
+		<footer>Blink had its 1st birthday on April, 2014</footer>
+	</div></section>
+	
+	
+	<section class="slide">
+	<div>
+		<h2>Mobile Browser Usage Stats</h2>
+		
+		<img src="images/statcounter.png" class="center" style="">
+		<p class="credit"><a href="http://gs.statcounter.com/#mobile_browser-ww-monthly-201301-201403">StatCounter Global Stats - Browser Market Share</a></p>
+		
+		<!--
+		<div id="mobile_browser-ww-monthly-201301-201403" width="800" height="400" style="width:800px; height: 400px;"></div>		
+		<p class="credit"><a href="http://gs.statcounter.com/#mobile_browser-ww-monthly-201301-201403">StatCounter Global Stats - Browser Market Share</a></p>
+		
+		<script type="text/javascript" src="http://www.statcounter.com/js/FusionCharts.js"></script><script type="text/javascript" src="http://gs.statcounter.com/chart.php?mobile_browser-ww-monthly-201301-201403"></script> -->
+		
+		<footer></footer>
+	</div></section>
+	
+	
+	<section class="slide">
+	<div>
+		<h2>Feature Support Stats</h2>
+		
+		<img src="images/caniuse-stat.png" class="center" style="height:450px;">	
+			
+		<p class="credit"><a href="http://caniuse.com/">Can I Use...</a></p>
+		
+		<footer></footer>
+	</div></section>
+	
+	<section class="slide cover dark"><div>
+		<h2>Disrupt App Store</h2>
+		<img src="images/appstore.jpg" style="width:1024px;height:640px;" alt="html5 mug">
+		<p class="credit dim">https://flic.kr/p/5r6RYe by Cristiano Betta<span class="cc">b</span></p>
+	</div></section>
+	
+	<section class="slide">
+	<div>
+		<h2>Distributing outside of app stores</h2>
+		
+		<div class="center">
+		<img src="images/flappy-fork.png" style="height:420px">	
+		<img src="images/2048.png" style="margin-left:100px;height:420px">
+		</div>
+			
+		<p class="credit"><a href="http://flappybird.io">flappybird.io</a> &bull; <a href="http://gabrielecirulli.github.io/2048/">2048</a></p>
+		
+		<footer></footer>
+	</div></section>
+
+	
+	<section class="slide">
+	<div>
+		<h2>Forking (in Doge style)</h2>
+		
+		<div class="center">
+		<img src="images/flappy-doge.png" style="height:420px">	
+		<img src="images/doge2048.png" style="margin-left:100px;height:420px">
+		</div>
+			
+		<p class="credit"><a href="http://tensaix2j.github.io/flappy-doge/">Flappy Doge</a> &bull; <a href="http://doge2048.com/">Doge2048</a></p>
+		
+		<footer></footer>
+	</div></section>
+	
+	<section class="slide">
+	<div>
+		<h2>and Flappy 2048</h2>
+		
+		<div class="center">
+		<img src="https://gifvine-gifs.s3.amazonaws.com/MOm1Zleu2h5" class="center" style="width:400px">	
+		</div>
+			
+		<p class="credit"><a href="http://hczhcz.github.io/Flappy-2048/">Flappy 2048</a></p>
+		
+		<footer></footer>
+	</div></section>
+	
+	
+	<section class="slide cover dark" id="Picture"><div>
+		<h2 style="margin-left: -60px">Last Year</h2>
+		<h2 style="text-align:right; margin-right: -40px">"Coremob<br/>Camera"</h2>
+		<img src="../html5-mobile-usecases/images/coremobcamera.jpg" alt="Coremob Camera app on Android">
+		
+		<footer>
+			As a side project of W3C Core Platform CG I have initiated to develop an open-source camera application built using Web technology. 
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide">
+	<div>
+		<h2>Core Mobile Web Platform CG</h2>
+		<img src="../html5-mobile-usecases/images/w3c-community-logo.png" alt="W3C CG logo" align="right" style="margin-right:-20px">
+		
+		<h3 class="left">Goal:</h3>
+		
+		<p style="margin-top:1.3em; font-size:1.2em;">
+			To accelerate the adoption of the Mobile Web as a compelling platform for the development of modern mobile Web applications
+		</p>
+
+		<footer>
+In 2012, W3C announced an industry-wide initiative, called Core Mobile Web Platform Community Group (CoreMob CG, for short), to help improve the mobile web.
+			
+The goal of the CoreMob is to accelerate the adoption of the Mobile Web as a compelling platform for the development of modern mobile Web applications. 
+			
+In order to achieve this mission, the CG brings developers, equipment manufacturers, browser vendors, operators and other relevant members of the industry together.
+			
+		</footer>
+		<p class="credit">http://coremob.github.com/coremob-2012/</p>
+	</div></section>
+	
+	
+	<section class="slide">
+	<div>
+		<h2>Web and Mobile Interest Group (Sept 2013 ~ )</h2>
+		
+		<h3 class="left">Mission:</h3>
+		
+		<p style="margin-top:1.3em; font-size:1.2em;">
+		To accelerate the development of Web technology so that it becomes a compelling platform for mobile applications and the obvious choice for cross platform development.</p>
+		
+		<p><em>"Closing the gap with native"</em></p>
+
+		<footer>
+		The CoreMobile Community Group was in the process of rechartering, and needed to transition to an Interest Group to get more W3C official supports.
+		So CoreMob was closed on September last year, and upgraded to WebMob IG.
+		</footer>
+		<p class="credit">http://www.w3.org/Mobile/IG/</p>
+	</div></section>
+	
+	
+
+	<section class="slide"><div>
+		<h2>Project Goals</h2>
+
+		<ol class="large-list">
+			<li>Showcase the capabilities of the Web platform</li>
+			<li>Educate Web developers</li>
+			<li>Help improve browsers</li>
+		</ol>
+		
+		<footer>
+			We have set three main goals to this project:
+
+			1. showcase the capabilities of the Web platform and more specifically of the subset of features Coremob is driving,
+			2. educate Web developers about how to best use these technologies to build modern Web applications, 
+			and
+			3. help improve browsers by providing vendors with an app which tests some of the key features and performance requirements of the platform.
+		</footer>
+	</div></section>
+	
+
+	
+	<section class="slide"><div>
+		<video controls style="width:800px">
+			<source src="media/coremobcamera.mp4" />
+			Mp4 video is not supported.
+		</video>
+		
+		<p class="print-only">Watch the demo video at: http://sdrv.ms/UF55gM</p>
+		<footer>
+		</footer>
+	</div></section>
+	
+	
+		<section class="slide"><div>
+		<h3>HTML5 APIs</h3>
+		<ol class="small" style="margin-top:1.5em">
+			<li>Take a picture via <span class="pink">HTML Media Capture</span></li>
+			<li>Use <span class="pink">FileReader()</span> to return the picture as a object</li>
+			<li><span class="pink">drawImage()</span> to draw the image object in <span class="pink">canvas</span></li>
+			<li><span class="pink">getImageData()</span> to get an ImageData object containing a copy of the pixel data, then alter the pixels</li>
+			<li>Store the <span class="pink">blob</span> locally with <span class="pink">IndexedDB</span></li>
+			<li>Upload the final photo with <span class="pink">XHR2</span>/<span class="pink">CORS</span></li>
+		</ol>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>HTML Media Capture</h2>
+		<img src="../html5-mobile-usecases/images/coremobcamera-01.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-60px">
+		
+		<p>Taking a photo with using a native camera</p>
+		<pre><code class="language-markup">
+&lt;input type="file" accept="image/*"&gt;
+		</code></pre>
+		
+		<div class="browser-container" style="margin-top:20px">
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser o"><span>15bl</span></div>
+			<div class="browser android"><span>3</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser safari"><span>6</span></div>
+			<div class="browser moz"><span>10</span></div>
+			<div class="browser ie dim"><span>10</span></div>
+			<div class="browser ie"><span class="new">11</span></div>
+		</div>
+		
+		<footer>
+Taking a picture is done by delegating to the native camera via HTML Media Capture. 
+The native camera returns the pictures as a File object (from File API). 
+
+Easy implementation for us - 
+use the file upload input - the input element with the type attribute, 'file', then specify the accept attribute.
+The values of the attribute can be:
+ -images/* , video/*, or audio/*.
+			
+The capture attribute is a boolean attribute.
+If specified, a browser captures of media directly from the device's environment.	
+			
+(The actual demo is using the older spec, with the capture value of 'camera'. It is deprecated.)
+			
+- this is not WebRTC/ getUserMedia, by the way.
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<div class="bubbleContainer"><div class="bubble">open camera!</div></div>
+		<pre><code class="language-markup">&lt;input type="file" accept="image/*" capture&gt;
+		</code></pre>
+		<img src="images/coremobcamera-01a.png" alt="Coremob Camera app" style="height:400px" class="center">
+	</div></section>	
+		
+	<section class="slide"><div>
+		<h2>File API</h2>
+
+		<p>Camera returns the photo as a <code>file</code> object</p>		
+
+		<pre style="mar"><code class="language-javascript">var input = document.querySelector('input[type=file]'); 
+camera.addEventListener('change', function() {
+    var localFile = input.files[0];
+    var reader = new FileReader();
+    reader.readAsDataURL(localFile);
+    reader.onload = function(e){
+        preview.src = e.target.result;
+    }
+}, false);
+		</code>
+		</pre>
+		
+		<footer>
+The image can also be displayed on the client-side without uploading. 
+			
+When a user snap a photo, the API returns a file object list.
+- You can access the file object on a 'change' event.  (In this demo, I added a event listener.)
+- reading a FileReader object as an instance.
+- Then call readAsDataURL() to display the image in dataURL.
+		</footer>
+	</div></section>	
+	
+	
+	<section class="slide"><div>
+		<h2>Canvas</h2>
+		<img src="../html5-mobile-usecases/images/coremobcamera-02.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-90px;cursor:pointer;" onclick="javascript:this.src='../html5-mobile-usecases/images/coremobcamera-02a.png';return false;">
+		
+		<p>Applying filters to the photo</p>
+	
+		<pre><code class="language-javascript">
+var c = document.createElement('canvas');
+var ctx = this.c.getContext('2d');
+ctx.drawImage(imgObj, 0, 0);
+var imgData = ctx.getImageData(x, y, w, h); 
+//...Pixel manipulation ...
+ctx.putImageData(imgData, 0, 0); 
+		</code>
+		</pre>
+		
+		<div class="browser-container">
+			<div class="browser chrome"><span></span></div>
+			<div class="browser android"><span></span></div>
+			<div class="browser safari"><span></span></div>
+			<div class="browser moz"><span></span></div>
+			<div class="browser bb"><span>7</span></div>
+			<div class="browser ie"><span>9</span></div>
+			<div class="browser o"><span></span></div>
+		</div>
+		
+		<footer>
+This is an example of how you paint the pixel data-
+- First you define the canvas, 
+- and importing an photo into a canvas, by using drawImage() method to draw the image object.
+- Then, use getImageData() method to obtain an ImageData object containing a copy of the pixel data for a context.
+- Then "applying filter" by tweaking the pixel data, which I will talk a bit more on the next slide.
+- And finally, using putImageData() method, paint pixel data back into a context.
+
+HW Accel
+IE10 - yes
+Chrome on Android - yes
+http://stackoverflow.com/questions/9823219/is-html-5-canvas-hardware-accelerated-on-android-chrome-beta
+
+		</footer>
+	</div></section>
+
+	
+<!--
+	<section class="slide"><div>
+		<h2>canvas.toBlob</h2>
+		
+		<p>Converting the filtered photo (canvas) to blob</p>
+
+		<pre><code class="language-javascript">
+if (canvas.toBlob) {
+    var blob = canvas.toBlob(function(blob){
+        // async callback
+    }, 'image/jpeg');
+}
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-30px">
+			<div class="browser moz"><span>18</span></div>
+		</div>
+		
+		<footer>
+			toBlob method is specified by WHATWG.
+			For non-supporting browsers, I needed to convert a canvas to a dataURL string once, then invoke the Blob constructor to finally convert it to blob.
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Blob URLs</h2>
+		
+		<p>Displaying Blob</p>
+		
+		<code>&lt;img src="blob:958c1b50-09a0-2543-8528-8697ae387667"&gt;</code>
+
+		<pre><code class="language-javascript">
+var URL = window.URL || window.webkitURL*;
+var imgURL = URL.createObjectURL(blob);
+		</code></pre>
+		
+		<div class="browser-container">
+			<div class="browser chrome"><span>18*</span></div>
+			<div class="browser chrome"><span>23</span></div>
+			<div class="browser o"><span>15bl</span></div>
+			<div class="browser android"><span>4*</span></div>
+			<div class="browser safari"><span>6*</span></div>
+			<div class="browser bb"><span>10*</span></div>
+			<div class="browser moz"><span></span></div>
+			<div class="browser ie"><span>10</span></div>
+		</div>
+		
+		<footer>
+- The object URL represents the specified Blob object.
+- Creates a new object URL, whose lifetime is tied to the document in the window on which it was created. 
+- Release the url with revokeObjectURL() if you no longer need them.
+		</footer>
+	</div></section>
+	
+-->
+	
+	<section class="slide"><div>
+		<h2>IndexedDB</h2>
+		<img src="../html5-mobile-usecases/images/coremobcamera-03.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-50px;margin-top:-90px">
+		<p>Storing the photos locally</p>
+	
+		<pre><code class="language-javascript">
+if(window.indexedDB) {
+   var req = indexedDB.open('coremobCamera'); 
+   req.onsuccess = function(e) {
+      // async
+   }
+}
+</code></pre>
+		
+		<div class="browser-container" style="margin-top:55px">
+			<div class="browser chrome"><span>18*</span></div>
+			<div class="browser chrome"><span>25</span></div>
+			<div class="browser o"><span>15bl</span></div>
+			<div class="browser bb"><span>10*</span></div>
+			<div class="browser moz"><span>16</span></div>
+			<div class="browser ie"><span>10</span></div>
+			<div class="browser android"><span class="new">4.4</span></div>
+		</div>
+		<footer>
+		
+		<footer>
+opening a DB...
+
+Blackberry and Pre-Blink Chrome required webkit prefix, window.webkitIndexedDB
+
+
+There are multiple specifications have been modified since, so older browsers support deprecated specs, and some had new and old mixed.
+
+
+For example, Firefox has started supporting iDB. 
+   - The basic support starts since ver4, setVersion() was deprecated at ver 10, 
+   - and transaction mode has been switched to string from constant since 13.
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Polyfill or not?</h2>
+		
+		<table class="centered">
+		<tr>
+			<th style="width:200px"></th>
+			<th style="width:180px">Indexed DB</th>
+			<th style="width:180px">Web SQL</th>
+		</tr>
+		<tr>
+			<td>Chrome 37</td>
+			<td class="yes">Yes</td>
+			<td class="yes">Yes</td>
+		</tr>		
+		<tr>
+			<td>Opera 22</td>
+			<td class="yes">Yes</td>
+			<td class="yes">Yes</td>
+		</tr>		
+		<tr>
+			<td>Blackberry 10</td>
+			<td class="yes">Yes</td>
+			<td class="yes">Yes</td>
+		</tr>
+		<tr>
+			<td>Firefox 26</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		<tr>
+			<td>IE 11</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		<tr>
+			<td>Android 4.4</td>
+			<td class="yes">Yes</td>
+			<td class="yes">Yes</td>
+		</tr>
+		<tr>
+			<td class="no">Safari 7</td>
+			<td class="no">No</td>
+			<td class="yes">Yes</td>
+		</tr>
+
+		</table>
+		
+		<div style="position:absolute; bottom:20px; right:75px; -webkit-transform:rotate(15deg); transform:rotate(15deg);">
+			<img src="../html5-indexedDB/images/polyfilla.png" height="180">
+		</div>
+		
+		<div style="font-size:80px; position:absolute; bottom:10px; right:220px;">&larr;</div>
+
+		<p class="credit">caniuse.com</p>
+		
+		<footer>
+		The latest browser as of April 2014
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>XMLHttpRequest Level 2</h2>
+		<img src="../html5-mobile-usecases/images/coremobcamera-05.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-40px">
+		<p>Sending a photo</p>
+
+		
+		<pre><code class="language-javascript">
+var formData = new FormData();
+formData.append('photo', blob); 
+		</code></pre>
+		
+		<div class="browser-container">
+			<div class="browser chrome"><span></span></div>
+			<div class="browser android"><span>3</span></div>
+			<div class="browser safari"><span>5</span></div>
+			<div class="browser bb"><span></span></div>
+			<div class="browser moz"><span></span></div>
+			<div class="browser ie"><span>10</span></div>
+			<div class="browser o"><span>12</span></div>
+			<div class="browser o"><span>15bl</span></div>
+		</div>
+
+		<footer>
+OK, let's send the photo to a server.
+	
+- XHR2 adds support for the new FormData interface.
+- The FormData object lets you compile a set of key/value pairs to send using XMLHttpRequest easily.
+
+- Here, I don't have a physical form element, however, I can just instantiate a FormData object then use append() method to append fields on the fly.
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>XMLHttpRequest Level 2</h2>
+		<p>Sending a photo</p>
+		
+		<pre><code class="language-javascript">
+var xhr = new XMLHttpRequest();        
+xhr.open('POST', '/gallery'); 
+xhr.upload.addEventListener('progress', handleProgress, false);
+xhr.addEventListener('load', handleFinish, false);
+xhr.addEventListener('error', handleError, false);
+xhr.addEventListener('abort', handleAbort, false);
+xhr.send(formData);
+		</code></pre>
+		
+		<footer>
+With XHR2, the data you can send is not limited to DOMstring or XML.
+- The send() method can accept the binary data.
+			
+- Here, I am registering the some events-
+with XHR2 we have some cool feature like uploading progress events.
+		</footer>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>XMLHttpRequest Level 2</h2>
+		<img src="../html5-mobile-usecases/images/coremobcamera-06.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-40px">
+		<p>Sending a photo</p>
+		
+		<pre><code class="language-javascript">
+function handleProgress(e) { 
+  if (e.lengthComputable) {
+     el.textContent = 
+     (e.loaded / e.total * 100) >>> 0 + '%';
+  } 
+}
+		</code></pre>
+		
+		<footer>
+I only display the % in integer to fit the app UI, but it is cool if you use the HTML5 progress element to display. 
+		</footer>
+	</div></section>	
+	
+	
+	
+	<section class="slide"><div>
+		<h2>CORS: <br>Cross Origin Resource Sharing</h2>
+
+		
+		<code>Access-Control-Allow-Origin: http://some-domain.org</code>
+		
+<pre><code class="language-javascript">
+//Apache .htaccess
+&lt;IfModule mod_headers.c&gt;
+  Header set Access-Control-Allow-Origin "*"
+&lt;/IfModule&gt;
+		</code></pre>
+		
+		<div class="browser-container">
+			<div class="browser chrome"><span></span></div>
+			<div class="browser android"><span></span></div>
+			<div class="browser safari"><span></span></div>
+			<div class="browser moz"><span></span></div>
+			<div class="browser ie"><span></span></div>
+			<div class="browser bb"><span></span></div>
+			<div class="browser o"><span>12</span></div>
+			<div class="browser o"><span>15bl</span></div>
+		</div>
+		
+		<footer>
+- Typically, a web application using XMLHttpRequest can only make HTTP requests to the domain it was loaded from, and not to other domains.
+
+- CORS allows web applications on one domain to make cross domain AJAX requests to another domain.
+- To make simple CORS requests, the server only needs to add the header to its response.
+The example shown here is how to set on Apache server.
+			
+			http://enable-cors.org
+		</footer>
+	</div></section>
+	
+
+		
+	
+	<section class="slide"><div>
+		<h2>Touch Events v.1</h2>
+		<img src="../html5-mobile-usecases/images/coremobcamera-04.png" alt="Coremob Camera app" align="right" style="width:240px;margin-right:-40px;margin-top:-60px">
+		<p>Photo Gallery Carousel</p>
+		
+		<pre><code class="language-javascript">
+el.addEventListener('touchstart', 
+                    startHandler, false);
+el.addEventListener('touchmove'...);
+el.addEventListener('touchend'...);
+		</code></pre>
+		
+		<p>You probably want to include mouse events too (<code>mousedown</code>, <code>mousemove</code>, and <code>mouseup</code>).
+		
+		<footer>
+- The Apple's touch event has been the de facto standard of the touch event for years.
+- Then there was a drama between Apple and the rest, who wanted standardized the touch events, regarding the specifications and legal concerns.
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Pointer Events</h2>
+		<img src="../html5-mobile-usecases/images/pointer.png" alt="Micorsoft Pointer event diagram" align="right" style="z-index:-1;margin-right:-75px;margin-top:10px;width:230px">
+		
+		<p>For <em>any</em> input devices: touch, mouse, pen...</p>
+		<pre><code class="language-javascript">
+if (typeof window.PointerEvent != 'undefined') {
+   el.addEventListener('pointerdown', 
+                         startHandler, false);
+   el.addEventListener('pointermove', ...);
+   el.addEventListener('pointerup', ...);
+}
+		</code></pre>
+		
+		<footer>
+			Then, the end of last year, Microsoft has submitted the alternative way of the touch event standard proposal to W3C.
+		</footer>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<h2>Touch vs. Pointer Events</h2>
+		
+		<table class="centered">
+		<tr>
+			<th style="width:200px"></th>
+			<th style="width:180px">Touch</th>
+			<th style="width:180px">Pointer</th>
+		</tr>
+		<tr>
+			<td>Chrome 37</td>
+			<td class="yes">Yes</td>
+			<td class="maybe">No (Will implement)</td>
+		</tr>		
+		<tr>
+			<td>Opera 22</td>
+			<td class="yes">Yes</td>
+			<td class="maybe">No (Will implement)</td>
+		</tr>		
+		<tr>
+			<td>Blackberry 10</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		<tr>
+			<td>Firefox 26</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		<tr>
+			<td>IE 10</td>
+			<td class="no">No</td>
+			<td class="yes">Yes</td>
+		</tr>
+		<tr>
+			<td>Safari 7</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		<tr>
+			<td>Android 4.4</td>
+			<td class="yes">Yes</td>
+			<td class="no">No</td>
+		</tr>
+		</table>
+		
+		<p class="credit">caniuse.com &bull; groups.google.com/a/chromium.org</p>
+	</div></section>
+
+
+	
+	<section class="slide"><div>
+		<p align="center" aria-hidden="true" data-icon="&#xe003;" class="github">
+			<span style="color:#f18">github</span>.com/coremob/camera
+		</p>
+		<p align="center">
+			<img src="../html5-mobile-usecases/images/qrcode-camera.png">
+		</p>
+		<footer>
+			source code
+		</footer>
+	</div></section>
+	
+	
+	<!-- Hardware -->
+	
+	<section class="slide cover dark"><div>
+		<h2 style="">Hardware Access</h2>
+		<img src="images/cat-machine.jpg" style="width:1024px;height:640px;" alt="cat in dryer">
+		<p class="credit dim">https://flic.kr/p/54oAAr by James Cridland<span class="cc">b</span></p>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Device APIs</h2>
+		
+		<ul>
+			<li>GPS</li>
+			<li>Camera &amp; Video</li>	
+			<li>Microphone</li>		
+			<li>Audio HW</li>
+			<li>Vibration HW</li>
+			<li>Battery</li>
+			<li>NFC</li>
+		</ul>
+		
+		<footer>
+			- GPS (Geolocation API)
+			- Camera, Video, Mic (Media Capture / Streaming APIs)
+				Media Capture APIs - HTML media capture input type=file, and getUserMedia()
+			- Audio HW (Web Audio API)
+			- Vibration HW (Vibration API)
+			- Battery (Battery API)
+			- NFC (Web NFC API)
+		</footer>
+	</div></section>
+	
+		<section class="slide"><div>
+		<h2>Device APIs - Sensors</h2>
+		<ul>
+			<li>Accelerometer</li>
+			<li>Magnetometer</li>
+			<li>Gyrometer</li>
+			<li>Light</li>
+			<li>Proximity</li>
+			<li>Barometer (Pressure)</li>
+		</ul>
+		
+		<footer>
+			- Accelerometer, Magnetometer (Compass), and Gyrometer sensors (DeviceOrientation Events)
+			- Barometer (Atmospheric Pressure Events)
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide">
+	<div>
+		<h2>Geolocation</h2>
+		<pre style="margin-top: -20px"><code class="language-javascript">		
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, fail);
+}
+function success(position) {
+  alert('Latitude: '+ position.coords.latitude + 
+  ', Longitude: '+ position.coords.longitude);
+}
+		</code></pre>
+		<div class="browser-container">
+			<div class="browser chrome"><span></span></div>
+			<div class="browser android"><span></span></div>
+			<div class="browser safari"><span></span></div>
+			<div class="browser moz"><span></span></div>
+			<div class="browser ie"><span></span></div>
+			<div class="browser bb"><span></span></div>
+			<div class="browser o"><span></span></div>
+		</div>
+	</div></section>
+	
+		<section class="slide"><div>
+		<h2>Device Orientation Events</h2>
+		<img src="../html5-mobile-approach/images/device-alpha-beta-gamma.png" class="center">
+    	<p class="credit">
+    		<a href="http://dev.opera.com/articles/view/w3c-device-orientation-api">Dev Opera (Diagram)</a>    	
+    	</p>
+    	
+    	<footer>
+    	The deviceorientation event is fired when new data is available from a magnetometer sensor
+    	    	
+    	- deviceorientation: supplies the physical orientation of the device.    	
+    	- devicemotion: supplies the acceleration of the device.    	
+    	- compassneedscalibration
+    	
+    	iOS5 has webkitCompassHeading property but it is not a standard.
+    	</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<pre style="margin-top: -20px"><code class="language-javascript">
+if (window.DeviceOrientationEvent) {
+  window.addEventListener('deviceorientation', function(e) {
+    compass   = e.alpha; // degree
+	frontBack = e.beta;
+	leftRight = e.gamma;
+	...
+  }, false);
+} 
+		</code></pre>
+		<p style="margin-top: -10px">Partial support</p>
+		<div class="browser-container">
+			<div class="browser safari"><span>4.2</span></div>
+			<div class="browser android"><span>3.0</span></div>
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser moz"><span>14</span></div>
+			<div class="browser o"><span>12</span></div>
+    	</div>
+    	
+    	<footer>
+    	FF 14 and Chrome 18 are the oldest for Android.
+    	FF on my slides are for Android only, not including older Fennec. Also, I have not tested on FirefoxOS.
+    	</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+
+		<iframe class="no-print" seamless src="http://player.vimeo.com/video/92208773?byline=0&amp;color=ff0179" width="800" height="448" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<p class="print-only" style="margin-top:-10px">
+		<img class="center" src="images/vimeo-sushi.png">
+		Watch the demo video at: https://vimeo.com/92208773
+		</p>
+    	<p>Demo: http://girliemac.github.com/sushi-compass</p> 
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var battery = navigator.battery || navigator.webkitBattery;
+
+battery.addEventListener('chargingchange', updateStatus);  
+battery.addEventListener('levelchange', updateStatus);
+
+function updateStatus() {  
+  alert('Battery status: ' + battery.level * 100 + ' %');  
+  if (battery.charging) {
+    alert('Battery is charging...');   
+  }
+}  
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-80px">
+			<div class="browser moz"><span>14*</span></div>
+			<div class="browser moz"><span>16</span></div>
+		</div>
+		
+		<footer>
+		The battery object provides information about the system's battery charge level.
+		</footer>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<div style="text-align:center">
+			<img src="../html5-mobile-approach/images/battery-api.png" alt="Photo: demo on Firefox on Galaxy Nexus" style="height:400px">
+		</div>
+    	<p style="font-size:.75em;text-align:right;">http://goo.gl/V1n6h (Pictured: Firefox)</p>
+	</div></section>
+	
+
+	<section class="slide"><div>
+		<h2>Vibration API</h2>
+		
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var vibrate = navigator.vibrate || navigator.mozVibrate;
+
+// vibrate for 1sec
+vibrate(1000); 
+
+// vibrates for 1sec, still for 0.5 seconds, 
+// and vibrates again for 2sec
+vibrate([1000, 500, 2000]);
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;">
+			<div class="browser moz"><span>14*</span></div>
+			<div class="browser moz"><span>16</span></div>
+			<div class="browser chrome"><span class="new">30</span></div>
+		</div>
+		
+		<footer>
+			Last year, only Firefox and Tizen supported, and now Chrome does too.
+		</footer>
+	</div></section>	
+			
+
+	<section class="slide"><div>
+		<iframe class="no-print" seamless src="http://player.vimeo.com/video/86735842?byline=0&amp;color=ff0179" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		
+		<p class="print-only" style="margin-top:-10px">
+		<img class="center" src="images/vimeo-vibration.png">
+		Watch the demo video at: https://vimeo.com/86735842</p>
+		<p>Demo: http://goo.gl/SFzKaH</p>
+	</div></section>
+	
+	
+		
+	<section class="slide"><div>
+		<h2>Ambient Light Events</h2>
+
+		<pre style="margin-top:-30px"><code class="language-javascript">
+window.addEventListener('devicelight', function(e) {
+   alert(e.value);
+});		
+		</code></pre>
+		
+		<table style="margin-top:-10px">
+			<tr>
+				<th>Returned value (in lux)</th><th>My Observations</th>
+			</tr>
+			<tr>
+				<td>&lt; 400</td><td>Indoor</td>
+			</tr>
+			<tr>
+				<td>400-1000</td><td>Office lighting. Outdoor (in foggy San Francisco)</td>
+			</tr>
+			<tr>
+				<td>&gt; 1000</td><td>Outdoor daylight (anywhere else in California)</td>
+			</tr>
+		</table>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-15px">
+			<div class="browser moz"><span>15</span></div>
+		</div>
+	</div></section>
+	
+	
+
+	<section class="slide"><div>
+
+		<iframe class="no-print" seamless src="http://player.vimeo.com/video/79466285?byline=0&amp;color=ff0179" width="800" height="448" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		
+		<p class="print-only" style="margin-top:-10px">
+		<img class="center" src="images/vimeo-luminosity.png">
+		Watch the demo video at: https://vimeo.com/79466285</p>
+    	
+    	<p>Demo: http://codepen.io/girliemac/pen/pvmBs</p> 
+	</div></section>		
+	
+		
+	<!-- Status -->
+	
+	<section class="slide cover dark"><div>
+		<h2>Keep up to date</h2>
+		<img src="images/nasa-cat.jpg" style="width:1024px;height:640px;" alt="html5 mug">
+		<p class="credit dim">https://flic.kr/p/8tuc1u by randomliteraturecouncil<span class="cc">b</span></p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<img src="images/chromestatus.png" class="center" style="width:800px;margin-top:-60px;margin-top:-80px">
+		<p class="credit"><a href="http://www.chromestatus.com/features" target="_blank">Chromium Dashboard</a></p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<img src="images/status-modern-ie.png" class="center" style="width:800px;margin-top:-60px;margin-top:-80px">
+		<p class="credit"><a href="http://status.modern.ie" target="_blank">IE Platform Status</a></p>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<h2>Thank you!</h2>
+		<img src="../html5-mobile-usecases/images/tomomi.jpg" align="right">
+		<p>Tomomi Imura</p>
+		<ul style="margin-top:2em">
+			<li><a href="http://girliemac.com">girliemac.com</a></li>
+			<li><a href="http://twitter.com/girlie_mac">twitter.com/girlie_mac</a></li>
+			<li><a href="http://github.com/girliemac">github.com/girliemac</a></li>
+		</ul>
+	</div></section>
+	
+	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+	
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+</body>
+</html>

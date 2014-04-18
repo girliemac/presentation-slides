@@ -1,0 +1,22 @@
+{
+  "name": "shower-bright",
+  "version": "1.0.3",
+  "license": "MIT",
+  "main": "styles/screen.css",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    "Contributing.md",
+    "Gruntfile.js",
+    "node_modules",
+    "package.json",
+    "styles/*.scss"
+  ],
+  "keywords": [
+    "shower",
+    "presentation",
+    "bright",
+    "theme"
+  ]
+}

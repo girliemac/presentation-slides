@@ -1,0 +1,25 @@
+{
+  "name": "shower",
+  "version": "1.0.3",
+  "license": "MIT",
+  "main": "index.html",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    "Contributing.md",
+    "Gruntfile.js",
+    "node_modules",
+    "package.json"
+  ],
+  "keywords": [
+    "shower",
+    "presentation",
+    "template"
+  ],
+  "dependencies": {
+    "shower-core": "^1.0.1",
+    "shower-ribbon": "^1.0.4",
+    "shower-bright": "^1.0.4"
+  }
+}
