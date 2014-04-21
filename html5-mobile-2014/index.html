@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>State of Mobile HTML5</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">	
 	<script src="../prism/prism.js"></script>
@@ -323,63 +323,6 @@ http://stackoverflow.com/questions/9823219/is-html-5-canvas-hardware-accelerated
 		</footer>
 	</div></section>
 
-	
-<!--
-	<section class="slide"><div>
-		<h2>canvas.toBlob</h2>
-		
-		<p>Converting the filtered photo (canvas) to blob</p>
-
-		<pre><code class="language-javascript">
-if (canvas.toBlob) {
-    var blob = canvas.toBlob(function(blob){
-        // async callback
-    }, 'image/jpeg');
-}
-		</code></pre>
-		
-		<div class="browser-container" style="text-align:right;margin-top:-30px">
-			<div class="browser moz"><span>18</span></div>
-		</div>
-		
-		<footer>
-			toBlob method is specified by WHATWG.
-			For non-supporting browsers, I needed to convert a canvas to a dataURL string once, then invoke the Blob constructor to finally convert it to blob.
-		</footer>
-	</div></section>
-	
-	
-	<section class="slide"><div>
-		<h2>Blob URLs</h2>
-		
-		<p>Displaying Blob</p>
-		
-		<code>&lt;img src="blob:958c1b50-09a0-2543-8528-8697ae387667"&gt;</code>
-
-		<pre><code class="language-javascript">
-var URL = window.URL || window.webkitURL*;
-var imgURL = URL.createObjectURL(blob);
-		</code></pre>
-		
-		<div class="browser-container">
-			<div class="browser chrome"><span>18*</span></div>
-			<div class="browser chrome"><span>23</span></div>
-			<div class="browser o"><span>15bl</span></div>
-			<div class="browser android"><span>4*</span></div>
-			<div class="browser safari"><span>6*</span></div>
-			<div class="browser bb"><span>10*</span></div>
-			<div class="browser moz"><span></span></div>
-			<div class="browser ie"><span>10</span></div>
-		</div>
-		
-		<footer>
-- The object URL represents the specified Blob object.
-- Creates a new object URL, whose lifetime is tied to the document in the window on which it was created. 
-- Release the url with revokeObjectURL() if you no longer need them.
-		</footer>
-	</div></section>
-	
--->
 	
 	<section class="slide"><div>
 		<h2>IndexedDB</h2>
@@ -838,7 +781,7 @@ if (window.DeviceOrientationEvent) {
 	<section class="slide"><div>
 		<h2>Battery Status API</h2>
 		<pre style="margin-top:-30px"><code class="language-javascript">
-var battery = navigator.battery || navigator.webkitBattery;
+var battery = navigator.battery || navigator.mozBattery;
 
 battery.addEventListener('chargingchange', updateStatus);  
 battery.addEventListener('levelchange', updateStatus);
@@ -972,7 +915,7 @@ window.addEventListener('devicelight', function(e) {
 	
 	
 	<section class="slide"><div>
-		<h2>Thank you!</h2>
+		<h2>Köszönöm!</h2>
 		<img src="../html5-mobile-usecases/images/tomomi.jpg" align="right">
 		<p>Tomomi Imura</p>
 		<ul style="margin-top:2em">
