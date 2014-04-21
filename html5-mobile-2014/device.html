@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>HTML5 Device APIs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">	
+	<script src="../prism/prism.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../bower_components/shower-bright/styles/screen.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>HTML5 Device APIs</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	
+	
+	<section class="slide cover dark"><div>
+		<h2 style="color:#f18">HTML5 Device APIs</h2>
+		<h4 style="margin-left:-50px;margin-top:-20px;">Tomomi Imura (@girlie_mac)</h4>
+		<img src="images/cat-machine.jpg" style="width:1024px;height:640px;" alt="cat in dryer">
+		<p class="credit dim">https://flic.kr/p/54oAAr by James Cridland<span class="cc">b</span></p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<!-- Hello, my name is CSS sticker -->
+		<div class="vcard" style="margin: 120px auto; cursor:pointer" onclick="javascript:this.className='vcard anim'"> 
+		    <div> 
+		        <p>Hello</p> 
+		        <p>my name is</p> 
+		    </div> 
+		    <div class="fn"> 
+		        <p class="given-name">Tomomi</p> 
+		        <address class="nickname">@girlie_mac</address> 
+		    </div>
+		</div>
+		<!-- sticker end -->
+		<ul class="animList" style="position:relative; left: 180px;">
+			<li>Open Web Advocate</li>
+			<li>Mobile geek</li>
+			<li>worked at Yahoo! Mobile, Palm, Nokia</li>
+		</ul>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+		<h2>Device APIs</h2>
+		
+		<ul>
+			<li>GPS</li>
+			<li>Camera, Video, &amp; Microphone</li>		
+			<li>Audio HW</li>
+			<li>Vibration HW</li>
+			<li>Battery</li>
+			<li>NFC</li>
+		</ul>
+		
+		<footer>
+			- GPS (Geolocation API)
+			- Camera, Video, Mic (Media Capture / Streaming APIs)
+				Media Capture APIs - HTML media capture input type=file, and getUserMedia()
+			- Audio HW (Web Audio API)
+			- Vibration HW (Vibration API)
+			- Battery (Battery API)
+			- NFC (Web NFC API)
+		</footer>
+	</div></section>
+	
+		<section class="slide"><div>
+		<h2>Device APIs - Sensors</h2>
+		<ul>
+			<li>Accelerometer</li>
+			<li>Magnetometer</li>
+			<li>Gyrometer</li>
+			<li>Light</li>
+			<li>Proximity</li>
+			<li>Barometer (Pressure)</li>
+		</ul>
+		
+		<footer>
+			- Accelerometer, Magnetometer (Compass), and Gyrometer sensors (DeviceOrientation Events)
+			- Barometer (Atmospheric Pressure Events)
+		</footer>
+	</div></section>
+	
+	
+	<section class="slide">
+	<div>
+		<h2>Geolocation</h2>
+		<pre style="margin-top: -20px"><code class="language-javascript">		
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, fail);
+}
+function success(position) {
+  alert('Latitude: '+ position.coords.latitude + 
+  ', Longitude: '+ position.coords.longitude);
+}
+		</code></pre>
+		<div class="browser-container">
+			<div class="browser chrome"><span></span></div>
+			<div class="browser android"><span></span></div>
+			<div class="browser safari"><span></span></div>
+			<div class="browser moz"><span></span></div>
+			<div class="browser ie"><span></span></div>
+			<div class="browser bb"><span></span></div>
+			<div class="browser o"><span></span></div>
+		</div>
+	</div></section>
+	
+		<section class="slide"><div>
+		<h2>Device Orientation Events</h2>
+		<img src="../html5-mobile-approach/images/device-alpha-beta-gamma.png" class="center">
+    	<p class="credit">
+    		<a href="http://dev.opera.com/articles/view/w3c-device-orientation-api">Dev Opera (Diagram)</a>    	
+    	</p>
+    	
+    	<footer>
+    	The deviceorientation event is fired when new data is available from a magnetometer sensor
+    	    	
+    	- deviceorientation: supplies the physical orientation of the device.    	
+    	- devicemotion: supplies the acceleration of the device.    	
+    	- compassneedscalibration
+    	
+    	iOS5 has webkitCompassHeading property but it is not a standard.
+    	</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<pre style="margin-top: -20px"><code class="language-javascript">
+if (window.DeviceOrientationEvent) {
+  window.addEventListener('deviceorientation', function(e) {
+    compass   = e.alpha; // degree
+	frontBack = e.beta;
+	leftRight = e.gamma;
+	...
+  }, false);
+} 
+		</code></pre>
+		<p style="margin-top: -10px">Partial support</p>
+		<div class="browser-container">
+			<div class="browser safari"><span>4.2</span></div>
+			<div class="browser android"><span>3.0</span></div>
+			<div class="browser chrome"><span>18</span></div>
+			<div class="browser bb"><span>10</span></div>
+			<div class="browser moz"><span>14</span></div>
+			<div class="browser o"><span>12</span></div>
+    	</div>
+    	
+    	<footer>
+    	FF 14 and Chrome 18 are the oldest for Android.
+    	FF on my slides are for Android only, not including older Fennec. Also, I have not tested on FirefoxOS.
+    	</footer>
+	</div></section>
+	
+	
+	<section class="slide"><div>
+
+		<iframe class="no-print" seamless src="http://player.vimeo.com/video/92208773?byline=0&amp;color=ff0179" width="800" height="448" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<p class="print-only" style="margin-top:-10px">
+		<img class="center" src="images/vimeo-sushi.png">
+		Watch the demo video at: https://vimeo.com/92208773
+		</p>
+    	<p>Demo: http://girliemac.github.com/sushi-compass</p> 
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var battery = navigator.battery || navigator.mozBattery;
+
+battery.addEventListener('chargingchange', updateStatus);  
+battery.addEventListener('levelchange', updateStatus);
+
+function updateStatus() {  
+  alert('Battery status: ' + battery.level * 100 + ' %');  
+  if (battery.charging) {
+    alert('Battery is charging...');   
+  }
+}  
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-80px">
+			<div class="browser moz"><span>14*</span></div>
+			<div class="browser moz"><span>16</span></div>
+		</div>
+		
+		<footer>
+		The battery object provides information about the system's battery charge level.
+		</footer>
+	</div></section>			
+
+		
+	<section class="slide"><div>
+		<h2>Battery Status API</h2>
+		<div style="text-align:center">
+			<img src="../html5-mobile-approach/images/battery-api.png" alt="Photo: demo on Firefox on Galaxy Nexus" style="height:400px">
+		</div>
+    	<p style="font-size:.75em;text-align:right;">http://goo.gl/V1n6h (Pictured: Firefox)</p>
+	</div></section>
+	
+
+	<section class="slide"><div>
+		<h2>Vibration API</h2>
+		
+		<pre style="margin-top:-30px"><code class="language-javascript">
+var vibrate = navigator.vibrate || navigator.mozVibrate;
+
+// vibrate for 1sec
+vibrate(1000); 
+
+// vibrates for 1sec, still for 0.5 seconds, 
+// and vibrates again for 2sec
+vibrate([1000, 500, 2000]);
+		</code></pre>
+		
+		<div class="browser-container" style="text-align:right;">
+			<div class="browser moz"><span>14*</span></div>
+			<div class="browser moz"><span>16</span></div>
+			<div class="browser chrome"><span class="new">30</span></div>
+		</div>
+		
+		<footer>
+			Last year, only Firefox and Tizen supported, and now Chrome does too.
+		</footer>
+	</div></section>	
+			
+
+	<section class="slide"><div>
+		<iframe class="no-print" seamless src="http://player.vimeo.com/video/86735842?byline=0&amp;color=ff0179" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		
+		<p class="print-only" style="margin-top:-10px">
+		<img class="center" src="images/vimeo-vibration.png">
+		Watch the demo video at: https://vimeo.com/86735842</p>
+		<p>Demo: http://goo.gl/SFzKaH</p>
+	</div></section>
+	
+	
+		
+	<section class="slide"><div>
+		<h2>Ambient Light Events</h2>
+
+		<pre style="margin-top:-30px"><code class="language-javascript">
+window.addEventListener('devicelight', function(e) {
+   alert(e.value);
+});		
+		</code></pre>
+		
+		<table style="margin-top:-10px">
+			<tr>
+				<th>Returned value (in lux)</th><th>My Observations</th>
+			</tr>
+			<tr>
+				<td>&lt; 400</td><td>Indoor</td>
+			</tr>
+			<tr>
+				<td>400-1000</td><td>Office lighting. Outdoor (in foggy San Francisco)</td>
+			</tr>
+			<tr>
+				<td>&gt; 1000</td><td>Outdoor daylight (anywhere else in California)</td>
+			</tr>
+		</table>
+		
+		<div class="browser-container" style="text-align:right;margin-top:-15px">
+			<div class="browser moz"><span>15</span></div>
+		</div>
+	</div></section>
+	
+	
+
+	<section class="slide"><div>
+
+		<iframe class="no-print" seamless src="http://player.vimeo.com/video/79466285?byline=0&amp;color=ff0179" width="800" height="448" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		
+		<p class="print-only" style="margin-top:-10px">
+		<img class="center" src="images/vimeo-luminosity.png">
+		Watch the demo video at: https://vimeo.com/79466285</p>
+    	
+    	<p>Demo: http://codepen.io/girliemac/pen/pvmBs</p> 
+	</div></section>		
+	
+		
+	<!-- Status -->
+	
+	<section class="slide cover dark"><div>
+		<h2>Keep up to date</h2>
+		<img src="images/nasa-cat.jpg" style="width:1024px;height:640px;" alt="html5 mug">
+		<p class="credit dim">https://flic.kr/p/8tuc1u by randomliteraturecouncil<span class="cc">b</span></p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<img src="images/chromestatus.png" class="center" style="width:800px;margin-top:-60px;margin-top:-80px">
+		<p class="credit"><a href="http://www.chromestatus.com/features" target="_blank">Chromium Dashboard</a></p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<img src="images/status-modern-ie.png" class="center" style="width:800px;margin-top:-60px;margin-top:-80px">
+		<p class="credit"><a href="http://status.modern.ie" target="_blank">IE Platform Status</a></p>
+	</div></section>
+	
+	
+	
+	<section class="slide"><div>
+		<h2>Köszönöm!</h2>
+		<img src="../html5-mobile-usecases/images/tomomi.jpg" align="right">
+		<p>Tomomi Imura</p>
+		<ul style="margin-top:2em">
+			<li><a href="http://girliemac.com">girliemac.com</a></li>
+			<li><a href="http://twitter.com/girlie_mac">twitter.com/girlie_mac</a></li>
+			<li><a href="http://github.com/girliemac">github.com/girliemac</a></li>
+		</ul>
+	</div></section>
+	
+	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+	
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+</body>
+</html>
