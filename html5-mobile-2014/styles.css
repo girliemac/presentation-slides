@@ -30,12 +30,16 @@ body {
 	background: #474747;
 }
 
-.slide:after{
+body:not(.list) .slide:after{
 	right: auto;
 	bottom: 15px;
 	left: 10px;
 	content: '@girlie_mac';
+	counter-increment: none;
 	font-size: .75em; background-image: url();
+}
+body:not(.list) .slide.cover:after {
+	content: '';
 }
 
 .slide.cover h2 {
