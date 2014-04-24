@@ -3,6 +3,21 @@ My Presentation Slide Decks
 
 - Use arrow keys / spacebar to navigate
 
+### The State of Mobile HTML5 2013- 2014
+
+http://girliemac.github.io/presentation-slides/html5-mobile-2014/index.html
+
+- Craft Conf Budapest (April 2014)
+
+
+### Hardware Access with HTML5 Device APIs 
+#### Updated version of JS Conf 2013 slides
+
+http://girliemac.github.io/presentation-slides/html5-mobile-2014/device.html
+
+- Budapest Front-end Meetup (April 2014)
+
+
 ### IndexedDB: storing data locally on browsers with HTML5
 
 http://girliemac.github.io/presentation-slides/html5-indexedDB/index.html
