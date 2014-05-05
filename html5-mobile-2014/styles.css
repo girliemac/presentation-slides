@@ -433,4 +433,7 @@ td.maybe {
 	.print-only {
 		display: block;
 	}
+	.slide:after{
+		display: none;
+	}
 }
