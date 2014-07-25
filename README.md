@@ -7,6 +7,7 @@ My Presentation Slide Decks
 
 http://girliemac.github.io/presentation-slides/html5-mobile-2014/index.html
 
+- ForwardJS (updated. July 2014)
 - Craft Conf Budapest (April 2014)
 
 
