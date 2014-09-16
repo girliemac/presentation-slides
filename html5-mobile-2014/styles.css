@@ -415,6 +415,20 @@ td.maybe {
 	color: #26B8E0;
 }
 
+.timeline {
+	position: relative;
+}
+.timeline.dim {
+	opacity: .7;
+}
+.timeline-annotation {
+	width: 50px;
+	height: 50px;
+	border-radius: 20px;
+	position: absolute;
+	border: 6px solid #f18;
+}
+
 /* Print 
 	
    Issue with Chrome Save-as-PDF:
