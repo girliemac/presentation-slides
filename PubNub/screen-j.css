@@ -1,0 +1,17 @@
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+:lang(ja) body {
+    counter-reset: slide;
+    font: 26px/2 'Noto Sans Japanese', sans-serif;
+}
+
+:lang(ja) .slide h2 {
+    margin: 0 0 42px;
+    font: 48px/1.2 'Noto Sans Japanese',sans-serif;
+    color: #ce1126;
+}
+
+:lang(ja) .en {
+    font-family: 'Oxygen', sans-serif;
+}

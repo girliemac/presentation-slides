@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Intro PubNub</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">	
+	<script src="../prism/prism.js"></script>
+	<link rel="stylesheet" href="screen.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>Realtime Data Stream with PubNub</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	<section class="slide cover" id="cover"><div>
+		<h2 style="">Realtime Data Stream with PubNub</h2>
+		<h4 class="author no-logo">Tomomi Imura</h4>
+		<img src="images/pubnub/pubnub-connected-1024x640.png" style="width:1024px;height:640px;overflow-y:640px" alt="cover">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>What We Do</h2>
+	
+		<ul>
+		<li>Provide data stream network
+		<li>Allow you to send and receive JSON data　easily
+		<li>Broadcast (one-to-many) and Unicast (one-to-one) realtime messages
+		<li>Provide reliable connectivity via CDN globally
+		<li>Support SDK for multiple languages and frameworks
+		<li>Protects security with encryption
+		<li>Helps you to create cool stuff
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Data</h2>
+		<img src="images/piechart.jpeg" class="center">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Data Stream</h2>
+		<img src="images/pie-eating-contest-o.gif" width="470px" class="center">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>SDKs</h2>
+		<img src="images/pubnub/sdks.png" width="560px" class="center" style="margin-top:-50px">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request &amp; Response</h2>
+		<img src="images/pubnub/req-res.png" width="500px" class="center" style="margin-top:-10px">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request &amp; Response</h2>
+		<img src="images/pubnub/req-res-multi.png" width="500px" class="center" style="margin-top:-10px">
+		<footer>HTTP request and response are single connection, and creates connection to server on each request and gets response from server, then the connection gets closed.</footer>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Data Stream</h2>
+		<img src="images/pubnub/data-stream.png" width="540px" class="center" style="margin-top:-20px">
+		<footer>We work on a Pub/Sub model that you can send data from one place to another, reliably, consistently as fast as possible.</footer>
+	</div></section>
+
+	<section class="slide chapter-cover"><div>
+		<h2>JavaScript Examples</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Super Simple Chat App</h2>
+		<img src="images/pubnub/devices-loop.gif" width="580px" class="center" style="margin-top:100px">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Include PubNub CDN</h2>
+		<pre><code class="language-markup">
+&lt;script src="//cdn.pubnub.com/pubnub.min.js"&gt;&lt;/script&gt;
+
+&lt;input id="input" placeholder="enter your message"&gt;
+&lt;p&gt;Chat Output:&lt;/p&gt;
+&lt;section id="output"&gt;&lt;/section&gt;
+</code></pre>
+
+		<footer>CDNs can offer a performance benefit by hosting pubnub scripts on servers across the globe. </footer>
+	</div></section>
+
+		<section class="slide"><div>
+		<h2>Initialize</h2>
+<pre><code class="language-javascript">
+var pubnub = PUBNUB.init({
+  subscribe_key: 'sub-c-f762fb78-2724-11e4-a4df-.........',
+  publish_key: 'pub-c-156a6d5f-22bd-4a13-848d-.........'
+});
+</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Subscribe </h2>
+		<p>Receiving messages and display</p>
+		<pre><code class="language-javascript">
+var channel = 'chat';
+
+pubnub.subscribe({
+    channel  : channel,
+    callback : function(m) { 
+      output.innerHTML = m.text.replace( /[<>]/ig, '' )  + '<br>' + output.innerHTML; 
+    }
+});
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Publish</h2>
+		<p>Sending a message</p>
+		<pre><code class="language-javascript">
+input.addEventListener('keyup', function(e) {
+    (e.keyCode || e.charCode) === 13 && 
+      pubnub.publish({
+        channel : channel, 
+        message : input.value
+      })
+}, false);
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Live Demo</h2>
+		<p>Join the chat - <strong>http://goo.gl/vlaOKy</strong></p>
+		<img src="images/phonegap.jpg" width="100%">
+		<p class="credit"><a href="http://pubnub.github.io/super-simple-chat/index.html">http://goo.gl/vlaOKy</a></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<div class="center" style="margin-top:-1em"><img src="images/screenshot-tweets.png"></div>
+		<p class="credit"><a href="http://pubnub.github.io/tweet-emotion/">http://pubnub.github.io/tweet-emotion/</a></p>
+	</div></section>
+
+	
+	<section class="slide chapter-cover"><div>
+		<h2>Node.js Hotness</h2>
+	</div></section>
+
+	<section class="slide"><div>
+	<div align="center">
+		<iframe class="vine-embed" src="https://vine.co/v/OmhHTuQjvQu/embed/simple" width="480" height="480" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
+	</div>
+	</div></section>
+
+
+	<section class="slide chapter-cover"><div>
+		<h2>More Use Cases</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Multiplayer Games</h2>
+		<img src="http://www.pubnub.com/static/images/in-action/multiplayer.png" class="center">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Realtime Analytics &bull; Data Vis</h2>
+		<img src="http://www.pubnub.com/static/images/in-action/dashboard.png" class="center">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Home Automation &bull; IoT</h2>
+		<img src="http://www.pubnub.com/static/images/in-action/home-automation.png" class="center">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Interactive Advertising</h2>
+		<img src="http://www.pubnub.com/blog/wp-content/uploads/2014/08/bizw_jy_P24c_1503_9cmX30p.jpg" width="75%" class="center">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Realtime Location &bull; Tracking Vehicles</h2>
+		<img src="http://www.pubnub.com/static/images/in-action/mapsgeo.png" class="center">
+	</div></section>
+
+	<section class="slide cover"><div>
+		<img src="images/lyft.jpg">
+	</div></section>
+
+	
+	<section class="slide chapter-cover"><div>
+		<h2>Community Involvement</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Next Events at PubNub</h2>
+		<ul>
+			<li>SF JavaScript Meetup</li>
+			<li>HackaPong</li>
+			<li>Tessel Hackathon</li>
+		</ul>
+	</div></section>
+
+	
+	<section class="slide"><div>
+		<h2>Thank you!</h2>
+		<img class="bio-photo" src="images/tomomi-406x406.jpg" align="right">
+		<img src="images/pubnub.png" style="position:absolute;right:70px;bottom:130px">
+		<p style="margin-bottom: 2em">Tomomi Imura @ PubNub</p>
+
+		<a href="http://pubnub.com"><i class="fa fa-globe"></i> pubnub.com</a><br>
+		<a href="http://twitter.com/pubnub"><i class="fa fa-twitter"></i> @pubnub</a><br>
+		<a href="http://twitter.com/girlie_mac"><i class="fa fa-twitter"></i> @girlie_mac</a><br>
+		<a href="http://github.com/pubnub"><i class="fa fa-github-alt"></i> github.com/pubnub</a>
+	</div></section>
+
+	<section class="slide credit"><div>
+		<h2>Photo Credit</h2>
+		<ul>
+			<li>Lyft: http://en.wikipedia.org/wiki/Lyft<span class="cc">ba</span></li>
+		</ul>
+	</div></section>
+		
+	<div class="progress"><div></div></div>
+	<script src="../bower_components/shower-core/shower.min.js"></script>
+</body>
+</html>

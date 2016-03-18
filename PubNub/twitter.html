@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>PubNub ❤ Twitter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">	
+	<script src="../prism/prism.js"></script>
+	<link rel="stylesheet" href="screen.css">
+<!-- 	<link rel="stylesheet" href="styles.css"> -->
+	<link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>Tweet Emotion: Realtime Tweet Pseudo-Analysis with PubNub Data Stream</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	<section class="slide cover dark" id="cover"><div>
+		<h2>Realtime Tweet Analysis with PubNub Data Stream</h2>
+
+		<h4 class="author">Tomomi Imura</h4>
+		<img src="images/5445596808_c47aac47a8_b.jpg" style="width:1024px;height:640px;overflow-y:640px" alt="tweet me">
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>"How is America feeling now?"</h2>
+		<p>Visualized cartographic data of the emotional "state" of each state at any given moment</p>
+
+		<div class="center" style="position:relative; margin-top:1em">
+			<img src="images/obama-tweet.png">
+			<img src="images/smiling-face.png" style="position:absolute; bottom:0; right:120px;">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<div class="center" style="margin-top:-1em"><img src="images/screenshot-tweets.png"></div>
+		<p class="credit"><a href="http://pubnub.github.io/tweet-emotion/">http://pubnub.github.io/tweet-emotion/</a></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Pseudo-analysis</h2>
+		<p>Positive or negative sentiments are loosely determined based on an analysis of keywords used in tweets</p>
+		<pre><code class="language-javascript">
+positiveWords = [
+  'excellent', 'amazing', 'marvelous', 'magnificent', 
+  'fabulous', 'astonishing', 'fantastic', 'peaceful', 
+  'brilliant', 'glorious', 'cheerful', 'gracious', 
+  ...
+];
+</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Process</h2>
+		<ol>
+			<li>using TopoJSON to display a US state map using d3.js
+			<li>using PubNub JavaScript API to consume Twitter stream
+			<li>colorizing the map by moods
+		</ol>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>GeoJSON</h2>
+		<ul>
+			<li>Open standard format for encoding geographical features 
+			<li>Written in JavaScript Object Notation
+			<li>Typically large file size
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>TopoJSON</h2>
+		<ul>
+			<li>Extension of GeoJSON that encodes geospatial topology
+			<li>Compressed / Smaller size
+			<li>Tailored for only what you need
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>TopoJSON</h2>
+		<div class="center" style="margin-top:-15px;"><img src="images/topoJSON.png"></div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Render TopoJSON with D3.js</h2>
+
+		<pre><code class="language-javascript">
+var svg = d3.select('#map').append('svg')
+  .attr('width', 900).attr('height', 550);
+
+var path = d3.geo.path().projection(d3.geo.albersUsa());
+</code></pre>
+	
+		<p style="text-align:right" >
+			<img src="https://camo.githubusercontent.com/3da33aba96e13f6dd2c8b57141defdb53b6ca918/687474703a2f2f64336a732e6f72672f6c6f676f2e737667">
+		</p>
+	</div></section>
+
+		<section class="slide"><div>
+		<h2>Render TopoJSON with D3.js</h2>
+
+		<pre><code class="language-javascript">var g = svg.append('g');
+
+d3.json('us-states.json', function(error, topology) {
+  g.selectAll('path')
+    .data(topojson.feature(topology, 
+      topology.objects.usStates).features)
+    .enter().append('path')
+    .attr('class', function(d){ 
+      return 'states ' + d.properties.STATE_ABBR;} )
+    .attr('d', path)
+    .attr('fill', 'gray')
+});
+</code></pre>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Getting Realtime Tweets from PubNub Stream</h2>
+
+		<div class="center" style="position:relative;">
+			<img src="images/pubnub-cloud-twitter.png">
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Getting Started with PubNub APIs</h2>
+		
+		<pre><code class="language-markup">
+&lt;script src="//cdn.pubnub.com/pubnub.min.js"&gt;&lt;/script&gt;
+		</code><code class="language-javascript">
+var channel = 'pubnub-twitter';
+
+var pubnub = PUBNUB.init({
+  subscribe_key:'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe'
+});
+		</code></pre>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Receiving Live JSON Data</h2>
+		
+		<p>To retrieve the live tweets, you simply use PubNub <code>subscribe()</code> API.</p>
+
+		<pre><code class="language-javascript">
+pubnub.subscribe({
+  channel: channel,
+  callback: processData
+});
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Pseudoanalyze Tweets</h2>
+		
+		<p>Create a mini dictionary that describes moods</p>
+
+		<pre><code class="language-javascript">
+var positiveWords = [
+  'excellent', 'amazing', 'happy', 'magnificent', ':)', 
+  ...
+];
+var negativeWords = [
+  'unhappy', 'sorry', 'annoyed', 'dislike', 'anxious', ':(', 
+  ...
+];
+		</code></pre>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Pseudoanalyze Tweets</h2>
+		
+		<p>See if these words are used in each tweet, in the callback function</p>
+
+		<pre><code class="language-javascript">function processData(data) {
+  // looking for US data only for this demo
+  if(data.place.country_code !== 'US') return;
+
+  // Check if emotional words are used in the tweet
+  if (positiveWords.some(function(v) { 
+      return data.text.toLowerCase().indexOf(v) > 0; })) {
+    displayData(data, positive);
+  } else if
+    ...
+}
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Pseudoanalyze Tweets</h2>
+		
+		Create a mini dictionary that describes moods
+
+		<pre><code class="language-javascript">
+var positiveWords = [
+  'excellent', 'amazing', 'happy', 'magnificent', ':)', 
+  ...
+];
+var negativeWords = [
+  'unhappy', 'sorry', 'annoyed', 'dislike', 'anxious', ':(', 
+  ...
+];
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Display Data on Map</h2>
+	
+		<pre><code class="language-javascript">function displayData(data, emotion) {
+  var state = data.place.full_name.substring(
+    city.lastIndexOf(',')+1).trim();
+		
+  if(document.querySelector('.'+state)) {
+  var stateEl = document.querySelector('.'+state);
+    
+  // count
+  tally[state] = (tally[state] || {positive:0, negative:0});
+  tally[state][emotion] = (tally[state][emotion] || 0) + 1;
+
+  ...
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>...cont'd</h2>
+		<pre><code class="language-javascript">
+  // colorize svg path	
+  stateEl.style.fill = (
+    tally[state].positive > tally[state].negative) 
+      ? 'pink' : 
+      ((tally[state].positive < tally[state].negative) 
+      ? 'turquoise' : 'beige'); 
+    }	
+  }
+}
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<div class="center" style="margin-top:-10px"><img src="images/screenshot-topojson.png" style="height:500px"></div>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Full Article</h2>
+		<p><a href="http://blog.twitter.com"><i class="fa fa-newspaper-o"></i> <a href="https://blog.twitter.com/2014/tweet-emotion-real-time-tweet-analysis-with-pubnub-data-stream">blog.twitter.com</a></a></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Thank you!</h2>
+		<img class="bio-photo" src="images/tomomi-406x406.jpg" align="right">
+		<p style="margin-bottom: 2em">Tomomi Imura @ PubNub</p>
+
+		<a href="http://pubnub.com"><i class="fa fa-globe"></i> pubnub.com</a><br>
+		<a href="http://twitter.com/pubnub"><i class="fa fa-twitter"></i> @pubnub</a><br>
+		<a href="http://twitter.com/girlie_mac"><i class="fa fa-twitter"></i> @girlie_mac</a><br>
+		<a href="http://github.com/oubnub"><i class="fa fa-github-alt"></i> github.com/pubnub</a>
+	</div></section>
+
+	<section class="slide credit"><div>
+		<h2>Photo Credit</h2>
+		<ul>
+			<li>Cover: https://flic.kr/p/9id7d9 by Kate Ter Haar<span class="cc">b</span></li>
+		</ul>
+	</div></section>
+		
+	<div class="progress"><div></div></div>
+	<script src="../bower_components/shower-core/shower.min.js"></script>
+</body>
+</html>

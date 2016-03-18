@@ -1,0 +1,24 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Dominating Shadow DOM</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">	
+	<style>
+		audio {margin: 3em;}
+
+		audio.fancy /deep/ input[type=range] {
+			background-color: pink; 
+		}
+		audio.fancy >>> input[type=range] {
+			background-color: pink; 
+		}
+	</style>
+</head>
+<body>
+
+<audio src="media/meow.mp3" controls></audio>
+
+</body>
+</script>

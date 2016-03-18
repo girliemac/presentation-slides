@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Dominating Shadow DOM</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">	
+	<script src="../prism/prism.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../bower_components/shower-bright/styles/screen.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="../prism/prism.css">
+	<style>
+	audio {
+		display: block;
+	}
+	audio.fancy <<< input[type=range] {
+		background-color: pink; 
+	}
+	</style>
+</head>
+<body class="list">
+	
+	<header class="caption">
+		<h1>Dominating Shadow DOM</h1>
+		<p><a href="http://girliemac.com">Tomomi Imura</a>, <a href="http://twitter.com/girlie_mac">@girlie_mac</a></p>
+	</header>
+	
+	
+	<section class="slide cover dark"><div>
+		<header style="margin-top:-30px;text-align:right;margin-right:-20px;">
+			<h2 style="font-size:76px"><span style="font-size:0.7em">Dominating</span><br>Shadow DOM</h2>
+			<h4 style="font-size:28px;margin-top:9em">Tomomi Imura (@girlie_mac)</h4>
+		</header>
+		<img src="images/cat-564202.jpg" style="width:1024px;height:640px;" alt="cat shadow">
+		<p class="credit dim" style="color:#444;">CC0</p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Creating Web UI</h2>
+		<img src="images/webUI.png" alt="Web UI">
+	</div></section>
+
+	<section class="slide cover"><div>
+		<h2 style="font-family:impact;color:#333;font-size:100px;text-align:right">Bleh!</h2>
+		<img src="images/divitis.jpg" style="width:1024px;height:640px;" alt="Divitis">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Modular UI</h2>
+		<img src="images/webUI-components.png" alt="UI components">
+		<!-- &lt;core-scaffold&gt;, 
+		&lt;core-item&gt;, 
+		&lt;paper-input&gt;, 
+		&lt;paper-fab&gt;, 
+		&lt;x-chat-list&gt; --> 
+	</div></section>
+
+	<section class="slide"><div>
+<pre><code class="language-markup">&lt;core-scaffold&gt;
+  &lt;core-header-panel&gt;
+    &lt;core-toolbar&gt;Chat Room&lt;/core-toolbar&gt;
+  &lt;/core-header-panel&gt;
+
+  &lt;template repeat="{{m in messages}}"&gt;
+    &lt;x-chat-list uuid="{{m.uuid}}" text="{{m.text}}"&gt;&lt;/x-chat-list&gt;
+  &lt;/template&gt;
+
+  &lt;paper-input on-keyup="{{checkKey}}"&gt;&lt;/paper-input&gt;
+  &lt;paper-fab icon="send"&gt;&lt;/paper-fab&gt;
+&lt;/core-scaffold&gt;
+		</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>W3C Web Components</h2>
+
+		<div style="display:-webkit-flex; display:flex">
+			<ul>
+			<li>HTML Imports</li>
+			<li>HTML Templates</li>
+			<li>Custom Elements</li>
+			<li>Shadow DOM</li>
+			</ul>
+		</div>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Shadow DOM</h2>
+		<p>Shadow DOM enable markup to:</p>
+		<div style="display:-webkit-flex; display:flex">
+			<ul>
+			<li>be composed in modular pattern</li>
+			<li>be encapsulated (Private)</li>
+			<li>overlay subtree of nodes</li>
+			</ul>
+		</div>
+		<footer>Shadow DOM gives developers access to style and DOM scoping.</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Shadow DOM Browser Supports</h2>
+		with vendor prefix
+		<div class="browser-container">
+			<div class="browser chrome"><span>25*</span></div>
+			<div class="browser o"><span>15*</span></div>
+			<div class="browser android"><span>4.4*</span></div>
+		</div>
+
+		no vendor prefix
+		<div class="browser-container">
+			<div class="browser chrome"><span>35</span></div>
+			<div class="browser o"><span>22</span></div>
+		</div>
+		<p class="credit"><a href="http://caniuse.com/#feat=shadowdom" target="_blank">Can I Use?</a></p>
+	</div></section>
+	
+	<section class="slide"><div>
+
+		<!-- web layout -->
+		<section class="no-print">
+			<h2>Shadow DOM in User Agent</h2>
+			<audio src="media/meow.mp3" controls></audio>
+			<pre><code class="language-markup">
+&lt;audio src="media/meow.mp3" controls&gt;&lt;/audio&gt;
+			</code></pre>
+			<input type="date">
+			<pre><code class="language-markup">
+&lt;input type="date"&gt;
+			</code></pre>
+
+			<p class="credit dim" style="color:#444;">SoundBible.com<span class="cc">b</span></p>
+			</section>
+
+		<!-- print layout -->
+		<section class="print-only">
+			<h2>Shadow DOM in Browser</h2>
+			<audio src="media/meow.mp3" controls></audio>
+			<pre><code class="language-markup">&lt;audio src="media/meow.mp3" controls&gt;&lt;/audio&gt;
+			</code></pre>
+
+			<img src="images/date.png">
+			<pre><code class="language-markup">&lt;input type="date"&gt;
+			</code></pre>
+
+			<p class="credit dim" style="color:#444;">SoundBible.com<span class="cc">b</span></p>
+		</section>
+
+		<footer>
+			 Chrome v29+ supports inspecting Shadow DOM using Chrome DevTools. You need to enable the feature.
+		</footer>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="images/audio-DOM.png" style="margin-top:-80px;margin-left:-160px" class="no-print">
+		<img src="images/audio-DOM.png" style="height:540px;margin-left:-80px" class="print-only">
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="images/audio-shadowDOM-setting.png" style="margin-top:-80px;margin-left:-160px" class="no-print" >
+		<img src="images/audio-shadowDOM-setting.png" style="height:540px;margin-left:-80px" class="print-only">
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="images/audio-shadowDOM.png" style="margin-top:-80px;margin-left:-160px" class="no-print" >
+		<img src="images/audio-shadowDOM.png" style="height:540px;margin-left:-80px" class="print-only">
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="images/audio-shadowDOM-annotation.png" style="margin-top:-80px;margin-left:-160px" class="no-print" >
+		<img src="images/audio-shadowDOM-annotation.png" style="height:540px;margin-left:-80px" class="print-only">
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="images/audio-shadowDOM-annotation2.png" style="margin-top:-80px;margin-left:-160px" class="no-print" >
+		<img src="images/audio-shadowDOM-annotation2.png" style="height:540px;margin-left:-80px" class="print-only">
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Custom Elements</h2>
+		<img src="images/x-chat-list.png">
+
+		<pre><code class="language-markup">&lt;x-chat-list 
+  color="moss" avatar="korat" username="Moss-Korat" 
+  text="happy moew year to you all"
+  timestamp="a minutes ago"&gt;&lt;/x-chat-list&gt;
+		</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="images/kitteh-anonymous.png" style="margin-top:-40px;  margin-left:-20px" >
+		<p class="credit"><a href="http://pubnub.github.io/paper-chat/" target="_blank">Kitteh Anonymous (Polymer demo)</a></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="images/kitteh-anonymous-inspect.png" style="margin-top:-40px;  margin-left:-20px" >
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Dissecting Custom Elements</h2>
+		<ul>
+		<li>Element &rarr; <em class="blue">Shadow Host</em></li>
+		<li>The root of shadow DOM subtree &rarr; <em class="blue">Shadow Root</em></li>
+		<li>Shadow DOM subtrees &rarr; <em class="blue">Shadow DOM</em></li>
+		<ul>
+			<li>Children</li> 
+			<li>Children visible to end user &rarr; <em class="blue">Light DOM</em></li>
+		</ul>
+		<footer>
+		With Shadow DOM, elements can get a new kind of node associated with them: a shadow root.
+		</footer>
+	</div></section>
+
+	<section class="slide"><div>
+		<p align="right" style="z-index:10">DOM &amp; Shadow DOM</p>
+		<img src="images/dom-tree.png" style="margin-top:-50px; margin-left:60px; height:440px" >
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>DOM: Creating a Node</h2>
+		<pre><code class="language-markup">&lt;div id="parent"&gt;&lt;/div&gt;</code></pre>
+		<pre><code class="language-javascript">
+var parent = document.querySelector('#parent');
+var child = document.createElement('div');
+parent.appendChild(child);
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Shadow DOM: Creating a Node</h2>
+		<pre><code class="language-markup">&lt;div id="host"&gt;&lt;/div&gt;</code></pre>
+		<pre><code class="language-javascript">
+var host = document.querySelector('#host');
+var shadowroot = host.createShadowRoot();
+
+// To append a child node to the shadow root
+var child = document.createElement('div');
+shadowroot.appendChild(child);
+		</code></pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Styling Shadow DOM: CSS Scoping</h2>
+		<ol>
+		<li><code>:host</code> and <code>:host()</code> pseudo-class</li>
+		<li><code>:host-context()</code> pseudo-class</li>
+		<li><code>::content</code> pseudo-element</li>
+		<li><code>::shadow</code> pseudo-element</li>
+		<li><code>&gt;&gt;&gt;</code> shadow-piercing descendant combinator</li>
+		</ol>
+		<p class="credit">CSS Scoping Module Level 1 &bull; http://dev.w3.org/csswg/css-scoping/</p>
+		<footer>
+			- :host - Selects a shadow host element
+			- :host-context() - Select a shadow host, based on a matching parent element
+			- ::content - targets light DOM
+			- ::shadow - Selects shadow root
+			- shadow-piercing descendant combinator (used to be /deep/) Selects shadow trees that are N levels deep inside of an element
+		</footer>
+	</div></section>
+
+	
+	<section class="slide"><div>
+		<h2>:host</h2>
+		<pre><code class="language-markup">&lt;element name="x-chat-list"&gt;
+  &lt;style&gt;
+    :host {
+      border-bottom: 1px solid #eee;
+      min-height: 72px;
+	}
+  &lt;/style&gt;
+  &lt;div class="username"&gt;&lt;/div&gt;
+  &lt;div class="text"&gt;&lt;/div&gt;
+  &lt;template&gt;...&lt;/template&gt;
+&lt;/element&gt;
+</code></pre>
+	<footer>
+	host: pseudo-class selects a shadow host element.
+	Use this when you are creating a custom element and style the element hosting a shadow tree.
+	</footer>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>:host()</h2>
+		<pre><code class="language-markup">&lt;element name="x-chat-list" class="fancy"&gt;
+  &lt;style&gt;
+    :host(.fancy) {
+      border-bottom: 3px dashed LemonChiffon;
+	}
+	:host(:hover) {
+	  color: DarkSlateBlue;
+	}
+  &lt;/style&gt;
+  ...
+&lt;/element&gt;
+</code></pre>
+	<footer>
+		:host() function pseudo-class selects a shadow host element that matches the selector argument
+	</footer>
+	</div></section>
+
+	
+	<section class="slide"><div>
+		<h2>:host-context()</h2>
+		<pre><code class="language-css">
+:host-context(.fancypants) {
+    background-color: LavenderBlush;
+}
+</code></pre>
+		<pre><code class="language-markup">
+&lt;div class="fancypants"&gt;
+  &lt;x-chat-list&gt;&lt;/x-chat-list&gt;
+&lt;/div&gt;
+</code></pre>
+	<footer>
+		:host-context select functional pseudo-class matches the host element if it or any of its ancestors matches the selector argument. It can therefore be useful for theming.
+	</footer>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>::content</h2>
+		<pre><code class="language-markup">&lt;element name="x-chat-list"&gt;
+  &lt;style&gt;
+    ::content span {
+      font-weight: 400;
+	}
+  &lt;/style&gt;
+  &lt;div class="username"&gt;&lt;span&gt;User: &lt;/span&gt;&lt;/div&gt;
+  &lt;div class="text"&gt;&lt;/div&gt;
+  &lt;template&gt;...&lt;/template&gt;
+&lt;/element&gt;
+</code></pre>
+	<footer>
+		::content pseudo-element allows you to target Light DOM nodes distributed into the shadow tree
+	</footer>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>::shadow</h2>
+		<pre><code class="language-css">
+x-chat-list::shadow > div {
+    min-height: 100px;
+}
+</code></pre>
+		<pre><code class="language-markup">
+&lt;x-chat-list&gt;
+  #shadow-root
+  &lt;div&gt;...&lt;/div&gt; <-- this is selected
+&lt;/x-chat-list&gt;
+</code></pre>
+	<p class="credit">* deprecated in Chrome recently: https://www.chromestatus.com/features/6750456638341120</p>
+	<footer>
+		::shadow pseudo-element matches the shadow roots
+		Deprecated on Chrome https://www.chromestatus.com/features/6750456638341120
+	</footer>
+	</div></section>
+
+
+
+	<section class="slide"><div>
+		<h2>&gt;&gt;&gt; combinator</h2>
+		<p>Shadow-piercing descendant combinator</p>
+		<pre><code class="language-css">x-chat-list >>> div { ... } </code></pre>
+		<pre><code class="language-markup">
+&lt;x-chat-list&gt;
+  #shadow-root
+  &lt;div&gt; <-- all divs are selected incl. nested divs
+    &lt;div&gt;
+      &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+&lt;/x-chat-list&gt;
+</code></pre>
+	<footer>
+		This is new and not supported on any browsers yet. This should replaces /deep/. It selects shadow trees that are N levels deep inside of an element.
+
+		Deprecated on Chrome https://www.chromestatus.com/features/6750456638341120
+	</footer>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>&gt;&gt;&gt; combinator</h2>
+		<pre><code class="language-css">audio.fancy >>> input[type=range] { 
+  background-color: CornflowerBlue; 
+} 
+		</code></pre>
+
+		Actual DOM:
+		<audio class="fancy" src="media/meow.mp3" controls></audio>
+
+		Screenshot:<br>
+		<img src="images/audio-shadow-dom-css.png">
+
+		<p class="credit">* Both /deep/ and the combinator are deprecated in Chrome: https://www.chromestatus.com/features/6750456638341120</p>
+	</div></section>
+
+
+	<section class="slide cover dark"><div>
+		<img src="images/black-white-cats.jpg" style="width:1024px;height:640px;" alt="a black cat and a white cat">
+		<p class="credit dim" style="color:#444;">https://flic.kr/p/8jP4NJ by Ryusuke <span class="cc">b</span></p>
+	</div></section>
+
+
+
+	<section class="slide"><div>
+		<h2>Thank you &lt;3 &lt;3 &lt;3</h2>
+		<img src="../html5-mobile-usecases/images/tomomi.jpg" align="right">
+		<ul style="margin-top:2em">
+			<li><a href="http://girliemac.com">girliemac.com</a></li>
+			<li><a href="http://twitter.com/girlie_mac">@girlie_mac</a></li>
+			<li><a href="http://github.com/girliemac">github.com/girliemac</a></li>
+		</ul>
+	</div></section>
+
+	
+	<!-- <p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p> -->
+	
+	<div class="progress"><div></div></div>
+	<script src="../bower_components/shower-core/shower.min.js"></script>
+</body>
+</html>
